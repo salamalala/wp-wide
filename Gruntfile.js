@@ -25,7 +25,7 @@ module.exports = function (grunt) {
             },
             dist: {
                 files: {
-                    'assets/dist/css/main-min.css'    : 'assets/src/css/*.css'
+                    'assets/dist/css/main-min.css': 'assets/src/css/main.css'
                 }
             }
         },
