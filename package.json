@@ -1,0 +1,25 @@
+{
+  "name": "wide",
+  "version": "1.0.0",
+  "description": "This is a theme based on underscores and created specifically for a swiss network researching gender topics.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/salamalala/wp-wide.git"
+  },
+  "author": "Nina Regli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/salamalala/wp-wide/issues"
+  },
+  "homepage": "https://github.com/salamalala/wp-wide#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^1.2.0",
+    "load-grunt-tasks": "^3.5.0"
+  }
+}
