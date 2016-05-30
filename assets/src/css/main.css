@@ -170,7 +170,14 @@ td,
 th {
   padding: 0; }
 
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
 h1 {
-  color: green; }
+  background-color: yellow;
+  display: flex; }
 
 /*# sourceMappingURL=main.css.map */

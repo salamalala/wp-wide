@@ -12,10 +12,28 @@ module.exports = function (grunt) {
             }
         },
 
+        postcss: {
+            options: {
+                map: true, // inline sourcemaps
+
+
+                processors: [
+                    require('pixrem')(), // add fallbacks for rem units
+                    require('autoprefixer')({browsers: 'last 2 versions'}), // add vendor prefixes
+                    require('cssnano')() // minify the result
+                ]
+            },
+            dist: {
+                files: {
+                    'assets/dist/css/main-min.css'    : 'assets/src/css/*.css'
+                }
+            }
+        },
+
         watch: {
             sass: {
                 files: ['**/*.scss'],
-                tasks: ['sass']
+                tasks: ['sass', 'postcss']
 
             }
         }
@@ -25,6 +43,6 @@ module.exports = function (grunt) {
     require('load-grunt-tasks')(grunt);
 
 
-    grunt.registerTask('default', ['sass:dist', 'watch']);
+    grunt.registerTask('default', ['sass:dist', 'postcss', 'watch']);
 
 };
