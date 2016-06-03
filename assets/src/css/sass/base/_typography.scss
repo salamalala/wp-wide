@@ -3,7 +3,7 @@ body {
   -webkit-font-smoothing: antialiased;
   color: $base-font-color;
   font-family: $base-font-family;
-  font-size: $base-font-size;
+  font-size: $font-size-base;
   line-height: $base-line-height;
 }
 
@@ -15,22 +15,22 @@ h5,
 h6 {
   font-family: $heading-font-family;
   line-height: $heading-line-height;
-  margin: 0 0 $small-spacing;
+  margin: 0 0 $spacing-sm;
 }
 
 p {
-  margin: 0 0 $small-spacing;
+  margin: 0 0 $spacing-sm;
 }
 
 a {
-  color: $action-color;
+  color: $blue;
   text-decoration: none;
   transition: color 0.1s linear;
 
   &:active,
   &:focus,
   &:hover {
-    color: darken($action-color, 15%);
+    color: darken($blue, 15%);
   }
 
   &:active,
@@ -44,7 +44,7 @@ hr {
   border-left: none;
   border-right: none;
   border-top: none;
-  margin: $base-spacing 0;
+  margin: $spacing-base 0;
 }
 
 img,

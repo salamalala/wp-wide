@@ -2,14 +2,14 @@
 button {
   @include appearance(none);
   -webkit-font-smoothing: antialiased;
-  background-color: $action-color;
+  background-color: $light-gray;
   border-radius: $base-border-radius;
   border: none;
-  color: #fff;
+  color: $medium-gray;
   cursor: pointer;
   display: inline-block;
   font-family: $base-font-family;
-  font-size: $base-font-size;
+  font-size: $font-size-base;
   font-weight: 600;
   line-height: 1;
   padding: 0.75em 1em;
@@ -20,7 +20,7 @@ button {
 
   &:hover,
   &:focus {
-    background-color: darken($action-color, 15%);
+    background-color: darken($light-gray, 15%);
     color: #fff;
   }
 
