@@ -1,6 +1,15 @@
 module.exports = function (grunt) {
 
     grunt.initConfig({
+
+        uglify: {
+            my_target: {
+              files: {
+                'assets/dist/js/main-min.js': ['assets/src/js/main.js']
+              }
+            }
+        },
+
         sass: {
             options: {
                 sourceMap: true
@@ -30,7 +39,23 @@ module.exports = function (grunt) {
             }
         },
 
+        browserSync: {
+          dev: {
+            bsFiles: {
+              src : ['assets/dist/**/*.css', 'assets/dist/**/*.js', '*.php']
+            },
+            options: {
+              proxy: "http://local.wordpress.dev/",
+              watchTask: true,
+            }
+          }
+        },
+
         watch: {
+            js: {
+                files: ['assets/src/js/*.js'],
+                tasks: ['uglify:js'],
+            },
             sass: {
                 files: ['**/*.scss'],
                 tasks: ['sass', 'postcss']
@@ -43,6 +68,6 @@ module.exports = function (grunt) {
     require('load-grunt-tasks')(grunt);
 
 
-    grunt.registerTask('default', ['sass:dist', 'postcss', 'watch']);
+    grunt.registerTask('default', ['newer:uglify', 'newer:sass:dist', 'newer:postcss', 'browserSync', 'watch']);
 
 };

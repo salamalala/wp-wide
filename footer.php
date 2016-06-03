@@ -22,7 +22,13 @@
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
+
 <?php wp_footer(); ?>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+
+<script  type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/dist/js/main-min.js"></script>
 
 </body>
 </html>
