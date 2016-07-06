@@ -4,10 +4,9 @@ $heading-font-family: "sofia-pro", sans-serif;
 
 
 // Base Font Sizes for body, changing for different screen sizes
-$body-font-size-xs: 0.7em;
-$body-font-size-sm: 0.97em;
-$body-font-size-md: 1em;
-$body-font-size-lg: 1.02em;
+$body-font-size-sm: 0.8em;
+$body-font-size-base: 1em;
+$body-font-size-lg: 1.03em;
 
 // Modular scale for different font headings
 $modular-scale-base: 1em;
@@ -45,7 +44,7 @@ $blue: #497FA3;
 $dark-gray: #313336;
 $medium-gray: #565B5E;
 $light-gray: #E6EBF0;
-$offwhite: #F2F7FC;
+$offwhite: #F5F5FA;
 $white: #fff;
 
 // Font Colors

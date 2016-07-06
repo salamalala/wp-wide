@@ -3,8 +3,16 @@ body {
   -webkit-font-smoothing: antialiased;
   color: $base-font-color;
   font-family: $base-font-family;
-  font-size: $font-size-base;
+  font-size: $body-font-size-sm;
   line-height: $base-line-height;
+
+  @include media($small-screen) {
+    font-size: $body-font-size-base;
+  }
+
+  @include media($large-screen) {
+    font-size: $body-font-size-lg;
+  }
 }
 
 h1,
@@ -16,9 +24,24 @@ h6 {
   font-family: $heading-font-family;
   line-height: $heading-line-height;
   margin: 0 0 $spacing-sm;
+  letter-spacing: $letter-spacing-lg;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: $font-size-xl;
+}
+
+h2 {
+  font-size: $font-size-lg;
+}
+
+h3 {
+  font-size: $font-size-md;
 }
 
 p {
+  font-size: $font-size-base;
   margin: 0 0 $spacing-sm;
 }
 
@@ -37,14 +60,6 @@ a {
   &:focus {
     outline: none;
   }
-}
-
-hr {
-  border-bottom: $base-border;
-  border-left: none;
-  border-right: none;
-  border-top: none;
-  margin: $spacing-base 0;
 }
 
 img,

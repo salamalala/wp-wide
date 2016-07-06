@@ -10,25 +10,20 @@
  */
 
 ?>
+		</main><!-- site content-->
 
-	</div><!-- #content -->
+		<footer class="footer" role="footer">
+			<h1>this is the footer</h1>
+		</footer>
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'wide' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'wide' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'wide' ), 'wide', '<a href="http://ninaregli.com" rel="designer">ninaregli</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+	</div><!-- body__wrapper-->
 
+	<?php wp_footer(); ?>
 
-<?php wp_footer(); ?>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+	<script  type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/dist/js/main-min.js"></script>
 
-<script  type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/dist/js/main-min.js"></script>
-
-</body>
+	</body>
 </html>

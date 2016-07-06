@@ -363,4 +363,10 @@ picture {
   margin: 0;
   max-width: 100%; }
 
+body {
+  background-color: #fff; }
+  body .body__wrapper {
+    background-color: #F7F8FD;
+    margin: 1em; }
+
 /*# sourceMappingURL=main.css.map */
