@@ -10,10 +10,23 @@
  */
 
 ?>
+
+		  </div><!-- main wrapper-->
+
 		</main><!-- site content-->
 
 		<footer class="footer" role="footer">
-			<h1>this is the footer</h1>
+
+			<div class="footer__content">
+				<p class="footer__copyright">
+					© 2016 Wide Switzerland | <span class="footer__impressum"><a href="#">Impressum</a></span>
+				</p>
+
+				<p class="footer__address">
+					info@wide-network.ch
+				</p>
+			</div>
+
 		</footer>
 
 	</div><!-- body__wrapper-->

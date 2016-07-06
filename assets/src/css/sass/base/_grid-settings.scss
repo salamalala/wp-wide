@@ -1,14 +1,18 @@
-@import "neat-helpers"; // or "../neat/neat-helpers" when not in Rails
+@import "../bourbon/bourbon";
+@import "../neat/neat-helpers";
 
 // Neat Overrides
-// $column: 90px;
-// $gutter: 30px;
-// $grid-columns: 12;
-// $max-width: em(1088);
+$column: 90px;
+$gutter: 60px;
+$grid-columns: 12;
 
-// Neat Breakpoints
-$medium-screen: em(640);
-$large-screen: em(860);
+//ems in media queries, react to the browser font size
+$max-width: 74em;
 
-$medium-screen-up: new-breakpoint(min-width $medium-screen 4);
-$large-screen-up: new-breakpoint(min-width $large-screen 8);
+// Main Breakpoints
+//(480px)
+$small-screen: 30em;
+//(744px)
+$medium-screen: 46.5em;
+//(1184px)
+$large-screen: 74em;

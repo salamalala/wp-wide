@@ -1,9 +1,16 @@
 @import "normalize";
 
 @import "bourbon/bourbon";
-
+$visual-grid: false;
+$visual-grid-color: yellow;
+$visual-grid-index: front;
+$visual-grid-opacity: 0.1;
+@import "base/grid-settings";
 @import "neat/neat";
 
 @import "base/base";
 
 @import "partials/body";
+@import "partials/header";
+@import "partials/main";
+@import "partials/footer";

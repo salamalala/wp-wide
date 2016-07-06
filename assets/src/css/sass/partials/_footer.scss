@@ -1,0 +1,27 @@
+.footer {
+  font-family: $heading-font-family;
+  padding: $spacing-lg 0;
+  background-color: $medium-gray;
+  color: $offwhite;
+
+  &__content {
+    @include display(flex);
+    @include outer-container();
+  }
+
+  &__copyright {
+    @include flex-grow(2);
+    margin: 0;
+  }
+
+  &__impressum {
+    text-transform: uppercase;
+    a {
+      color: $offwhite;
+    }
+  }
+
+  &__address {
+    margin: 0;
+  }
+}

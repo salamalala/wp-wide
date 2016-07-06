@@ -1,0 +1,42 @@
+.header {
+position: relative;
+height: 1px;
+
+  &__logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -#{$spacing-xs};
+    width: 180px;
+  }
+}
+
+.navigation {
+  position: fixed;
+  left: 0;
+  top: 250px;
+
+  &__menu {
+    a {
+      display: inline-block;
+      width: 250px;
+      padding-top: $spacing-xs;
+      padding-bottom: $spacing-xs;
+      padding-left: $spacing-lg;
+      margin-bottom: $spacing-sm;
+      background-color: $light-gray;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-family: $heading-font-family;
+      color: $medium-gray;
+      transition: all 0.2s ease-out;
+
+      &:active,
+      &:focus,
+      &:hover {
+        color: $dark-gray;
+        width: 270px;
+      }
+    }
+  }
+}

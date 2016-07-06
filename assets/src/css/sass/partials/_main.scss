@@ -1,0 +1,9 @@
+.main {
+  @include outer-container();
+  margin-top: 300px;
+
+  &__wrapper {
+    @include span-columns(9);
+    @include shift(3);
+  }
+}

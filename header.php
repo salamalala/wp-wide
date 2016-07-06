@@ -37,8 +37,8 @@
 
 	<div class="body__wrapper">
 
-		<header role="header">
-      
+		<header role="header" class="header">
+
       <div class="header__logo">
 					<a href="<?php echo get_home_url(); ?>">
 						<img src= "<?php
@@ -48,8 +48,23 @@
 					</a>
 			</div>
 
+      <nav role="navigation" class="navigation">
+					<?php
+
+					$args = array(
+						'container'       => 'ul',
+						'menu_class'      => 'navigation__menu',
+						'depth'           => 0
+						);
+					wp_nav_menu( $args )
+
+					?>
+			</nav>
+
 		</header>
 
-    <main role="main">
+    <main role="main" class="main">
 
-      <h1>this is main</h1>
+      <div class="main__wrapper">
+
+        <h1>this is main</h1>
