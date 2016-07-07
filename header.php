@@ -68,8 +68,8 @@
 
 		</header>
 
-    <main role="main" class="main">
+    <main role="main" class="main outer-container">
 
-      <div class="main__wrapper">
+      <div class="wrapper">
 
         <h1>this is main</h1>

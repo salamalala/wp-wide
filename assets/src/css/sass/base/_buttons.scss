@@ -2,18 +2,19 @@
 button {
   @include appearance(none);
   -webkit-font-smoothing: antialiased;
-  background-color: $light-gray;
+  background-color: transparent;
   border-radius: $base-border-radius;
-  border: none;
+  border: $blue 3px solid;
   color: $medium-gray;
   cursor: pointer;
   display: inline-block;
-  font-family: $base-font-family;
+  font-family: $heading-font-family;
   font-size: $font-size-base;
   font-weight: 600;
-  line-height: 1;
-  padding: 0.75em 1em;
+  letter-spacing: $letter-spacing-lg;
+  padding: $spacing-sm $spacing-lg;
   text-decoration: none;
+  text-transform: uppercase;
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;

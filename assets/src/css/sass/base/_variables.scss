@@ -22,9 +22,11 @@ $font-size-xxl: modular-scale(4);
 $base-line-height: 1.5;
 $heading-line-height: 1.2;
 
+
 // Other Sizes
 $base-border-radius: 0;
 $base-z-index: 0;
+$letter-spacing-lg: 1.2px;
 
 //Spacing with modular scales
 $spacing-xxs: modular-scale(-3);
@@ -41,6 +43,7 @@ $spacing-xxl: modular-scale(5);
 $green: #CCCC00;
 $red: #E06767;
 $blue: #497FA3;
+$light-blue: lighten($blue, 45%);
 
 $dark-gray: #313336;
 $medium-gray: #565B5E;
@@ -59,3 +62,7 @@ $base-border: 2px solid $base-border-color;
 // Forms
 $form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
 $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($blue, $lightness: -5%, $alpha: -0.3);
+
+
+// Hover transition
+$hover-transition: all 0.1s ease-out;

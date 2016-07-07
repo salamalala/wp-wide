@@ -9,7 +9,7 @@ input,
 label,
 select {
   display: block;
-  font-family: $base-font-family;
+  font-family: $heading-font-family;
   font-size: $font-size-base;
 }
 
@@ -29,15 +29,16 @@ label {
 #{$all-text-inputs},
 select[multiple=multiple],
 textarea {
-  background-color: $base-background-color;
-  border: $base-border;
+  background-color: $offwhite;
+  border: $blue;
   border-radius: $base-border-radius;
   box-shadow: $form-box-shadow;
   box-sizing: border-box;
-  font-family: $base-font-family;
+  color: $medium-gray;
+  font-family: $heading-font-family;
   font-size: $font-size-base;
   margin-bottom: $spacing-base / 2;
-  padding: $spacing-base / 3;
+  padding: $spacing-sm $spacing-lg;
   transition: border-color;
   width: 100%;
 
@@ -51,6 +52,20 @@ textarea {
     outline: none;
   }
 }
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $dark-gray;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: $dark-gray;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: $dark-gray;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: $dark-gray;
+}
+
 
 textarea {
   resize: vertical;
@@ -75,4 +90,16 @@ select {
   margin-bottom: $spacing-base;
   max-width: 100%;
   width: auto;
+}
+
+::-webkit-input-placeholder {
+ color: #45454A;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+ color: #45454A;
+}
+
+:-ms-input-placeholder {
+ color: #45454A;
 }

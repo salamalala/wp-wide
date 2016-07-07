@@ -1,12 +1,73 @@
 .footer {
   font-family: $heading-font-family;
-  padding: $spacing-lg 0;
   background-color: $medium-gray;
   color: $offwhite;
 
-  &__content {
+  &__support {
+    background-color: $blue;
+  }
+
+  &__newsletter {
+    border: solid 4px $light-blue;
+    margin-top: $spacing-xxl;
+    margin-bottom: $spacing-xxl;
+    padding-top: $spacing-xl;
+    padding-bottom: $spacing-xl;
+    position: relative;
+
+    //Newsletter abonnieren text
+    &:before {
+      content: "Newsletter abonnieren";
+      position: absolute;
+      left: $spacing-xl;
+      top: -25%;
+      padding: 0 $spacing-lg;
+      font-family: $heading-font-family;
+      font-weight: 700;
+      font-size: $font-size-lg;
+      background: $blue;
+      color: $light-blue;
+
+    }
+  }
+
+  &__input[type=email] {
+    @include span-columns(5 of 9);
+    @include shift(1);
+    background-color: $light-blue;
+    border: solid 2px $light-blue;
+
+    &:hover {
+      border-color: darken($light-blue, 10%);
+    }
+
+    &:focus {
+      border-color: $blue;
+      box-shadow: $form-box-shadow-focus;
+      outline: none;
+    }
+  }
+
+  &__submit[type=submit] {
+    @include span-columns(2 of 9);
+    border-color: $light-blue;
+    color: $light-blue;
+    transition: $hover-transition;
+
+    &:active,
+    &:focus,
+    &:hover {
+      background-color: $light-blue;
+      color: $medium-gray;
+    }
+  }
+
+
+//for border animation check greensocket
+
+  &__info {
     @include display(flex);
-    @include outer-container();
+    padding: $spacing-lg 0;
   }
 
   &__copyright {
