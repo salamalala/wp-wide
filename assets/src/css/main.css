@@ -99,7 +99,7 @@ samp {
   font-family: monospace, monospace;
   font-size: 1em; }
 
-button,
+button, .footer__support-button,
 input,
 optgroup,
 select,
@@ -108,25 +108,25 @@ textarea {
   font: inherit;
   margin: 0; }
 
-button {
+button, .footer__support-button {
   overflow: visible; }
 
-button,
+button, .footer__support-button,
 select {
   text-transform: none; }
 
-button,
+button, .footer__support-button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer; }
 
-button[disabled],
+button[disabled], [disabled].footer__support-button,
 html input[disabled] {
   cursor: default; }
 
-button::-moz-focus-inner,
+button::-moz-focus-inner, .footer__support-button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
   padding: 0; }
@@ -176,8 +176,9 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
-button, input[type="button"], input[type="reset"], input[type="submit"],
-button {
+button, .footer__support-button, input[type="button"], input[type="reset"], input[type="submit"],
+button,
+.footer__support-button {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -200,13 +201,16 @@ button {
   user-select: none;
   vertical-align: middle;
   white-space: nowrap; }
-  button:hover, button:focus, input[type="button"]:hover, input[type="button"]:focus, input[type="reset"]:hover, input[type="reset"]:focus, input[type="submit"]:hover, input[type="submit"]:focus,
+  button:hover, .footer__support-button:hover, button:focus, .footer__support-button:focus, input[type="button"]:hover, input[type="button"]:focus, input[type="reset"]:hover, input[type="reset"]:focus, input[type="submit"]:hover, input[type="submit"]:focus,
   button:hover,
-  button:focus {
+  .footer__support-button:hover,
+  button:focus,
+  .footer__support-button:focus {
     background-color: #b6c5d3;
     color: #fff; }
-  button:disabled, input[type="button"]:disabled, input[type="reset"]:disabled, input[type="submit"]:disabled,
-  button:disabled {
+  button:disabled, .footer__support-button:disabled, input[type="button"]:disabled, input[type="reset"]:disabled, input[type="submit"]:disabled,
+  button:disabled,
+  .footer__support-button:disabled {
     cursor: not-allowed;
     opacity: 0.5; }
 
@@ -472,14 +476,21 @@ body {
   background-color: #565B5E;
   color: #F5F5FA; }
   .footer__support {
-    background-color: #497FA3; }
+    background-color: #497FA3;
+    padding-top: 4.2087269129em;
+    padding-bottom: 4.2087269129em; }
   .footer__newsletter {
+    float: left;
+    display: block;
+    margin-right: 4.6511627907%;
+    width: 100%;
     border: solid 4px #e0eaf1;
-    margin-top: 4.2087269129em;
-    margin-bottom: 4.2087269129em;
-    padding-top: 2.368593037em;
-    padding-bottom: 2.368593037em;
+    margin-bottom: 1.776889em;
+    padding-top: 1.776889em;
+    padding-bottom: 1.776889em;
     position: relative; }
+    .footer__newsletter:last-child {
+      margin-right: 0; }
     .footer__newsletter:before {
       content: "Newsletter abonnieren";
       position: absolute;
@@ -498,7 +509,8 @@ body {
     width: 53.488372093%;
     margin-left: 11.6279069767%;
     background-color: #e0eaf1;
-    border: solid 2px #e0eaf1; }
+    border: solid 3px #e0eaf1;
+    margin-bottom: 0; }
     .footer__input[type=email]:last-child {
       margin-right: 0; }
     .footer__input[type=email]:hover {
@@ -520,6 +532,16 @@ body {
     .footer__submit[type=submit]:active, .footer__submit[type=submit]:focus, .footer__submit[type=submit]:hover {
       background-color: #e0eaf1;
       color: #565B5E; }
+  .footer__support-button {
+    width: 45%;
+    text-align: center;
+    border: 3px solid #e0eaf1;
+    color: #e0eaf1; }
+    .footer__support-button:active, .footer__support-button:focus, .footer__support-button:hover {
+      background-color: #e0eaf1;
+      color: #565B5E; }
+    .footer__support-button:last-child {
+      float: right; }
   .footer__info {
     display: -webkit-box;
     display: -moz-box;

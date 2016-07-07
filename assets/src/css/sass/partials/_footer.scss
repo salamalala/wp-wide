@@ -5,14 +5,16 @@
 
   &__support {
     background-color: $blue;
+    padding-top: $spacing-xxl;
+    padding-bottom: $spacing-xxl;
   }
 
   &__newsletter {
+    @include span-columns(9 of 9);
     border: solid 4px $light-blue;
-    margin-top: $spacing-xxl;
-    margin-bottom: $spacing-xxl;
-    padding-top: $spacing-xl;
-    padding-bottom: $spacing-xl;
+    margin-bottom: $spacing-lg;
+    padding-top: $spacing-lg;
+    padding-bottom: $spacing-lg;
     position: relative;
 
     //Newsletter abonnieren text
@@ -35,7 +37,8 @@
     @include span-columns(5 of 9);
     @include shift(1);
     background-color: $light-blue;
-    border: solid 2px $light-blue;
+    border: solid 3px $light-blue;
+    margin-bottom: 0;
 
     &:hover {
       border-color: darken($light-blue, 10%);
@@ -62,8 +65,24 @@
     }
   }
 
+  &__support-button {
+    width: 45%;
+    @extend button;
+    text-align: center;
+    border: 3px solid $light-blue;
+    color: $light-blue;
 
-//for border animation check greensocket
+    &:active,
+    &:focus,
+    &:hover {
+      background-color: $light-blue;
+      color: $medium-gray;
+    }
+
+    &:last-child {
+      float:right;
+    }
+  }
 
   &__info {
     @include display(flex);

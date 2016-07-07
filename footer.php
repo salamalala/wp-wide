@@ -19,9 +19,16 @@
 
 				<div class="footer__support">
 					<div class="outer-container">
-						<div class="footer__newsletter wrapper">
-							<input class="footer__input" type="email" placeholder="Emailadresse"/>
-							<input class="footer__submit" type="submit" name="name" value="Anmelden">
+						<div class="wrapper">
+
+							<div class="footer__newsletter">
+								<input class="footer__input" type="email" placeholder="Emailadresse"/>
+								<input class="footer__submit" type="submit" name="name" value="Anmelden">
+							</div>
+
+							<a class="footer__support-button" href="#">Mitmachen</a>
+							<a class="footer__support-button" href="#">Unterstützen</a>
+							
 						</div>
 					</div>
 				</div>
