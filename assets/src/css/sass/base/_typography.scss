@@ -45,14 +45,31 @@ p {
 }
 
 a {
+  position: relative;
+  padding-bottom: $spacing-xxs;
   color: $blue;
   text-decoration: none;
   transition: color 0.1s linear;
 
+  &:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: $offwhite;
+    opacity: 0;
+    transition: height 0.3s, opacity 0.3s, transform 0.3s;
+    transform: translateY(-#{$spacing-xxs});
+  }
+
   &:active,
-  &:focus,
-  &:hover {
-    color: darken($blue, 15%);
+  &:focus:after,
+  &:hover:after {
+    height: 2px;
+    opacity: 1;
+    transform: translateY(0px);
   }
 
   &:active,
