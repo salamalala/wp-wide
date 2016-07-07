@@ -61,6 +61,11 @@
 					?>
 			</nav>
 
+      <div class="language">
+        <a href="#" class="language__item language__item--active">DE</a>
+        <a href="#" class="language__item">EN</a>
+      </div>
+
 		</header>
 
     <main role="main" class="main">

@@ -40,3 +40,42 @@ height: 1px;
     }
   }
 }
+
+.language {
+  position: fixed;
+  right: $spacing-base;
+  top: 250px;
+
+  &__item {
+    display: block;
+    padding: $spacing-xxs;
+    margin-bottom: $spacing-sm;
+    border: $base-border;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: $heading-font-family;
+    color: $medium-gray;
+    background-color: $offwhite;
+    transition: all 0.2s ease-out;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: $offwhite;
+      background-color: $medium-gray;
+    }
+
+    &--active {
+      color: $offwhite;
+      background-color: $medium-gray;
+      transition: all 0.2s ease-out;
+
+      &:active,
+      &:focus,
+      &:hover {
+        color: $offwhite;
+        background-color: $medium-gray;
+      }
+    }
+  }
+}

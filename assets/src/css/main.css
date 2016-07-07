@@ -210,8 +210,8 @@ button {
     opacity: 0.5; }
 
 fieldset {
-  background-color: #494c51;
-  border: 1px solid #313336;
+  background-color: #6e7579;
+  border: 2px solid #565B5E;
   margin: 0 0 0.7501875469em;
   padding: 1em; }
 
@@ -234,7 +234,7 @@ input[type="color"], input[type="date"], input[type="datetime"], input[type="dat
 select[multiple=multiple],
 textarea {
   background-color: #fff;
-  border: 1px solid #313336;
+  border: 2px solid #565B5E;
   border-radius: 0;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
   box-sizing: border-box;
@@ -247,7 +247,7 @@ textarea {
   input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="email"]:hover, input[type="month"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="text"]:hover, input[type="time"]:hover, input[type="url"]:hover, input[type="week"]:hover, textarea:hover,
   select[multiple=multiple]:hover,
   textarea:hover {
-    border-color: #191a1b; }
+    border-color: #3e4143; }
   input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="email"]:focus, input[type="month"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="week"]:focus, textarea:focus,
   select[multiple=multiple]:focus,
   textarea:focus {
@@ -304,13 +304,13 @@ table {
   width: 100%; }
 
 th {
-  border-bottom: 1px solid #0d0d0e;
+  border-bottom: 1px solid #313436;
   font-weight: 600;
   padding: 0.7501875469em 0;
   text-align: left; }
 
 td {
-  border-bottom: 1px solid #313336;
+  border-bottom: 2px solid #565B5E;
   padding: 0.7501875469em 0; }
 
 tr,
@@ -410,6 +410,32 @@ body {
       color: #313336;
       width: 270px; }
 
+.language {
+  position: fixed;
+  right: 1em;
+  top: 250px; }
+  .language__item {
+    display: block;
+    padding: 0.4221915645em;
+    margin-bottom: 0.7501875469em;
+    border: 2px solid #565B5E;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: "sofia-pro", sans-serif;
+    color: #565B5E;
+    background-color: #F5F5FA;
+    transition: all 0.2s ease-out; }
+    .language__item:active, .language__item:focus, .language__item:hover {
+      color: #F5F5FA;
+      background-color: #565B5E; }
+    .language__item--active {
+      color: #F5F5FA;
+      background-color: #565B5E;
+      transition: all 0.2s ease-out; }
+      .language__item--active:active, .language__item--active:focus, .language__item--active:hover {
+        color: #F5F5FA;
+        background-color: #565B5E; }
+
 .main {
   max-width: 74em;
   margin-left: auto;
@@ -453,9 +479,11 @@ body {
     -moz-flex-grow: 2;
     flex-grow: 2;
     -ms-flex-positive: 2;
-    margin: 0; }
+    margin: 0;
+    font-size: 85%; }
   .footer__impressum {
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    font-weight: 700; }
     .footer__impressum a {
       color: #F5F5FA; }
   .footer__address {

@@ -27,6 +27,7 @@ $base-border-radius: 0;
 $base-z-index: 0;
 
 //Spacing with modular scales
+$spacing-xxs: modular-scale(-3);
 $spacing-xs: modular-scale(-2);
 $spacing-sm: modular-scale(-1);
 $spacing-base: modular-scale(0);
@@ -52,8 +53,8 @@ $base-background-color: #fff;
 $base-font-color: $dark-gray;
 
 // Border
-$base-border-color: $dark-gray;
-$base-border: 1px solid $base-border-color;
+$base-border-color: $medium-gray;
+$base-border: 2px solid $base-border-color;
 
 // Forms
 $form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);

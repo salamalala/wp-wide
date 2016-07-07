@@ -17,6 +17,13 @@
 
 		<footer class="footer" role="footer">
 
+			<div class="newsletter">
+				<div>
+					<input type="text" placeholder="Emailadresse"/>
+				</div>
+			</div>
+			
+
 			<div class="footer__content">
 				<p class="footer__copyright">
 					© 2016 Wide Switzerland | <span class="footer__impressum"><a href="#">Impressum</a></span>
