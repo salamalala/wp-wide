@@ -27,7 +27,7 @@ h6 {
 }
 
 h1 {
-  font-weight: 500;
+  font-weight: 700;
   font-size: $font-size-xl;
 }
 
@@ -51,6 +51,13 @@ a {
   text-decoration: none;
   transition: color 0.1s linear;
 
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+
+.footer a {
   &:after {
     content: '';
     position: absolute;
@@ -70,11 +77,6 @@ a {
     height: 2px;
     opacity: 1;
     transform: translateY(0px);
-  }
-
-  &:active,
-  &:focus {
-    outline: none;
   }
 }
 

@@ -150,3 +150,14 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Load custom field file.
+ */
+require get_template_directory() . '/inc/acf.php';
+
+
+//added functions
+
+//remove added p tags
+remove_filter('the_content', 'wpautop');

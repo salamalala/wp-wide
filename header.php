@@ -71,5 +71,3 @@
     <main role="main" class="main outer-container">
 
       <div class="wrapper">
-
-        <h1>this is main</h1>
