@@ -263,19 +263,19 @@ textarea {
 
 ::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
-  color: #2D3236; }
+  color: #383E42; }
 
 ::-moz-placeholder {
   /* Firefox 19+ */
-  color: #2D3236; }
+  color: #383E42; }
 
 :-ms-input-placeholder {
   /* IE 10+ */
-  color: #2D3236; }
+  color: #383E42; }
 
 :-moz-placeholder {
   /* Firefox 18- */
-  color: #2D3236; }
+  color: #383E42; }
 
 textarea {
   resize: vertical; }
@@ -356,7 +356,7 @@ body {
   -ms-font-feature-settings: "kern", "liga", "pnum";
   font-feature-settings: "kern", "liga", "pnum";
   -webkit-font-smoothing: antialiased;
-  color: #2D3236;
+  color: #383E42;
   font-family: "rooney-web", serif;
   font-size: 0.8em;
   line-height: 1.5; }
@@ -459,7 +459,7 @@ body {
     color: #4F585E;
     transition: all 0.1s ease-out; }
     .nav__menu-item a:active, .nav__menu-item a:focus, .nav__menu-item a:hover {
-      color: #2D3236; }
+      color: #383E42; }
   .nav__menu-item > a:active, .nav__menu-item > a:focus, .nav__menu-item > a:hover {
     width: 110%; }
   .nav__menu-item--more {
@@ -640,7 +640,7 @@ body {
   float: left;
   display: block;
   margin-right: 3.4482758621%;
-  width: 74.1379310345%;
+  width: 65.5172413793%;
   margin-left: 25.8620689655%; }
   .wrapper:last-child {
     margin-right: 0; }

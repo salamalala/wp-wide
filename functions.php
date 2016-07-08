@@ -155,13 +155,57 @@ remove_filter('the_content', 'wpautop');
 
 // Walker: outputting HTML for custom menus My_Sub_Menu allows custom class name, in this case nav__submenu
 class My_Sub_Menu extends Walker_Nav_Menu {
+  function start_lvl(&$output, $depth = 0, $args = array()) {
+    $indent = str_repeat("\t", $depth);
+    $output .= "\n$indent<ul class=\"nav__submenu\">\n";
+  }
+  function end_lvl(&$output, $depth = 0, $args = array()) {
+    $indent = str_repeat("\t", $depth);
+    $output .= "$indent</ul>\n";
+  }
+}
 
-	  function start_lvl(&$output, $depth = 0, $args = array()) {
-	    $indent = str_repeat("\t", $depth);
-	    $output .= "\n$indent<ul class=\"nav__submenu\">\n";
-	  }
-	  function end_lvl(&$output, $depth = 0, $args = array()) {
-	    $indent = str_repeat("\t", $depth);
-	    $output .= "$indent</ul>\n";
-	  }
-	}
+
+/**
+*create custom post type Aktivitäten
+*/
+function create_posttype() {
+
+	register_post_type( 'aktivitaet',
+	// CPT Options
+		array(
+			'labels' => array(
+				'name' => 'Aktivitäten',
+				'singular_name' => 'Aktivität',
+				'add_new'            => 'Neue Aktivität',
+		    'add_new_item'       => 'Neue Aktivität hinzufügen',
+		    'edit_item'          => 'Aktivität bearbeiten',
+		    'new_item'           => 'Neue Aktivität',
+		    'all_items'          => 'Alle Aktivitäten',
+		    'view_item'          => 'Aktivität ansehen',
+		    'search_items'       => 'Aktivitäten suchen',
+		    'not_found'          => 'Keine Aktivitäten gefunden',
+		    'not_found_in_trash' => 'Keine Aktivitäten im Papierkorb gefunden',
+		    'parent_item_colon'  => '',
+		    'menu_name'          => 'Aktivitäten'
+			),
+			'supports' => array('title', 'thumbnail', 'revisions','author'),
+			'rewrite' => array('slug' => 'aktivität'),
+			// You can associate this CPT with a taxonomy or custom taxonomy.
+			'hierarchical'        => true,
+			'public'              => true,
+			'show_ui'             => true,
+			'show_in_menu'        => true,
+			'show_in_nav_menus'   => true,
+			'show_in_admin_bar'   => true,
+			'menu_position'       => 5,
+			'can_export'          => true,
+			'has_archive'         => true,
+			'exclude_from_search' => false,
+			'publicly_queryable'  => true,
+			'capability_type'     => 'page',
+		)
+	);
+}
+// Hooking up our function to theme setup
+add_action( 'init', 'create_posttype' );

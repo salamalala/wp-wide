@@ -21,4 +21,6 @@
 
   </div>
 
+  <h2>Aktuelles</h2>
+
 <?php get_footer(); ?>
