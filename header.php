@@ -48,13 +48,14 @@
 					</a>
 			</div>
 
-      <nav role="navigation" class="navigation">
+      <nav role="navigation" class="nav">
 					<?php
 
 					$args = array(
 						'container'       => 'ul',
-						'menu_class'      => 'navigation__menu',
-						'depth'           => 0
+						'menu_class'      => 'nav__menu',
+						'depth'           => 0,
+						'walker'          => new My_Sub_Menu()
 						);
 					wp_nav_menu( $args )
 

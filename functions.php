@@ -80,17 +80,7 @@ function wide_setup() {
 endif;
 add_action( 'after_setup_theme', 'wide_setup' );
 
-/**
- * Set the content width in pixels, based on the theme's design and stylesheet.
- *
- * Priority 0 to make it available to lower priority callbacks.
- *
- * @global int $content_width
- */
-function wide_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'wide_content_width', 640 );
-}
-add_action( 'after_setup_theme', 'wide_content_width', 0 );
+
 
 /**
  * Register widget area.
@@ -161,3 +151,17 @@ require get_template_directory() . '/inc/acf.php';
 
 //remove added p tags
 remove_filter('the_content', 'wpautop');
+
+
+// Walker: outputting HTML for custom menus My_Sub_Menu allows custom class name, in this case nav__submenu
+class My_Sub_Menu extends Walker_Nav_Menu {
+
+	  function start_lvl(&$output, $depth = 0, $args = array()) {
+	    $indent = str_repeat("\t", $depth);
+	    $output .= "\n$indent<ul class=\"nav__submenu\">\n";
+	  }
+	  function end_lvl(&$output, $depth = 0, $args = array()) {
+	    $indent = str_repeat("\t", $depth);
+	    $output .= "$indent</ul>\n";
+	  }
+	}
