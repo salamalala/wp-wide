@@ -5,25 +5,15 @@
   //to force same line height despite bigger letters in title
   line-height: 1.6em;
 
+  &__title {
+    @include partly-underlined(5px, 3px, $blue);
+  }
+
   //to move both texts together incl all by wp added p tags.
   p {
     display: inline;
   }
 
-  &__title {
-    font-size: $font-size-lg;
-    font-weight: 600;
-    position: relative;
 
-    &:after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      background-color: $blue;
-      height: 6px;
-      width: 75%;
-    }
-  }
 
 }

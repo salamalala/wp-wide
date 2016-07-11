@@ -7,14 +7,14 @@ height: 1px;
     left: 50%;
     transform: translateX(-50%);
     top: -#{$spacing-xs};
-    width: 180px;
+    width: 220px;
   }
 }
 
 .nav {
   position: fixed;
   left: 0;
-  top: 250px;
+  top: 35%;
 
   &__menu-item {
     a {
@@ -90,7 +90,7 @@ height: 1px;
 .language {
   position: fixed;
   right: $spacing-base;
-  top: 250px;
+  top: 35%;
 
   &__item {
     display: block;

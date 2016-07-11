@@ -375,7 +375,7 @@ h5,
 h6 {
   font-family: "sofia-pro", sans-serif;
   line-height: 1.2;
-  margin: 0 0 0.7501875469em; }
+  margin: 0 0 1em; }
 
 h1 {
   font-weight: 700;
@@ -439,12 +439,12 @@ body {
     left: 50%;
     transform: translateX(-50%);
     top: -0.5627813555em;
-    width: 180px; }
+    width: 220px; }
 
 .nav {
   position: fixed;
   left: 0;
-  top: 250px; }
+  top: 35%; }
   .nav__menu-item a {
     display: inline-block;
     width: 220px;
@@ -486,7 +486,7 @@ body {
 .language {
   position: fixed;
   right: 1em;
-  top: 250px; }
+  top: 35%; }
   .language__item {
     display: block;
     padding: 0.237601541em;
@@ -513,6 +513,7 @@ body {
   margin-top: 300px; }
 
 .footer {
+  margin-top: 4.2087269129em;
   font-family: "sofia-pro", sans-serif;
   background-color: #4F585E;
   color: #F5F5FA; }
@@ -612,20 +613,61 @@ body {
   font-size: 1.333em;
   margin-bottom: 1.776889em;
   line-height: 1.6em; }
+  .entrytext__title {
+    position: relative;
+    display: inline; }
+    .entrytext__title:after {
+      content: "";
+      position: absolute;
+      width: 80%;
+      height: 5px;
+      left: 0;
+      bottom: 3px;
+      background-color: #3B79A3; }
   .entrytext p {
     display: inline; }
-  .entrytext__title {
-    font-size: 1.776889em;
-    font-weight: 600;
-    position: relative; }
-    .entrytext__title:after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      background-color: #3B79A3;
-      height: 6px;
-      width: 75%; }
+
+.news__item {
+  position: relative;
+  margin-bottom: 4.2087269129em; }
+  .news__item:before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 6px;
+    height: 100%;
+    left: -1em;
+    bottom: 0;
+    background-color: #CCCC00;
+    animation: fadein 0.5s forwards ease-out; }
+
+.news__title {
+  position: relative;
+  display: inline; }
+  .news__title:after {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 4px;
+    left: 0;
+    bottom: -5px;
+    background-color: #383E42; }
+
+.news__category {
+  color: #CCCC00;
+  position: absolute;
+  left: -1.776889em;
+  bottom: -0.7501875469em;
+  font-size: 0.7501875469em;
+  letter-spacing: 1.2px; }
+
+@keyframes fadein {
+  0% {
+    height: 0;
+    opacity: 0; }
+  100% {
+    height: 100%;
+    opacity: 1; } }
 
 .outer-container {
   max-width: 74em;
@@ -644,5 +686,9 @@ body {
   margin-left: 25.8620689655%; }
   .wrapper:last-child {
     margin-right: 0; }
+
+.rotated-text {
+  transform-origin: left bottom;
+  transform: rotate(-90deg); }
 
 /*# sourceMappingURL=main.css.map */

@@ -6,6 +6,8 @@ $visual-grid-color: yellow;
 $visual-grid-index: front;
 $visual-grid-opacity: 0.1;
 @import "base/grid-settings";
+@import "base/mixins";
+
 @import "neat/neat";
 
 @import "base/base";
@@ -16,6 +18,8 @@ $visual-grid-opacity: 0.1;
 @import "partials/footer";
 
 @import "partials/entrytext";
+@import "partials/news";
 
 @import "utility/outer-container";
 @import "utility/wrapper";
+@import "utility/rotated-text";

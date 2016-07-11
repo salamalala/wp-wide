@@ -12,15 +12,38 @@
 <?php get_header(); ?>
 
   <div class="entrytext">
-
+    <h1 class="entrytext__title"><?php the_field('eingangstext_titel'); ?> </h1>
     <p>
-      <span class="entrytext__title"> <?php the_field('eingangstext_titel'); ?> </span>
-
       <?php the_field('eingangstext'); ?>
     </p>
 
   </div>
 
-  <h2>Aktuelles</h2>
+
+  <?php if( have_rows('news') ): ?>
+
+    <h2>Aktuelles:</h2>
+    <div class="news">
+
+	   <?php while( have_rows('news') ): the_row();
+
+  		$titel = get_sub_field('titel');
+  		$text = get_sub_field('text');
+  		$kategorie = get_sub_field('kategorie');
+      $page_link = get_sub_field('link_zur_seite');
+  		?>
+
+      <section class="news__item">
+        <h3 class="news__category rotated-text"><?php echo $kategorie; ?></h3>
+        <h2 class="news__title"><?php echo $titel; ?></h2>
+        <p class="news__text"><?php echo $text; ?></p>
+        <p>Mehr Infos: <a href="<?php echo $page_link; ?>">hier</a> </p>
+      </section>
+
+    <?php endwhile; ?>
+
+    </div>
+
+  <?php endif; ?>
 
 <?php get_footer(); ?>

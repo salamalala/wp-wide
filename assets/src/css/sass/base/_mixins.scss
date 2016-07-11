@@ -1,0 +1,14 @@
+@mixin partly-underlined($height, $bottom, $color)  {
+  position: relative;
+  display: inline;
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: $height;
+    left: 0;
+    bottom: $bottom;
+    background-color: $color;
+  }
+}
