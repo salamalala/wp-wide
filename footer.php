@@ -28,7 +28,7 @@
 
 							<a class="footer__support-button" href="#">Mitmachen</a>
 							<a class="footer__support-button" href="#">Unterstützen</a>
-							
+
 						</div>
 					</div>
 				</div>
@@ -53,6 +53,7 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<script  type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/dist/js/main-min.js"></script>
 
 	</body>
