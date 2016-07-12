@@ -1,1 +1,1 @@
-var hello="hello",you="you";
+var emptyPTag=function(){$("p:empty").remove()},sectionAnimationTriggered=function(){var a=new ScrollMagic.Controller;$(".news section").each(function(b){var c=b++;b>1&&new ScrollMagic.Scene({triggerElement:".news section:nth-child("+c+")",reverse:!1}).setClassToggle(".news section:nth-child("+c+")","news__item--animation").addTo(a)}),new ScrollMagic.Scene({triggerElement:".news section:last-child",reverse:!1}).setClassToggle(".news section:last-child","news__item--animation").addTo(a)};$(function(){emptyPTag(),sectionAnimationTriggered()});

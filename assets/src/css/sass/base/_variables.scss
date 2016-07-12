@@ -24,7 +24,7 @@ $font-size-xxl: modular-scale(4);
 
 // Line height
 $base-line-height: 1.5;
-$heading-line-height: 1.2;
+$heading-line-height: 1.4;
 
 
 // Other Sizes
@@ -48,9 +48,9 @@ $spacing-xxl: modular-scale(5);
 $green: #CCCC00;
 $red: #E05353;
 $blue: #3B79A3;
-$light-blue: lighten($blue, 45%);
+$light-blue: lighten($blue, 50%);
 
-$dark-gray: #383E42;
+$dark-gray: #3E454A;
 $medium-gray: #4F585E;
 $light-gray: #E6EBF0;
 $offwhite: #F5F5FA;

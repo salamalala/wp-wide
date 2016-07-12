@@ -23,7 +23,7 @@ h5,
 h6 {
   font-family: $heading-font-family;
   line-height: $heading-line-height;
-  margin: 0 0 $spacing-base;
+  margin: 0 0 $spacing-sm;
 }
 
 h1 {
@@ -50,7 +50,6 @@ br {
 
 a {
   position: relative;
-  padding-bottom: $spacing-xxs;
   color: $blue;
   text-decoration: none;
   transition: color 0.1s linear;
@@ -61,27 +60,13 @@ a {
   }
 }
 
-.footer a {
-  &:after {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background: $offwhite;
-    opacity: 0;
-    transition: height 0.3s, opacity 0.3s, transform 0.3s;
-    transform: translateY(-#{$spacing-xxs});
-  }
+.main a {
+  margin: 0;
+  @include link-underlined($blue);
+}
 
-  &:active,
-  &:focus:after,
-  &:hover:after {
-    height: 2px;
-    opacity: 1;
-    transform: translateY(0px);
-  }
+.footer a {
+  @include link-underlined($offwhite);
 }
 
 img,

@@ -3,10 +3,12 @@
   font-size: $font-size-md;
   margin-bottom: $spacing-lg;
   //to force same line height despite bigger letters in title
-  line-height: 1.6em;
+  line-height: 1.7em;
 
   &__title {
-    @include partly-underlined(5px, 3px, $blue);
+    display: inline;
+    line-height: 1;
+    @include partly-underlined(5px, 3px, $dark-gray);
   }
 
   //to move both texts together incl all by wp added p tags.

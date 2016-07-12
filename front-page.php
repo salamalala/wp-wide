@@ -22,7 +22,7 @@
 
   <?php if( have_rows('news') ): ?>
 
-    <h2>Aktuelles:</h2>
+    <h1>Aktuelles:</h1>
     <div class="news">
 
 	   <?php while( have_rows('news') ): the_row();
