@@ -42,33 +42,38 @@
       <div class="header__logo">
 					<a href="<?php echo get_home_url(); ?>">
 						<img src= "<?php
-	            echo get_template_directory_uri(); ?>/assets/img/wide_switzerland_deflogo.svg"
+	            echo get_template_directory_uri(); ?>/assets/img/wide_switzerland_deflogo_white.svg"
 	            alt="Logo Wide Switzerland"
 	            >
 					</a>
 			</div>
 
-      <nav role="navigation" class="nav">
-					<?php
+      <div class="nav">
+        <!-- <div > -->
+          <a class="nav__menu-button" id="js-mobile-menu" href="javascript:void(0)">Menu</a>
+        <!-- </div> -->
+        <nav role="navigation" id="nav">
+            <?php
 
-					$args = array(
-						'container'       => 'ul',
-						'menu_class'      => 'nav__menu',
-						'depth'           => 0,
-						'walker'          => new My_Sub_Menu()
-						);
-					wp_nav_menu( $args )
+            $args = array(
+              'container'       => 'ul',
+              'menu_class'      => 'nav__list show',
+              'menu_id'         => 'js-navigation-menu',
+              'depth'           => 0,
+              'walker'          => new My_Sub_Menu()
+              );
+            wp_nav_menu( $args )
 
-					?>
-			</nav>
+            ?>
+        </nav>
+      </div>
 
-      <div class="language">
+
+      <div class="language" id="language">
         <a href="#" class="language__item language__item--active">DE</a>
         <a href="#" class="language__item">EN</a>
       </div>
 
 		</header>
 
-    <main role="main" class="main outer-container">
-
-      <div class="wrapper">
+    <main role="main" class="main">

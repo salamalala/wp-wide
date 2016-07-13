@@ -11,38 +11,199 @@ height: 1px;
   }
 }
 
+
 .nav {
-  position: fixed;
-  left: 0;
-  top: 35%;
+  position: absolute;;
+  width: 45%;
+  z-index: 10;
+
+  @include media($small-screen) {
+    width: 40%;
+  }
+
+  @include media($medium-screen) {
+    position: fixed;
+    top: 35%;
+    left: 0;
+    width: auto;
+  }
+
+  // on small screens only
+  &__menu-button {
+    display: inline-block;
+    position: relative;
+    padding-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: $medium-gray;
+    color: $offwhite;
+    text-transform: uppercase;
+    font-family: $heading-font-family;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+
+    @include media($small-screen) {
+      padding-top: 40px;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-bottom: 15px;
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+      background-color: $dark-gray;
+      color: $white;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 10px;
+      height: 3px;
+      @include calc(width, "100% - 20px");
+      background: $offwhite;
+      transition: $hover-transition;
+
+      @include media($small-screen) {
+        @include calc(width, "100% - 30px");
+        top: 20px;
+        height: 4px;
+      }
+    }
+
+  	&:after {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 20px;
+      height: 3px;
+      @include calc(width, "100% - 20px");
+      background: $offwhite;
+      transition: $hover-transition;
+
+      @include media($small-screen) {
+        @include calc(width, "100% - 30px");
+        top: 30px;
+        height: 4px;
+      }
+    }
+
+  	&.close {
+  		&:before {
+        transform: rotate(45deg);
+        top: 15px;
+        left: 18px;
+        width: 20px;
+
+        @include media($small-screen) {
+          top: 20px;
+          left: 25px;
+          width: 25px;
+        }
+      }
+
+  		&:after {
+        transform: rotate(-45deg);
+        top: 15px;
+        left: 18px;
+        width: 20px;
+
+        @include media($small-screen) {
+          top: 20px;
+          left: 25px;
+          width: 25px;
+        }
+      }
+  	}
+
+    @include media ($medium-screen) {
+      display: none;
+    }
+  }
+
+  &__list {
+    clear: both;
+    display: none;
+    margin: 0 auto;
+    overflow: visible;
+    padding: 0;
+    width: 100%;
+
+    @include media ($medium-screen) {
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+  }
 
   &__menu-item {
-    a {
-      display: inline-block;
+    width: 100%;
+
+    @include media($medium-screen) {
+      width: 180px;
+    }
+
+    @include media($large-screen) {
       width: 220px;
-      padding-top: $spacing-xs;
-      padding-bottom: $spacing-xs;
-      padding-left: $spacing-lg;
+    }
+
+    a {
+      display: block;
+      width: 100%;
+      padding-top: $spacing-sm;
+      padding-bottom: $spacing-sm;
+      padding-left: 10px;
       margin-bottom: $spacing-sm;
-      background-color: $light-gray;
       font-weight: 700;
       text-transform: uppercase;
       font-family: $heading-font-family;
-      color: $medium-gray;
+      line-height: 1;
+      background-color: $medium-gray;
+      color: $offwhite;
       transition: $hover-transition;
+
+      @include media($small-screen) {
+        padding-left: 15px;
+      }
+
+      @include media($medium-screen) {
+        display: inline-block;
+        width: 180px;
+        padding-left: $spacing-lg;
+        background-color: $light-gray;
+        color: $medium-gray;
+      }
+
+      @include media($large-screen) {
+        width: 220px;
+      }
 
       &:active,
       &:focus,
       &:hover {
-        color: $dark-gray;
+        background-color: $dark-gray;
+        color: $white;
+
+        @include media($medium-screen) {
+          background-color: $light-gray;
+          color: $dark-gray;
+        }
       }
     }
 
     > a {
-      &:active,
-      &:focus,
-      &:hover {
-        width: 110%;
+      @include media($medium-screen) {
+        &:active,
+        &:focus,
+        &:hover {
+          width: 110%;
+        }
       }
     }
 
@@ -76,7 +237,11 @@ height: 1px;
       display: block;
       padding-right: 0;
       margin-left: $spacing-base;
-      width: calc(220px - #{$spacing-base});
+
+
+      @include media($medium-screen) {
+        width: calc(220px - #{$spacing-base});
+      }
 
       a {
         display: inline-block;
@@ -88,13 +253,22 @@ height: 1px;
 }
 
 .language {
-  position: fixed;
-  right: $spacing-base;
-  top: 35%;
+  position: absolute;
+  right: 0;
+  margin-top: 10px;
+  line-height: 1;
+
+  @include media($medium-screen) {
+    position: fixed;
+    right: $spacing-base;
+    top: 35%;
+    margin: 0;
+  }
 
   &__item {
-    display: block;
-    padding: $spacing-xxs;
+    display: inline-block;
+    // to get the same padding than on the nav elements
+    @include calc(padding, "#{$spacing-sm} - 2px");
     margin-bottom: $spacing-sm;
     border: $base-border;
     font-weight: 700;
@@ -103,6 +277,10 @@ height: 1px;
     color: $medium-gray;
     background-color: $offwhite;
     transition: all 0.2s ease-out;
+
+    @include media($medium-screen) {
+      display: block;
+    }
 
     &:active,
     &:focus,

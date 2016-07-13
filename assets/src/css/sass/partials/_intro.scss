@@ -1,0 +1,24 @@
+.intro {
+  background-color: $blue;
+  color: $offwhite;
+  margin-bottom: $spacing-xxl;
+  padding-top: 20%;
+
+  &__content {
+    padding: $spacing-xl 0;
+    font-family: $heading-font-family;
+    font-size: $font-size-md;
+    //to force same line height despite bigger letters in title
+    line-height: 1.7em;
+  }
+
+  &__title {
+    display: inline;
+    line-height: 1;
+    @include partly-underlined(4px, 4px, $offwhite);
+  }
+
+  &__paragraph {
+    display: inline;
+  }
+}

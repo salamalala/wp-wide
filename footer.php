@@ -11,8 +11,6 @@
 
 ?>
 
-		  </div><!-- main wrapper-->
-
 		</main><!-- site content-->
 
 		<footer class="footer" role="footer">

@@ -33,8 +33,8 @@ $base-z-index: 0;
 $letter-spacing-lg: 1.2px;
 
 //Spacing with modular scales
-$spacing-xxxs: modular-scale(-7);
-$spacing-xxs: modular-scale(-5);
+$spacing-xxxs: modular-scale(-5);
+$spacing-xxs: modular-scale(-3);
 $spacing-xs: modular-scale(-2);
 $spacing-sm: modular-scale(-1);
 $spacing-base: modular-scale(0);
@@ -46,13 +46,17 @@ $spacing-xxl: modular-scale(5);
 
 // Colors
 $green: #CCCC00;
+$green: #CCCC23;
 $red: #E05353;
+$red: #F0624F;
 $blue: #3B79A3;
+$blue: #3B86A3;
 $light-blue: lighten($blue, 50%);
 
 $dark-gray: #3E454A;
 $medium-gray: #4F585E;
-$light-gray: #E6EBF0;
+$light-gray: #E9EBF0;
+
 $offwhite: #F5F5FA;
 $white: #fff;
 
@@ -62,6 +66,7 @@ $base-font-color: $dark-gray;
 
 // Border
 $base-border-color: $medium-gray;
+$base-border-width: 2px;
 $base-border: 2px solid $base-border-color;
 
 // Forms
