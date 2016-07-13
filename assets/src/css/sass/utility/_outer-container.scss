@@ -2,7 +2,7 @@
   @include outer-container(90%);
 
   @include media($small-screen) {
-    @include outer-container($sm-screen-value);
+    @include outer-container(95%);
   }
 
   @include media($small-medium-screen) {

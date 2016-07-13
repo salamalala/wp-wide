@@ -23,7 +23,7 @@
       content: "Newsletter abonnieren";
       position: absolute;
       left: $spacing-xs;
-      top: -25%;
+      top: -15%;
       padding: 0 $spacing-xxxs;
       font-family: $heading-font-family;
       font-weight: 700;
@@ -31,7 +31,8 @@
       background: $blue;
       color: $light-blue;
 
-      @include media($small-screen) {
+      @include media($small-medium-screen) {
+        top: -25%;
         left: $spacing-base;
         padding: 0 $spacing-base;
       }
@@ -49,11 +50,16 @@
   }
 
   &__input[type=email] {
-    @include span-columns(3 of 8);
-    // @include shift(1);
+    @include span-columns(6 of 8);
+    @include shift(1);
     background-color: $light-blue;
     border: solid 3px $light-blue;
     margin-bottom: 0;
+
+    @include media($small-medium-screen) {
+      @include span-columns(3 of 8);
+      @include shift(1);
+    }
 
     @include media($large-screen) {
       @include span-columns(4 of 8);
@@ -72,10 +78,17 @@
   }
 
   &__submit[type=submit] {
-    @include span-columns(2 of 9);
+    @include span-columns(6 of 8);
+    @include shift(1);
+    margin-top: $spacing-md;
     border-color: $light-blue;
     color: $light-blue;
     transition: $hover-transition;
+
+    @include media($small-medium-screen) {
+      width: auto;
+      margin: 0;
+    }
 
     &:active,
     &:focus,
@@ -86,11 +99,17 @@
   }
 
   &__support-button {
-    width: 45%;
+    width: 100%;
+    margin-top: $spacing-md;
     @extend button;
     text-align: center;
     border: 3px solid $light-blue;
     color: $light-blue;
+
+    @include media($small-screen) {
+      width: 45%;
+      margin-top: 0;
+    }
 
     &:active,
     &:focus,
@@ -105,14 +124,20 @@
   }
 
   &__info {
-    @include display(flex);
     padding: $spacing-lg 0;
+
+    @include media($small-medium-screen) {
+      @include display(flex);
+    }
   }
 
   &__copyright {
-    @include flex-grow(2);
     margin: 0;
     font-size: 85%;
+
+    @include media($small-medium-screen) {
+      @include flex-grow(2);
+    }
   }
 
   &__impressum {
