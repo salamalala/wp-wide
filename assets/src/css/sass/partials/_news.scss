@@ -8,15 +8,20 @@
       content: "";
       position: absolute;
       display: block;
-      width: 6px;
+      width: 5px;
       height: 0;
-      left: -#{$spacing-base};
+      left: -#{$spacing-sm};
       bottom: 0;
       background-color: $green;
+
+      @include media($medium-screen) {
+        left: -#{$spacing-base};
+        width: 6px;
+      }
     }
 
     &--animation:before {
-      animation: fadein 0.2s forwards ease-out;
+      animation: fadein 0.3s forwards ease-out;
     }
   }
 
@@ -28,9 +33,13 @@
   &__category {
     color: $green;
     position: absolute;
-    left: -#{$spacing-lg};
+    left: -#{$spacing-base};
     bottom: -#{$font-size-sm};
     font-size: $font-size-sm;
+
+    @include media($medium-screen) {
+      left: -#{$spacing-lg};
+    }
   }
 }
 

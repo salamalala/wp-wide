@@ -7,7 +7,15 @@ height: 1px;
     left: 50%;
     transform: translateX(-50%);
     top: -#{$spacing-xs};
-    width: 220px;
+    width: 120px;
+
+    @include media($small-screen) {
+      width: 200px;
+    }
+
+    @include media($medium-screen) {
+      width: 220px;
+    }
   }
 }
 

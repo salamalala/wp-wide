@@ -11,7 +11,7 @@
   }
 
   &__newsletter {
-    @include span-columns(9 of 9);
+    @include span-columns(8 of 8);
     border: solid 4px $light-blue;
     margin-bottom: $spacing-lg;
     padding-top: $spacing-lg;
@@ -22,24 +22,43 @@
     &:before {
       content: "Newsletter abonnieren";
       position: absolute;
-      left: $spacing-xl;
+      left: $spacing-xs;
       top: -25%;
-      padding: 0 $spacing-lg;
+      padding: 0 $spacing-xxxs;
       font-family: $heading-font-family;
       font-weight: 700;
       font-size: $font-size-lg;
       background: $blue;
       color: $light-blue;
 
+      @include media($small-screen) {
+        left: $spacing-base;
+        padding: 0 $spacing-base;
+      }
+
+      @include media($medium-screen) {
+        left: $spacing-lg;
+        padding: 0 $spacing-md;
+      }
+
+      @include media($large-screen) {
+        left: $spacing-xl;
+        padding: 0 $spacing-lg;
+      }
     }
   }
 
   &__input[type=email] {
-    @include span-columns(5 of 9);
-    @include shift(1);
+    @include span-columns(3 of 8);
+    // @include shift(1);
     background-color: $light-blue;
     border: solid 3px $light-blue;
     margin-bottom: 0;
+
+    @include media($large-screen) {
+      @include span-columns(4 of 8);
+      @include shift(1);
+    }
 
     &:hover {
       border-color: darken($light-blue, 10%);

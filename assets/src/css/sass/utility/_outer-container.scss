@@ -1,11 +1,55 @@
 .outer-container {
-  @include outer-container(95%);
+  @include outer-container(90%);
 
   @include media($small-screen) {
-    @include outer-container(90%);
+    @include outer-container($sm-screen-value);
+  }
+
+  @include media($small-medium-screen) {
+    @include outer-container($sm-md-screen-value);
+  }
+
+  @include media($medium-screen) {
+    @include outer-container($md-screen-value);
+  }
+
+  @include media($medium-large-screen) {
+    @include outer-container($md-lg-screen-value);
   }
 
   @include media($large-screen) {
-    @include outer-container();
+    @include outer-container($lg-screen-value);
+  }
+}
+
+
+
+@mixin container {
+  @include outer-container(100%);
+
+  @include media($small-screen) {
+    @include outer-container($sm-screen-value);
+  }
+
+  @include media($small-medium-screen) {
+    @include outer-container($sm-md-screen-value);
+  }
+
+  @include media($medium-screen) {
+    @include outer-container($md-screen-value);
+  }
+
+  @include media($medium-large-screen) {
+    @include outer-container($md-lg-screen-value);
+  }
+
+  @include media($large-screen) {
+    @include outer-container($lg-screen-value);
+  }
+}
+
+@if ($visual-grid) {
+  body:before {
+    @include container;
   }
 }

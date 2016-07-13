@@ -2,17 +2,30 @@
 @import "../neat/neat-helpers";
 
 // Neat Overrides
-$column: 90px;
-$gutter: 60px;
-$grid-columns: 12;
-
-//ems in media queries, react to the browser font size
-$max-width: 74em;
+// $column: 90px;
+// $gutter: 60px;
+// $grid-columns: 12;
 
 // Main Breakpoints
 //(480px)
-$small-screen: 30em;
+$sm-screen-value: 30em;
+//(600px)
+$sm-md-screen-value: 37.5em;
 //(744px)
-$medium-screen: 46.5em;
+$md-screen-value: 46.5em;
+//(900px)
+$md-lg-screen-value: 56.25em;
 //(1184px)
-$large-screen: 74em;
+$lg-screen-value: 74em;
+
+
+// Initial Grid Settings
+$max-width: 90%;
+$grid-columns: 12;
+
+
+$small-screen:  new-breakpoint(min-width $sm-screen-value 12);
+$small-medium-screen:  new-breakpoint(min-width $sm-md-screen-value 12);
+$medium-screen:  new-breakpoint(min-width $md-screen-value 12);
+$medium-large-screen:  new-breakpoint(min-width $md-lg-screen-value 12);
+$large-screen:  new-breakpoint(min-width $lg-screen-value 12);
