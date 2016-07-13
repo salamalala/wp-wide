@@ -49,9 +49,7 @@
 			</div>
 
       <div class="nav">
-        <!-- <div > -->
           <a class="nav__menu-button" id="js-mobile-menu" href="javascript:void(0)">Menu</a>
-        <!-- </div> -->
         <nav role="navigation" id="nav">
             <?php
 

@@ -1,7 +1,7 @@
 @import "normalize";
 
 @import "bourbon/bourbon";
-$visual-grid: true;
+$visual-grid: false;
 $visual-grid-color: yellow;
 $visual-grid-index: front;
 $visual-grid-opacity: 0.1;
@@ -14,6 +14,8 @@ $visual-grid-opacity: 0.1;
 
 @import "partials/body";
 @import "partials/header";
+@import "partials/nav";
+@import "partials/language";
 @import "partials/main";
 @import "partials/footer";
 

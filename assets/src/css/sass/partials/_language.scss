@@ -1,24 +1,3 @@
-.header {
-  position: relative;
-  height: 1px;
-
-  &__logo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: -#{$spacing-xs};
-    width: 120px;
-
-    @include media($small-screen) {
-      width: 200px;
-    }
-
-    @include media($medium-screen) {
-      width: 220px;
-    }
-  }
-}
-
 .language {
   position: absolute;
   right: 0;
@@ -26,10 +5,15 @@
   line-height: 1;
 
   @include media($medium-screen) {
-    position: fixed;
-    right: $spacing-base;
-    // top: 35%;
+    padding-top: 250px;
+    right: 0;
     margin: 0;
+
+    &.fixed {
+      position: fixed;
+      right: $spacing-base;
+      padding-top: 0;
+    }
   }
 
   &__item {

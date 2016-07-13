@@ -46,10 +46,23 @@ var sectionAnimationTriggered = function() {
     .addTo(controller);
 };
 
+
+var stickyHeaderElements = function(el) {
+  $(window).scroll(function(){
+  var sticky = $(el),
+      scroll = $(window).scrollTop();
+
+  if (scroll >= 250) sticky.addClass('fixed');
+  else sticky.removeClass('fixed');
+});
+}
+
 $(function() {
 
   emptyPTag();
   mobileMenu();
   sectionAnimationTriggered();
+  stickyHeaderElements('.nav');
+  stickyHeaderElements('.language');
 
 });
