@@ -42,7 +42,7 @@
       <div class="header__logo">
 					<a href="<?php echo get_home_url(); ?>">
 						<img src= "<?php
-	            echo get_template_directory_uri(); ?>/assets/img/svg/wide_switzerland_deflogo_white.svg"
+	            echo get_template_directory_uri(); ?>/assets/img/svg/wide_switzerland_deflogo.svg"
 	            alt="Logo Wide Switzerland"
 	            >
 					</a>

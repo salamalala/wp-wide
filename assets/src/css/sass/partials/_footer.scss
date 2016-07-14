@@ -151,4 +151,58 @@
   &__address {
     margin: 0;
   }
+
+
+  // change footer and all its element into $red
+  .single-aktivitaet & {
+    &__support {
+      background-color: $red;
+    }
+
+    &__newsletter {
+      border-color: $light-red;
+
+      &:before {
+        background-color: $red;
+        color: $light-red;
+      }
+    }
+
+    &__input[type=email] {
+      background-color: $light-red;
+      border-color: $light-red;
+
+      &:hover {
+        border-color: darken($light-red, 10%);
+      }
+
+      &:focus {
+        border-color: $red;
+      }
+    }
+
+    &__submit[type=submit] {
+      border-color: $light-red;
+      color: $light-red;
+
+      &:active,
+      &:focus,
+      &:hover {
+        background-color: $light-red;
+        color: $medium-gray;
+      }
+    }
+
+    &__support-button {
+      border-color: $light-red;
+      color: $light-red;
+
+      &:active,
+      &:focus,
+      &:hover {
+        background-color: $light-red;
+        color: $medium-gray;
+      }
+    }
+  }
 }

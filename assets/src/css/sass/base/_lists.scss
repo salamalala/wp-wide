@@ -1,19 +1,10 @@
 ul,
 ol {
-  list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding-left: $spacing-sm;
 
-  &%default-ul {
-    list-style-type: disc;
-    margin-bottom: $spacing-sm;
-    padding-left: $spacing-base;
-  }
-
-  &%default-ol {
-    list-style-type: decimal;
-    margin-bottom: $spacing-sm;
-    padding-left: $spacing-base;
+  li {
+   list-style-position:inside
   }
 }
 

@@ -1,6 +1,6 @@
 // Typography
 
-//weights installed: 300 / 400 / 500 / 700
+//weights installed: 400 / 400 italic / 500 / 700
 $base-font-family: "rooney-web", serif;
 
 //weights installed: 400 / 500 / 600 / 700
@@ -8,9 +8,9 @@ $heading-font-family: "sofia-pro", sans-serif;
 
 
 // Base Font Sizes for body, changing for different screen sizes
-$body-font-size-sm: 0.8em;
+$body-font-size-sm: 0.9em;
 $body-font-size-base: 1em;
-$body-font-size-lg: 1.03em;
+$body-font-size-lg: 1.05em;
 
 // Modular scale for different font headings
 $modular-scale-base: 1em;
@@ -21,6 +21,7 @@ $font-size-md: modular-scale(1);
 $font-size-lg: modular-scale(2);
 $font-size-xl: modular-scale(3);
 $font-size-xxl: modular-scale(4);
+$font-size-xxxl: modular-scale(5);
 
 // Line height
 $base-line-height: 1.5;
@@ -47,6 +48,7 @@ $spacing-xxl: modular-scale(5);
 // Colors
 $green: #CCCC23;
 $red: #CF5D55;
+$light-red: lighten($red, 37%);
 $blue: #3691A3;
 $light-blue: lighten($blue, 50%);
 

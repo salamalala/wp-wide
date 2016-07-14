@@ -23,19 +23,21 @@ h5,
 h6 {
   font-family: $heading-font-family;
   line-height: $heading-line-height;
-  margin: 0 0 $spacing-sm;
+  margin: $spacing-sm 0;
 }
 
 h1 {
   font-weight: 700;
-  font-size: $font-size-xl;
+  font-size: $font-size-xxl;
 }
 
 h2 {
+  font-weight: 700;
   font-size: $font-size-lg;
 }
 
 h3 {
+  font-weight: 700;
   font-size: $font-size-md;
 }
 
@@ -63,12 +65,18 @@ a {
 .main a {
   @include link-underlined($dark-gray);
   margin: 0;
-  font-weight: 500;
+  font-weight: 600;
+
+  .single-aktivitaet & {
+    color: $red;
+    @include link-underlined($red);
+  }
 }
 
 .footer a {
   @include link-underlined($offwhite);
 }
+
 
 img,
 picture {

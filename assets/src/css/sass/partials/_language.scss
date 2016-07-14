@@ -1,7 +1,7 @@
 .language {
   position: absolute;
   right: 0;
-  margin-top: 10px;
+  top: 0;
   line-height: 1;
 
   @include media($medium-screen) {
@@ -18,8 +18,9 @@
 
   &__item {
     display: inline-block;
+    display: block;
     // to get the same padding than on the nav elements
-    @include calc(padding, "#{$spacing-sm} - 2px");
+    @include calc(padding, "#{$spacing-xs} - 2px");
     margin-bottom: $spacing-sm;
     border: $base-border;
     font-weight: 700;
@@ -31,6 +32,7 @@
 
     @include media($medium-screen) {
       display: block;
+      @include calc(padding, "#{$spacing-sm} - 2px");
     }
 
     &:active,

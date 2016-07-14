@@ -12,10 +12,10 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<div class="outer-container">
-		<div class="wrapper">
+		<div class="wrapper article">
 
-			<h1><?php the_field('article_title'); ?></h1>
-			<div>
+			<h1 class="article__title"><?php the_field('article_title'); ?></h1>
+			<div class="article__content">
 				<?php the_field('article_content'); ?>
 			</div>
 

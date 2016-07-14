@@ -28,8 +28,6 @@
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
     background-color: $medium-gray;
     color: $offwhite;
     text-transform: uppercase;
@@ -120,6 +118,7 @@
   }
 
   &__list {
+    list-style: none;
     clear: both;
     display: none;
     margin: 0 auto;
