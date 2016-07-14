@@ -9,6 +9,10 @@
 
 get_header(); ?>
 
-			<h1>on the single paaage</h1>
+	<?php while ( have_posts() ) : the_post(); ?>
+
+		<?php get_template_part( 'template-parts/content', 'single' ); ?>
+
+	<?php endwhile; // End of the loop. ?>
 
 <?php get_footer(); ?>

@@ -173,7 +173,7 @@ function simple_toolbar( $toolbars )
 	// Add a new toolbar called "Very Simple"
 	// - this toolbar has only 1 row of buttons
 	$toolbars['Very Simple' ] = array();
-	$toolbars['Very Simple' ][1] = array('bold' , 'italic' , 'bullist' ,'numlist', 'link', 'unlink');
+	$toolbars['Very Simple' ][1] = array('bold' , 'italic' , 'formatselect', 'bullist' ,'numlist', 'link', 'unlink');
 
 	// Edit the "Full" toolbar and remove 'code'
 	// - delet from array code from http://stackoverflow.com/questions/7225070/php-array-delete-by-value-not-key
@@ -185,6 +185,16 @@ function simple_toolbar( $toolbars )
 	// return $toolbars - IMPORTANT!
 	return $toolbars;
 }
+
+
+//to change formatselect in the wysiwyg and only allow paragraph, h2 and h3. 
+add_filter( 'tiny_mce_before_init', function( $settings ){
+
+	$settings['block_formats'] = 'Paragraph=p;Heading 2=h2;Heading 3=h3';
+
+	return $settings;
+
+} );
 
 
 /**
