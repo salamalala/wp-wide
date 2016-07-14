@@ -1,3 +1,7 @@
 .main {
   padding-top: 20%;
+
+  .home & {
+    padding-top: 0;
+  }
 }

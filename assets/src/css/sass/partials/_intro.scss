@@ -1,9 +1,7 @@
 .intro {
   background-color: $blue;
-
   background-image: url(../../img/transparent-square-tiles.png);
   color: $offwhite;
-  // color: $dark-gray;
   margin-bottom: $spacing-xxl;
   padding-top: 20%;
 
@@ -17,7 +15,9 @@
 
   &__title {
     display: inline;
+    margin: 0;
     line-height: 1;
+    font-size: $font-size-xl;
     @include partly-underlined(4px, 4px, $offwhite);
   }
 
