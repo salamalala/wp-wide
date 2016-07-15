@@ -11,7 +11,7 @@ get_header();
 <div class="outer-container">
   <div class="wrapper menu-page">
 
-    <ul class="border-list">
+    <ul class="menu-page__list">
 
     <?php
 
@@ -26,9 +26,13 @@ get_header();
       if( $loop->have_posts() ):
         while( $loop->have_posts() ) : $loop->the_post(); ?>
 
-        <a href="<?php the_permalink()?>">
-          <li> <?php the_field('article_title'); ?></li>
+        <a class="menu-page__link" href="<?php the_permalink()?>">
+          <li class="menu-page__item"> <?php the_field('article_title'); ?>
+            <span class="menu-page__arrow"><?php get_template_part('assets/img/svg/inline', 'arrow-right.svg'); ?></span>
+          </li>
+          <div class="menu-page__item--shadow"></div>
         </a>
+
 
         <?php endwhile; ?>
       <?php endif; ?>

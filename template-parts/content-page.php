@@ -12,7 +12,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<div class="outer-container">
-	  <div class="wrapper menu-page">
+	  <div class="wrapper">
 
 			<header class="entry-header">
 				<?php the_title( '<h1>', '</h1>' ); ?>

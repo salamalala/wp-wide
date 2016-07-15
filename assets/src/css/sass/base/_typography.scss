@@ -62,16 +62,26 @@ a {
   }
 }
 
-.main a {
+.news a {
   @include link-underlined($dark-gray);
   margin: 0;
   font-weight: 600;
-
-  .single-aktivitaet & {
-    color: $red;
-    @include link-underlined($red);
-  }
 }
+
+.single-aktivitaet a {
+  color: $red;
+  font-weight: 600;
+}
+// .main a {
+//   @include link-underlined($dark-gray);
+//   margin: 0;
+//   font-weight: 600;
+//
+//   .single-aktivitaet & {
+//     color: $red;
+//     @include link-underlined($red);
+//   }
+// }
 
 .footer a {
   @include link-underlined($offwhite);
