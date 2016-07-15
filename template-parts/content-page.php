@@ -15,7 +15,7 @@
 	  <div class="wrapper">
 
 			<header class="entry-header">
-				<?php the_title( '<h1>', '</h1>' ); ?>
+				<?php the_title( '<h1 class="heading-underline">', '</h1>' ); ?>
 			</header><!-- .entry-header -->
 		</div>
 	</div>

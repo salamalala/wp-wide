@@ -956,7 +956,7 @@ body {
   display: inline-block;
   width: 100%;
   z-index: 2;
-  color: #F5F5FA;
+  color: #e2f2f6;
   font-family: "sofia-pro", sans-serif;
   font-weight: 500;
   margin: 1.333em 0; }
@@ -1096,5 +1096,17 @@ body {
 .rotated-text {
   transform-origin: left bottom;
   transform: rotate(-90deg); }
+
+.heading-underline {
+  display: inline-block;
+  position: relative; }
+  .heading-underline:after {
+    content: "";
+    position: absolute;
+    width: 75%;
+    height: 5px;
+    left: 0;
+    bottom: -1px;
+    background-color: #3E454A; }
 
 /*# sourceMappingURL=main.css.map */
