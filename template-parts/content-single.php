@@ -19,7 +19,6 @@
 				<?php the_field('article_content'); ?>
 			</div>
 
-
 		</div>
 	</div>
 

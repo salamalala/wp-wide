@@ -13,7 +13,7 @@
  		array (
  			'key' => 'field_5787854abb57d',
  			'label' => 'Titel',
- 			'name' => 'titel',
+ 			'name' => 'article_title',
  			'type' => 'text',
  			'instructions' => '',
  			'required' => 1,
@@ -34,7 +34,7 @@
  		array (
  			'key' => 'field_578787f7bb57e',
  			'label' => 'Text',
- 			'name' => 'text',
+ 			'name' => 'article_content',
  			'type' => 'wysiwyg',
  			'instructions' => '',
  			'required' => 1,
