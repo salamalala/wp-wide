@@ -50,15 +50,29 @@
  			'media_upload' => 1,
  		),
  	),
- 	'location' => array (
- 		array (
- 			array (
- 				'param' => 'post_type',
- 				'operator' => '==',
- 				'value' => 'aktivitaet',
- 			),
- 		),
- 	),
+  'location' => array (
+    array (
+      array (
+        'param' => 'post_type',
+        'operator' => '==',
+        'value' => 'aktivitaet',
+      ),
+    ),
+    array (
+      array (
+        'param' => 'post_type',
+        'operator' => '==',
+        'value' => 'ueberuns',
+      ),
+    ),
+    array (
+      array (
+        'param' => 'post_type',
+        'operator' => '==',
+        'value' => 'thema',
+      ),
+    ),
+  ),
  	'menu_order' => 0,
  	'position' => 'normal',
  	'style' => 'default',

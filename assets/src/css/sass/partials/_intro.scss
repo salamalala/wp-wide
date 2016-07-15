@@ -21,7 +21,7 @@
     @include partly-underlined(4px, 4px, $offwhite);
   }
 
-  &__paragraph {
+  p {
     display: inline;
   }
 }

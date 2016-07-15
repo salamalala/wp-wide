@@ -187,7 +187,7 @@ function simple_toolbar( $toolbars )
 }
 
 
-//to change formatselect in the wysiwyg and only allow paragraph, h2 and h3. 
+//to change formatselect in the wysiwyg and only allow paragraph, h2 and h3.
 add_filter( 'tiny_mce_before_init', function( $settings ){
 
 	$settings['block_formats'] = 'Paragraph=p;Heading 2=h2;Heading 3=h3';
@@ -201,6 +201,43 @@ add_filter( 'tiny_mce_before_init', function( $settings ){
 *create custom post type Aktivitäten
 */
 function create_posttype() {
+
+	register_post_type( 'ueberuns',
+	// CPT Options
+		array(
+			'labels' => array(
+				'name' => 'Über Uns',
+				'singular_name' => 'Über Uns',
+				'add_new'            => 'Neues Über Uns',
+				'add_new_item'       => 'Neues Über Uns hinzufügen',
+				'edit_item'          => 'Über Uns bearbeiten',
+				'new_item'           => 'Neues Über Uns',
+				'all_items'          => 'Alle Über Uns',
+				'view_item'          => 'Über Uns ansehen',
+				'search_items'       => 'Über Uns suchen',
+				'not_found'          => 'Kein Über Uns gefunden',
+				'not_found_in_trash' => 'Kein Über Uns im Papierkorb gefunden',
+				'parent_item_colon'  => '',
+				'menu_name'          => 'Über Uns'
+			),
+			'supports' => array('title', 'thumbnail', 'revisions','author'),
+			'rewrite' => array('slug' => 'ueberuns'),
+			// You can associate this CPT with a taxonomy or custom taxonomy.
+			'hierarchical'        => true,
+			'public'              => true,
+			'show_ui'             => true,
+			'show_in_menu'        => true,
+			'show_in_nav_menus'   => true,
+			'show_in_admin_bar'   => true,
+			'menu_position'       => 5,
+			'can_export'          => true,
+			'has_archive'         => true,
+			'exclude_from_search' => false,
+			'publicly_queryable'  => true,
+			'capability_type'     => 'page',
+		)
+	);
+
 
 	register_post_type( 'aktivitaet',
 	// CPT Options
@@ -237,6 +274,46 @@ function create_posttype() {
 			'capability_type'     => 'page',
 		)
 	);
+
+	register_post_type( 'thema',
+	// CPT Options
+		array(
+			'labels' => array(
+				'name' => 'Themen',
+				'singular_name' => 'Thema',
+				'add_new'            => 'Neues Thema',
+		    'add_new_item'       => 'Neues Thema hinzufügen',
+		    'edit_item'          => 'Thema bearbeiten',
+		    'new_item'           => 'Neues Thema',
+		    'all_items'          => 'Alle Themen',
+		    'view_item'          => 'Thema ansehen',
+		    'search_items'       => 'Themen suchen',
+		    'not_found'          => 'Kein Thema gefunden',
+		    'not_found_in_trash' => 'Kein Thema im Papierkorb gefunden',
+		    'parent_item_colon'  => '',
+		    'menu_name'          => 'Themen'
+			),
+			'supports' => array('title', 'thumbnail', 'revisions','author'),
+			'rewrite' => array('slug' => 'thema'),
+			// You can associate this CPT with a taxonomy or custom taxonomy.
+			'hierarchical'        => true,
+			'public'              => true,
+			'show_ui'             => true,
+			'show_in_menu'        => true,
+			'show_in_nav_menus'   => true,
+			'show_in_admin_bar'   => true,
+			'menu_position'       => 5,
+			'can_export'          => true,
+			'has_archive'         => true,
+			'exclude_from_search' => false,
+			'publicly_queryable'  => true,
+			'capability_type'     => 'page',
+		)
+	);
+
+
+
+
 }
 // Hooking up our function to theme setup
 add_action( 'init', 'create_posttype' );

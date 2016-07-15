@@ -15,8 +15,10 @@
     <div class="outer-container">
       <div class="wrapper">
         <div class="intro__content">
-          <h1 class="intro__title"><?php the_field('eingangstext_titel'); ?> </h1>
-          <p class="intro__paragraph">
+          <h1 class="intro__title">
+            <?php the_field('eingangstext_titel'); ?>
+          </h1>
+          <p>
             <?php the_field('eingangstext'); ?>
           </p>
         </div>
