@@ -232,7 +232,7 @@
 
 
       @include media($medium-screen) {
-        width: calc(220px - #{$spacing-base});
+        min-width: calc(220px - #{$spacing-base});
       }
 
       a {
@@ -242,4 +242,9 @@
       }
     }
   }
+}
+
+.current-menu-item > a {
+  background-color: $medium-gray;
+  color: $offwhite;
 }

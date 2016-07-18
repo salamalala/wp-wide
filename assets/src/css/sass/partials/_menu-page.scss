@@ -1,9 +1,14 @@
 .menu-page {
 
   &__list {
-    @include span-columns(5 of 8);
+    width: 100%;
     padding-left: 0;
-    list-style-type: none;
+
+    @include media($small-screen) {
+      @include span-columns(5 of 8);
+      padding-left: 0;
+      list-style-type: none;
+    }
   }
   //
   &__link{
@@ -36,7 +41,7 @@
     &:focus,
     &:hover {
       background-color: lighten($blue, 3%);
-      transform: translateX($spacing-xxs) translateY(-#{$spacing-xxs});
+      transform: translateX($spacing-xxxs) translateY(-#{$spacing-xxxs});
 
       svg {
         transform: translateX($spacing-xs);
