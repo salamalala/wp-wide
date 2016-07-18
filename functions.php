@@ -165,6 +165,14 @@ class My_Sub_Menu extends Walker_Nav_Menu {
   }
 }
 
+//remove wp editor
+function remove_editor() {
+  remove_post_type_support('page', 'editor');
+}
+add_action('admin_init', 'remove_editor');
+
+
+// create custom wysiwyg toolbar for acf fields
 add_filter( 'acf/fields/wysiwyg/toolbars' , 'simple_toolbar'  );
 
 function simple_toolbar( $toolbars )

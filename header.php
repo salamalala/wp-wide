@@ -76,8 +76,8 @@
 
 
       <div class="language" id="language">
-        <a href="#" class="language__item language__item--active">DE</a>
-        <a href="#" class="language__item">EN</a>
+        <a href="#" class="language__item language__item--active">De</a>
+        <a href="#" class="language__item">En</a>
       </div>
 
 		</header>

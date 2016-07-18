@@ -2,8 +2,9 @@
   background-color: $blue;
   background-image: url(../../img/transparent-square-tiles.png);
   color: $offwhite;
-  margin-bottom: $spacing-xxl;
+  margin-bottom: $spacing-xl;
   padding-top: 20%;
+  height: calc(100vh - (4*#{$spacing-base});
 
   &__content {
     padding-bottom: $spacing-xxl;

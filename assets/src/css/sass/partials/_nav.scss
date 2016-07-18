@@ -10,7 +10,7 @@
   @include media($medium-screen) {
     //to push to viewport
     left: -#{$spacing-base};
-    padding-top: 250px;
+    padding-top: 15%;
     width: auto;
 
     &.fixed {
@@ -137,11 +137,11 @@
     width: 100%;
 
     @include media($medium-screen) {
-      width: 180px;
+      min-width: 180px;
     }
 
     @include media($large-screen) {
-      width: 220px;
+      min-width: 220px;
     }
 
     a {
@@ -149,6 +149,7 @@
       width: 100%;
       padding-top: $spacing-sm;
       padding-bottom: $spacing-sm;
+      padding-right: $spacing-sm;
       padding-left: 10px;
       margin-bottom: $spacing-sm;
       font-weight: 700;
@@ -165,14 +166,14 @@
 
       @include media($medium-screen) {
         display: inline-block;
-        width: 180px;
+        min-width: 180px;
         padding-left: $spacing-lg;
         background-color: $light-gray;
         color: $medium-gray;
       }
 
       @include media($large-screen) {
-        width: 220px;
+        min-width: 220px;
       }
 
       &:active,

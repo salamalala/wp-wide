@@ -1,6 +1,6 @@
 <?php
 
-/* Template Name: Aktivitäten */
+/* Template Name: Über Uns */
 
 get_header();
 
@@ -16,7 +16,7 @@ get_header();
     <?php
 
       $args = array(
-         'post_type' => 'aktivitaet',
+         'post_type' => 'ueberuns',
          'order' => 'ASC',
          'orderby' => 'menu_order'
        );

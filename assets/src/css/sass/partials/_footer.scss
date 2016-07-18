@@ -154,7 +154,9 @@
 
 
   // change footer and all its element into $red
-  .single-aktivitaet & {
+  .single-ueberuns &,
+  .single-aktivitaet &,
+  .single-thema & {
     &__support {
       background-color: $red;
     }

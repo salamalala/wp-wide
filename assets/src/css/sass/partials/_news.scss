@@ -27,7 +27,7 @@
 
   &__title {
     display: inline-block;
-    @include partly-underlined(4px, -7px, $dark-gray);
+    @include partly-underlined(3px, -7px, $dark-gray);
   }
 
   &__category {
@@ -35,6 +35,7 @@
     position: absolute;
     left: -#{$spacing-base};
     bottom: -#{$font-size-sm};
+    text-transform: uppercase;
     font-size: $font-size-sm;
 
     @include media($medium-screen) {

@@ -15,6 +15,8 @@
     font-family: $heading-font-family;
     font-weight: 500;
     margin: $spacing-md 0;
+    text-transform: uppercase;
+    letter-spacing: $letter-spacing-lg;
 
     &:first-child {
       margin-top: 0;
@@ -33,6 +35,7 @@
     &:active,
     &:focus,
     &:hover {
+      background-color: lighten($blue, 3%);
       transform: translateX($spacing-xxs) translateY(-#{$spacing-xxs});
 
       svg {
