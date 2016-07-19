@@ -228,7 +228,7 @@ function create_posttype() {
 				'parent_item_colon'  => '',
 				'menu_name'          => 'Über Uns'
 			),
-			'supports' => array('title', 'thumbnail', 'revisions','author'),
+			'supports' => array('title', 'thumbnail', 'revisions','author', 'page-attributes'),
 			'rewrite' => array('slug' => 'ueberuns'),
 			// You can associate this CPT with a taxonomy or custom taxonomy.
 			'hierarchical'        => true,
@@ -265,7 +265,7 @@ function create_posttype() {
 		    'parent_item_colon'  => '',
 		    'menu_name'          => 'Aktivitäten'
 			),
-			'supports' => array('title', 'thumbnail', 'revisions','author'),
+			'supports' => array('title', 'thumbnail', 'revisions','author', 'page-attributes'),
 			'rewrite' => array('slug' => 'aktivität'),
 			// You can associate this CPT with a taxonomy or custom taxonomy.
 			'hierarchical'        => true,

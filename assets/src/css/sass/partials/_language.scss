@@ -23,6 +23,7 @@
     @include calc(padding, "#{$spacing-xs} - 2px");
     margin-bottom: $spacing-sm;
     border: $base-border;
+    border-color: $light-gray;
     font-weight: 700;
     text-transform: uppercase;
     font-family: $heading-font-family;
@@ -38,20 +39,21 @@
     &:active,
     &:focus,
     &:hover {
-      color: $offwhite !important;
-      background-color: $medium-gray;
+      color: $medium-gray !important;
+      background-color: $light-gray;
     }
 
     &--active {
-      color: $offwhite !important;
-      background-color: $medium-gray;
+      color: $medium-gray !important;
+      background-color: $light-gray;
       transition: all 0.2s ease-out;
+      pointer-events: none;
 
       &:active,
       &:focus,
       &:hover {
-        color: $offwhite;
-        background-color: $medium-gray;
+        color: $medium-gray;
+        background-color: $light-gray;
       }
     }
   }
