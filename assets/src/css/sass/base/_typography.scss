@@ -42,6 +42,15 @@ h3 {
   font-size: $font-size-md;
 }
 
+.single-aktivitaet h2,
+.single-aktivitaet h3,
+.single-thema h2,
+.single-thema h3,
+.single-ueberuns h2
+.single-ueberuns h3 {
+  margin-top: $spacing-sm;
+}
+
 p {
   font-size: $font-size-base;
   margin: 0 0 $spacing-sm;
@@ -53,7 +62,7 @@ br {
 
 a {
   position: relative;
-  font-weight: 600;
+  font-weight: 500;
   color: $dark-gray;
   text-decoration: none;
 
@@ -69,9 +78,11 @@ a {
   font-weight: 600;
 }
 
-.single-aktivitaet a {
+.single-aktivitaet a,
+.single-thema a,
+.single-ueberuns a {
   color: $red;
-  font-weight: 600;
+  font-weight: 500;
 }
 // .main a {
 //   @include link-underlined($dark-gray);

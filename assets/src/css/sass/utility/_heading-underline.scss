@@ -1,4 +1,4 @@
 .heading-underline {
   display: inline-block;
-  @include partly-underlined(5px, -1px, $dark-gray);
+  @include partly-underlined(5px, -1px, $medium-gray);
 }

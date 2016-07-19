@@ -17,6 +17,6 @@
 
   h2 {
     display: inline-block;
-    @include partly-underlined(3px, -3px, $dark-gray);
+    @include partly-underlined(3px, -3px, $medium-gray);
   }
 }

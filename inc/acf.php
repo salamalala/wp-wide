@@ -51,6 +51,13 @@
         'value' => 'thema',
       ),
     ),
+    array (
+			array (
+				'param' => 'page',
+				'operator' => '==',
+				'value' => '132',
+			),
+		),
   ),
  	'menu_order' => 0,
  	'position' => 'normal',

@@ -47,8 +47,8 @@ $spacing-xxl: modular-scale(5);
 
 // Colors
 $green: #CCCC23;
-$red: #CF5D55;
 $red: #CC4E4B;
+$red: #CF5D55;
 $light-red: lighten($red, 37%);
 $blue: #3691A3;
 $blue: #6096B5;
@@ -57,7 +57,10 @@ $blue: #3B86A3;
 $light-blue: lighten($blue, 50%);
 
 $dark-gray: #3E454A;
+$dark-gray: #393D40;
 $medium-gray: #4F585E;
+//logo
+$medium-gray: #565B5F;
 $light-gray: #E9EBF0;
 $light-gray: #E6E8ED;
 
@@ -67,6 +70,7 @@ $white: #fff;
 // Font Colors
 $base-background-color: #fff;
 $base-font-color: $dark-gray;
+$base-font-color: $medium-gray;
 
 // Border
 $base-border-color: $medium-gray;

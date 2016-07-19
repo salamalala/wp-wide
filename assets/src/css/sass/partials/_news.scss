@@ -27,7 +27,7 @@
 
   &__title {
     display: inline-block;
-    @include partly-underlined(3px, -7px, $dark-gray);
+    @include partly-underlined(3px, -7px, $medium-gray);
   }
 
   &__category {
