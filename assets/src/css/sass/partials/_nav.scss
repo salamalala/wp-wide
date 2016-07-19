@@ -204,6 +204,7 @@
       position: relative;
       transition: all 0.2s ease-out;
 
+      //show submenu when hovering over li with submenus.
       &:focus > .nav__submenu,
       &:hover > .nav__submenu {
        display: block;
@@ -244,7 +245,18 @@
   }
 }
 
+
+//use wp classes for targeting active links
 .current-menu-item > a {
+  pointer-events: none;
+}
+
+.current-menu-item > a,
+.current-menu-ancestor > a {
   background-color: $medium-gray;
   color: $offwhite;
+}
+
+.current-menu-ancestor > .nav__submenu {
+  display: block;
 }

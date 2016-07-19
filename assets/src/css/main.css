@@ -401,9 +401,9 @@ br {
 
 a {
   position: relative;
+  font-weight: 600;
   color: #3E454A;
-  text-decoration: none;
-  transition: color 0.1s linear; }
+  text-decoration: none; }
   a:active, a:focus {
     outline: none; }
 
@@ -651,8 +651,15 @@ body {
         font-size: 90%; }
 
 .current-menu-item > a {
+  pointer-events: none; }
+
+.current-menu-item > a,
+.current-menu-ancestor > a {
   background-color: #4F585E;
   color: #F5F5FA; }
+
+.current-menu-ancestor > .nav__submenu {
+  display: block; }
 
 .language {
   position: absolute;
@@ -1051,7 +1058,7 @@ body {
   font-weight: 400;
   float: left;
   line-height: 50%;
-  margin: 0 .15em 0 0; }
+  margin: 0 .1em 0 0; }
 
 .article h2 {
   display: inline-block;
@@ -1060,9 +1067,9 @@ body {
     content: "";
     position: absolute;
     width: 75%;
-    height: 4px;
+    height: 3px;
     left: 0;
-    bottom: -4px;
+    bottom: -3px;
     background-color: #3E454A; }
 
 .outer-container {

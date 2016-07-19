@@ -301,7 +301,7 @@ function create_posttype() {
 		    'parent_item_colon'  => '',
 		    'menu_name'          => 'Themen'
 			),
-			'supports' => array('title', 'thumbnail', 'revisions','author'),
+			'supports' => array('title', 'thumbnail', 'revisions','author', 'page-attributes'),
 			'rewrite' => array('slug' => 'thema'),
 			// You can associate this CPT with a taxonomy or custom taxonomy.
 			'hierarchical'        => true,
@@ -318,9 +318,6 @@ function create_posttype() {
 			'capability_type'     => 'page',
 		)
 	);
-
-
-
 
 }
 // Hooking up our function to theme setup

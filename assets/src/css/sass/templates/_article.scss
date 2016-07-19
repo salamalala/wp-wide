@@ -11,12 +11,12 @@
       font-weight: 400;
       float: left;
       line-height: 50%;
-      margin: 0 .15em 0 0;
+      margin: 0 .1em 0 0;
     }
   }
 
   h2 {
     display: inline-block;
-    @include partly-underlined(4px, -4px, $dark-gray);
+    @include partly-underlined(3px, -3px, $dark-gray);
   }
 }

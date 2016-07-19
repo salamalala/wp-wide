@@ -14,7 +14,7 @@
 	<div class="outer-container">
 		<div class="wrapper article">
 
-			<h1 class="article__title"><?php the_field('article_title'); ?></h1>
+			<?php the_title( '<h1 class="article__title">', '</h1>' ); ?>
 			<div class="article__content">
 				<?php the_field('article_content'); ?>
 			</div>

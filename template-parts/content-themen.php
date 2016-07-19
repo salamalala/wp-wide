@@ -16,9 +16,12 @@ get_header();
     <?php
 
       $args = array(
-         'post_type' => 'thema',
-         'order' => 'ASC',
-         'orderby' => 'menu_order'
+          'post_type' => 'thema',
+          'numberposts' => -1,
+          'orderby' => 'menu_order',
+          'order' => 'ASC',
+        //  'order' => 'ASC',
+        //  'orderby' => 'menu_order',
        );
 
       $loop = new WP_Query( $args );

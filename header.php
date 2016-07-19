@@ -57,7 +57,7 @@
 			</div>
 
       <div class="nav">
-          <a class="nav__menu-button" id="js-mobile-menu" href="javascript:void(0)">Menu</a>
+        <a class="nav__menu-button" id="js-mobile-menu" href="javascript:void(0)">Menu</a>
         <nav role="navigation" id="nav">
             <?php
 

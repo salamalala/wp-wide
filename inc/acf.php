@@ -11,27 +11,6 @@
  	'title' => 'Article',
  	'fields' => array (
  		array (
- 			'key' => 'field_5787854abb57d',
- 			'label' => 'Titel',
- 			'name' => 'article_title',
- 			'type' => 'text',
- 			'instructions' => '',
- 			'required' => 1,
- 			'conditional_logic' => 0,
- 			'wrapper' => array (
- 				'width' => '',
- 				'class' => '',
- 				'id' => '',
- 			),
- 			'default_value' => '',
- 			'placeholder' => '',
- 			'prepend' => '',
- 			'append' => '',
- 			'maxlength' => '',
- 			'readonly' => 0,
- 			'disabled' => 0,
- 		),
- 		array (
  			'key' => 'field_578787f7bb57e',
  			'label' => 'Text',
  			'name' => 'article_content',

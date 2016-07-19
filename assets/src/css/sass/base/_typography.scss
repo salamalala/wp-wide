@@ -53,9 +53,9 @@ br {
 
 a {
   position: relative;
+  font-weight: 600;
   color: $dark-gray;
   text-decoration: none;
-  transition: color 0.1s linear;
 
   &:active,
   &:focus {
