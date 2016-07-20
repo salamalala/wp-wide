@@ -194,7 +194,7 @@ button,
   font-family: "sofia-pro", sans-serif;
   font-size: 1em;
   font-weight: 600;
-  letter-spacing: 1.2px;
+  letter-spacing: 1px;
   padding: 0.7501875469em 1.776889em;
   text-decoration: none;
   text-transform: uppercase;
@@ -382,7 +382,7 @@ h6 {
 h1 {
   font-weight: 700;
   font-size: 3.1573345183em;
-  letter-spacing: 1.2px; }
+  letter-spacing: 1px; }
 
 h2 {
   font-weight: 700;
@@ -640,6 +640,9 @@ body {
       left: 0;
       position: relative;
       transition: all 0.2s ease-out; }
+      .nav__menu-item--more:focus > .nav__submenu,
+      .nav__menu-item--more:hover > .nav__submenu {
+        display: block; }
       .nav__menu-item--more.current-menu-item .nav__submenu {
         display: block; }
   .nav__submenu {
@@ -1018,7 +1021,7 @@ body {
   font-weight: 500;
   margin: 1.333em 0;
   text-transform: uppercase;
-  letter-spacing: 1.2px; }
+  letter-spacing: 1px; }
   .menu-page__link:first-child {
     margin-top: 0; }
 

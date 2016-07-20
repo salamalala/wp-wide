@@ -205,6 +205,12 @@
       transition: all 0.2s ease-out;
 
       //show submenu when hovering over li with submenus.
+      &:focus > .nav__submenu,
+      &:hover > .nav__submenu {
+       display: block;
+      }
+
+      //keep submenu open when current menu items is clicked. 
       &.current-menu-item {
         .nav__submenu {
           display: block;
