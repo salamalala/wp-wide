@@ -676,7 +676,9 @@ body {
   position: absolute;
   right: 0;
   top: 0;
-  line-height: 1; }
+  line-height: 1;
+  list-style: none;
+  padding-left: 0; }
   @media screen and (min-width: 46.5em) {
     .language {
       padding-top: 15%;
@@ -686,7 +688,15 @@ body {
         position: fixed;
         right: 1em;
         padding-top: 1em; } }
-  .language__item {
+  .language .current-lang a {
+    color: #565B5F !important;
+    background-color: #E6E8ED;
+    transition: all 0.2s ease-out;
+    pointer-events: none; }
+    .language .current-lang a:active, .language .current-lang a:focus, .language .current-lang a:hover {
+      color: #565B5F;
+      background-color: #E6E8ED; }
+  .language a {
     display: inline-block;
     display: block;
     padding: -webkit-calc(0.5627813555em - 2px);
@@ -701,21 +711,13 @@ body {
     background-color: transparent;
     transition: all 0.2s ease-out; }
     @media screen and (min-width: 46.5em) {
-      .language__item {
+      .language a {
         display: block;
         padding: -webkit-calc(0.7501875469em - 2px);
         padding: calc(0.7501875469em - 2px); } }
-    .language__item:active, .language__item:focus, .language__item:hover {
+    .language a:active, .language a:focus, .language a:hover {
       color: #565B5F !important;
       background-color: #E6E8ED; }
-    .language__item--active {
-      color: #565B5F !important;
-      background-color: #E6E8ED;
-      transition: all 0.2s ease-out;
-      pointer-events: none; }
-      .language__item--active:active, .language__item--active:focus, .language__item--active:hover {
-        color: #565B5F;
-        background-color: #E6E8ED; }
 
 .main {
   padding-top: 20%; }

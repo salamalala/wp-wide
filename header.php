@@ -74,11 +74,8 @@
         </nav>
       </div>
 
-
-      <div class="language" id="language">
-        <a href="#" class="language__item language__item--active">De</a>
-        <a href="#" class="language__item">En</a>
-      </div>
+      <!-- polylang plugin language switcher -->
+      <ul class="language"><?php pll_the_languages();?></ul>
 
 		</header>
 

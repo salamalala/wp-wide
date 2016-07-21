@@ -1,8 +1,12 @@
+// using polylang plugin selectors:
+
 .language {
   position: absolute;
   right: 0;
   top: 0;
   line-height: 1;
+  list-style: none;
+  padding-left: 0;
 
   @include media($medium-screen) {
     padding-top: 15%;
@@ -16,7 +20,21 @@
     }
   }
 
-  &__item {
+  .current-lang a {
+    color: $medium-gray !important;
+    background-color: $light-gray;
+    transition: all 0.2s ease-out;
+    pointer-events: none;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: $medium-gray;
+      background-color: $light-gray;
+    }
+  }
+
+  a {
     display: inline-block;
     display: block;
     // to get the same padding than on the nav elements
@@ -41,20 +59,6 @@
     &:hover {
       color: $medium-gray !important;
       background-color: $light-gray;
-    }
-
-    &--active {
-      color: $medium-gray !important;
-      background-color: $light-gray;
-      transition: all 0.2s ease-out;
-      pointer-events: none;
-
-      &:active,
-      &:focus,
-      &:hover {
-        color: $medium-gray;
-        background-color: $light-gray;
-      }
     }
   }
 }
