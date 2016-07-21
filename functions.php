@@ -229,6 +229,7 @@ function create_posttype() {
 				'menu_name'          => 'Über Uns'
 			),
 			'supports' => array('title', 'thumbnail', 'revisions','author', 'page-attributes'),
+			'taxonomies' => array('category'),
 			'rewrite' => array('slug' => 'ueberuns'),
 			// You can associate this CPT with a taxonomy or custom taxonomy.
 			'hierarchical'        => true,
@@ -266,6 +267,7 @@ function create_posttype() {
 		    'menu_name'          => 'Aktivitäten'
 			),
 			'supports' => array('title', 'thumbnail', 'revisions','author', 'page-attributes'),
+			'taxonomies' => array('category'),
 			'rewrite' => array('slug' => 'aktivität'),
 			// You can associate this CPT with a taxonomy or custom taxonomy.
 			'hierarchical'        => true,
@@ -302,6 +304,7 @@ function create_posttype() {
 		    'menu_name'          => 'Themen'
 			),
 			'supports' => array('title', 'thumbnail', 'revisions','author', 'page-attributes'),
+			'taxonomies' => array('category'),
 			'rewrite' => array('slug' => 'thema'),
 			// You can associate this CPT with a taxonomy or custom taxonomy.
 			'hierarchical'        => true,
@@ -322,3 +325,13 @@ function create_posttype() {
 }
 // Hooking up our function to theme setup
 add_action( 'init', 'create_posttype' );
+
+
+// creating different templates for single posts
+add_filter('single_template', create_function(
+	'$the_template',
+	'foreach( (array) get_the_category() as $cat ) {
+		if ( file_exists(TEMPLATEPATH . "/single-{$cat->slug}.php") )
+		return TEMPLATEPATH . "/single-{$cat->slug}.php"; }
+	return $the_template;' )
+);

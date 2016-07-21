@@ -9,7 +9,7 @@
 
   @include media($medium-screen) {
     //to push to viewport
-    left: -#{$spacing-base};
+    left: -#{$spacing-md};
     padding-top: 15%;
     width: auto;
 
@@ -210,7 +210,7 @@
        display: block;
       }
 
-      //keep submenu open when current menu items is clicked. 
+      //keep submenu open when current menu items is clicked.
       &.current-menu-item {
         .nav__submenu {
           display: block;
@@ -236,11 +236,11 @@
     li {
       display: block;
       padding-right: 0;
-      margin-left: $spacing-base;
+      margin-left: $spacing-md;
 
 
       @include media($medium-screen) {
-        min-width: calc(220px - #{$spacing-base});
+        min-width: calc(220px - #{$spacing-md});
       }
 
       a {
