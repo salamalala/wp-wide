@@ -180,8 +180,8 @@ function simple_toolbar( $toolbars )
 
 	// Add a new toolbar called "Very Simple"
 	// - this toolbar has only 1 row of buttons
-	$toolbars['Very Simple' ] = array();
-	$toolbars['Very Simple' ][1] = array('bold' , 'italic' , 'formatselect', 'bullist' ,'numlist', 'link', 'unlink');
+	$toolbars['Simple' ] = array();
+	$toolbars['Simple' ][1] = array('bold' , 'italic' , 'formatselect', 'bullist' ,'numlist', 'link', 'unlink');
 
 	// Edit the "Full" toolbar and remove 'code'
 	// - delet from array code from http://stackoverflow.com/questions/7225070/php-array-delete-by-value-not-key
@@ -203,6 +203,29 @@ add_filter( 'tiny_mce_before_init', function( $settings ){
 	return $settings;
 
 } );
+
+
+// create custom wysiwyg toolbar for acf fields
+add_filter( 'acf/fields/wysiwyg/toolbars' , 'very_simple_toolbar'  );
+
+function very_simple_toolbar( $toolbars )
+{
+
+	// Add a new toolbar called "Very Simple"
+	// - this toolbar has only 1 row of buttons
+	$toolbars['Very simple' ] = array();
+	$toolbars['Very simple' ][1] = array('bold', 'link', 'unlink');
+
+	// Edit the "Full" toolbar and remove 'code'
+	// - delet from array code from http://stackoverflow.com/questions/7225070/php-array-delete-by-value-not-key
+	if( ($key = array_search('code' , $toolbars['Full' ][2])) !== false )
+	{
+	    unset( $toolbars['Full' ][2][$key] );
+	}
+
+	// return $toolbars - IMPORTANT!
+	return $toolbars;
+}
 
 
 /**

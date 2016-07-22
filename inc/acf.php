@@ -25,7 +25,7 @@
  			),
  			'default_value' => '',
  			'tabs' => 'all',
- 			'toolbar' => 'very_simple',
+ 			'toolbar' => 'simple',
  			'media_upload' => 1,
  		),
  	),
@@ -194,7 +194,7 @@
  					),
  					'default_value' => '',
  					'tabs' => 'all',
- 					'toolbar' => 'very_simple',
+ 					'toolbar' => 'simple',
  					'media_upload' => 1,
  				),
  				array (
@@ -331,7 +331,7 @@
   				array (
   					'key' => 'field_5790d55e7e928',
   					'label' => 'Text',
-  					'name' => 'text',
+  					'name' => 'paragraph',
   					'type' => 'wysiwyg',
   					'instructions' => '',
   					'required' => 0,
@@ -349,7 +349,7 @@
   				array (
   					'key' => 'field_5790db5418c9b',
   					'label' => 'Emailadresse',
-  					'name' => 'email',
+  					'name' => 'emailaddress',
   					'type' => 'email',
   					'instructions' => '',
   					'required' => '',
