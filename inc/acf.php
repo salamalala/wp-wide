@@ -16,7 +16,7 @@
  			'name' => 'article_content',
  			'type' => 'wysiwyg',
  			'instructions' => '',
- 			'required' => 1,
+ 			'required' => 0,
  			'conditional_logic' => '',
  			'wrapper' => array (
  				'width' => '',
@@ -328,11 +328,11 @@
   					'readonly' => 0,
   					'disabled' => 0,
   				),
-  				array (
+          array (
   					'key' => 'field_5790d55e7e928',
   					'label' => 'Text',
   					'name' => 'paragraph',
-  					'type' => 'wysiwyg',
+  					'type' => 'textarea',
   					'instructions' => '',
   					'required' => 0,
   					'conditional_logic' => 0,
@@ -342,9 +342,12 @@
   						'id' => '',
   					),
   					'default_value' => '',
-  					'tabs' => 'all',
-  					'toolbar' => 'very_simple',
-  					'media_upload' => 0,
+  					'placeholder' => '',
+  					'maxlength' => 250,
+  					'rows' => '',
+  					'new_lines' => 'wpautop',
+  					'readonly' => 0,
+  					'disabled' => 0,
   				),
   				array (
   					'key' => 'field_5790db5418c9b',

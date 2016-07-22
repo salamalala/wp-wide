@@ -13,42 +13,37 @@ get_header(); ?>
 
 		<?php get_template_part( 'template-parts/content', 'single' ); ?>
 
+	<?php endwhile; // End of the loop. ?>
+
+	<?php if( have_rows('gallery_item') ): ?>
+
 		<div class="outer-container">
-			<div class="wrapper article">
+			<div class="wrapper gallery">
 
-				<?php if( have_rows('gallery_item') ): ?>
+			<?php while( have_rows('gallery_item') ): the_row();
 
-					<div class="gallery">
+				$image = get_sub_field('image');
+				$caption = get_sub_field('caption');
+				$paragraph = get_sub_field('paragraph', false, false);
+				$email = get_sub_field('emailaddress');
 
-					<?php while( have_rows('gallery_item') ): the_row();
+				?>
 
-						// vars
-						$image = get_sub_field('image');
-						$caption = get_sub_field('caption');
-						$text = get_sub_field('text');
-						$email = get_sub_field('email');
-
-						?>
-
-						<figure class="gallery__item">
-								<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
-								<figcaption><?php echo $caption; ?></figcaption>
-								<p>
-									<?php echo $caption; ?>
-								</p>
-								<a href="mailto:<?php $email; ?>" <?php  ?>>Email</a>
-						</figure>
-
-
-					<?php endwhile; ?>
-
+				<figure class="gallery__item">
+					<img class="gallery__img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
+					<div class="gallery__text">
+						<figcaption class="gallery__caption"> <?php echo $caption; ?> </figcaption>
+						<p class="gallery__paragraph"> <?php echo $paragraph; ?> </p>
+						<a class="gallery__email" href="mailto:<?php echo $email; ?>" >Email</a>
 					</div>
+				</figure>
 
-				<?php endif; ?>
 
-			<?php endwhile; // End of the loop. ?>
+			<?php endwhile; ?>
+
+			</div>
 		</div>
-	</div>
 
+	<?php endif; ?>
 
 <?php get_footer(); ?>

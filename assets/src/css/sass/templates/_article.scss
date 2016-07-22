@@ -1,7 +1,7 @@
 .article {
   &__title {
     display: inline-block;
-    @include partly-underlined(5px, -1px, $red);
+    @include partly-underlined(5px, -1px, $medium-gray);
   }
 
   &__content {

@@ -12,6 +12,9 @@ $visual-grid-opacity: 0.1;
 
 @import "base/base";
 
+@import "utility/outer-container";
+@import "utility/wrapper";
+
 @import "partials/body";
 @import "partials/header";
 @import "partials/nav";
@@ -22,10 +25,9 @@ $visual-grid-opacity: 0.1;
 @import "partials/intro";
 @import "partials/news";
 @import "partials/menu-page";
+@import "partials/gallery";
 
 @import "templates/article";
 
-@import "utility/outer-container";
-@import "utility/wrapper";
 @import "utility/rotated-text";
 @import "utility/heading-underline";

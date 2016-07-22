@@ -1,0 +1,42 @@
+.gallery {
+  @include display(flex);
+  @include flex-wrap(wrap);
+
+  &__item {
+    margin: 0;
+    @include span-columns(4 of 12);
+    @include display(flex);
+    @include flex-direction(column);
+    background-color: $white;
+    margin-top: $spacing-md;
+
+    &:nth-child(3) {
+      margin-right: 0;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  &__text {
+    @include display(flex);
+    @include flex-direction(column);
+    @include flex-grow(2);
+    padding: $spacing-sm $spacing-sm $spacing-md $spacing-sm;
+  }
+
+  &__caption {
+    margin: $spacing-base 0;
+    font-family: $heading-font-family;
+    font-weight: 700;
+    font-size: $font-size-sm;
+  }
+
+  &__paragraph {
+    @include flex(1 0 auto);
+  }
+
+}
