@@ -4,19 +4,20 @@
     @include partly-underlined(5px, -1px, $medium-gray);
   }
 
-  &__address {
+  &__form {
     @include span-columns(5 of 8);
-
-    input {
-      margin-bottom: $spacing-lg;
-    }
   }
 
-
+  &__address {
+    label {
+      margin-top: $spacing-md;
+    }
+  }
 
   input[type=submit]{
     width: 100%;
     background-color: $red;
     color: $offwhite;
+    margin-top: $spacing-lg;
   }
 }

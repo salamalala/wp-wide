@@ -91,7 +91,7 @@ select {
   width: auto;
 }
 
-
+//style radio buttons: 
 [type="radio"] {
   border: 0;
   clip: rect(0 0 0 0);
@@ -102,7 +102,6 @@ select {
   width: 1px;
 }
 
-/* the basic, unchecked style */
 [type="radio"] + span:before {
   content: '';
   display: inline-block;
@@ -115,7 +114,6 @@ select {
   transition: 0.5s ease all;
 }
 
-/* the checked style using the :checked pseudo class */
 [type="radio"]:checked + span:before {
   background: $red;
   box-shadow: 0 0 0 0.2em $red;
@@ -128,18 +126,46 @@ select {
   vertical-align: -0.125em;
 }
 
-
-
-
-
-::-webkit-input-placeholder {
- color: #45454A;
+input::-webkit-input-placeholder {
+ color: lighten($medium-gray, 20%);
+ font-size: 90%;
 }
 
-::-moz-placeholder {  /* Firefox 19+ */
- color: #45454A;
+input::-moz-placeholder {  /* Firefox 19+ */
+ color: lighten($medium-gray, 20%);
 }
 
-:-ms-input-placeholder {
- color: #45454A;
+input:-ms-input-placeholder {
+ color: lighten($medium-gray, 20%);
+}
+
+//alert messages;
+.wpcf7 {
+
+  span.wpcf7-not-valid-tip {
+    color: $red;
+    font-weight: 600;
+    font-family: $heading-font-family;
+    padding: $spacing-xxs;
+    text-align: center;
+  }
+
+  .wpcf7-validation-errors {
+    border-color: $red;
+  }
+
+  .wpcf7-mail-sent-ok {
+    border: none;
+    width: 100%;
+    font-family: $heading-font-family;
+    text-align: center;
+  }
+
+  div.wpcf7-validation-errors {
+    text-align: center;
+    font-family: $heading-font-family;
+    border: none;
+    width: 100%;
+  }
+
 }
