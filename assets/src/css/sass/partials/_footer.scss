@@ -72,7 +72,6 @@
 
     &:focus {
       border-color: $blue;
-      box-shadow: $form-box-shadow-focus;
       outline: none;
     }
   }
@@ -156,7 +155,8 @@
   // change footer and all its element into $red
   .single-ueberuns &,
   .single-aktivitaet &,
-  .single-thema & {
+  .single-thema &,
+  .page-template-content-unterstuetzung & {
     &__support {
       background-color: $red;
     }

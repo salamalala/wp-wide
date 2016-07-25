@@ -7,9 +7,9 @@ get_header();
 ?>
 
 <div class="outer-container">
-  <div class="wrapper">
+  <div class="wrapper support">
 
-    <?php the_title( '<h1 class="">', '</h1>' ); ?>
+    <?php the_title( '<h1 class="support__title">', '</h1>' ); ?>
 
 
     <?php

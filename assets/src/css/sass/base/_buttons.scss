@@ -3,8 +3,8 @@ button {
   @include appearance(none);
   -webkit-font-smoothing: antialiased;
   background-color: transparent;
-  border-radius: $base-border-radius;
-  border: $blue 3px solid;
+  border: $base-border;
+  border-color: $red;
   color: $medium-gray;
   cursor: pointer;
   display: inline-block;
