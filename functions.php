@@ -179,7 +179,7 @@ function remove_editor() {
 add_action('admin_init', 'remove_editor');
 
 
-// create custom wysiwyg toolbar for acf fields
+// create simplified custom toolbar for acf wysiwyg
 add_filter( 'acf/fields/wysiwyg/toolbars' , 'simple_toolbar'  );
 
 function simple_toolbar( $toolbars )
@@ -212,7 +212,7 @@ add_filter( 'tiny_mce_before_init', function( $settings ){
 } );
 
 
-// create custom wysiwyg toolbar for acf fields
+// create very simple toolbar for customized acf wysiwyg
 add_filter( 'acf/fields/wysiwyg/toolbars' , 'very_simple_toolbar'  );
 
 function very_simple_toolbar( $toolbars )

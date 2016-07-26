@@ -194,8 +194,8 @@
  					),
  					'default_value' => '',
  					'tabs' => 'all',
- 					'toolbar' => 'simple',
- 					'media_upload' => 1,
+ 					'toolbar' => 'very_simple',
+ 					'media_upload' => 0,
  				),
  				array (
  					'key' => 'field_577fb2e8f289c',

@@ -25,7 +25,7 @@
 							</div>
 
 							<a class="footer__support-button" href="#">Mitmachen</a>
-							<a class="footer__support-button" href="#">Unterstützen</a>
+							<a class="footer__support-button" href="/de/unterstutzung/">Unterstützen</a>
 
 						</div>
 					</div>

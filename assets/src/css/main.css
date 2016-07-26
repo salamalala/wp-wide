@@ -260,22 +260,6 @@ textarea {
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(201, 74, 65, 0.7);
     outline: none; }
 
-::-webkit-input-placeholder {
-  /* Chrome/Opera/Safari */
-  color: #393D40; }
-
-::-moz-placeholder {
-  /* Firefox 19+ */
-  color: #393D40; }
-
-:-ms-input-placeholder {
-  /* IE 10+ */
-  color: #393D40; }
-
-:-moz-placeholder {
-  /* Firefox 18- */
-  color: #393D40; }
-
 textarea {
   resize: vertical; }
 
@@ -332,15 +316,23 @@ select {
   vertical-align: -0.125em; }
 
 input::-webkit-input-placeholder {
-  color: #888e93;
-  font-size: 90%; }
+  color: #7a8187;
+  font-size: 90%;
+  font-weight: 600;
+  font-style: italic; }
 
 input::-moz-placeholder {
   /* Firefox 19+ */
-  color: #888e93; }
+  color: #7a8187;
+  font-size: 90%;
+  font-weight: 600;
+  font-style: italic; }
 
 input:-ms-input-placeholder {
-  color: #888e93; }
+  color: #7a8187;
+  font-size: 90%;
+  font-weight: 600;
+  font-style: italic; }
 
 .wpcf7 span.wpcf7-not-valid-tip {
   color: #CF5D55;
@@ -1273,19 +1265,7 @@ body {
     -ms-flex: 1 0 auto;
     flex: 1 0 auto; }
 
-.article__title {
-  display: inline-block;
-  position: relative; }
-  .article__title:after {
-    content: "";
-    position: absolute;
-    width: 75%;
-    height: 5px;
-    left: 0;
-    bottom: -1px;
-    background-color: #565B5F; }
-
-.article__content:first-letter {
+.article:first-letter {
   color: #CF5D55;
   font-size: 4.2087269129em;
   font-weight: 400;
@@ -1293,7 +1273,7 @@ body {
   line-height: 50%;
   margin: 0 .1em 0 0; }
 
-.article__content p:first-child {
+.article p:first-child {
   margin: 0; }
 
 .article img {

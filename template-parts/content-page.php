@@ -16,6 +16,13 @@
 
 			<header class="entry-header">
 				<?php the_title( '<h1 class="heading-underline">', '</h1>' ); ?>
+
+				<?php if( get_field('article_content') ): ?>
+					<div class="article">
+						<?php the_field('article_content'); ?>
+					</div>
+				<?php endif; ?>
+
 			</header><!-- .entry-header -->
 		</div>
 	</div>
