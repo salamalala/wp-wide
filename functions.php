@@ -150,7 +150,14 @@ require get_template_directory() . '/inc/acf.php';
 //added functions
 
 //remove added p tags
-remove_filter('the_content', 'wpautop');
+remove_filter('acf_the_content', 'wpautop');
+
+//remove p tags around images and iframes:
+function filter_ptags_on_images($content) {
+    $content = preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
+    return preg_replace('/<p>\s*(<iframe .*>*.<\/iframe>)\s*<\/p>/iU', '\1', $content);
+}
+add_filter('acf_the_content', 'filter_ptags_on_images');
 
 
 // Walker: outputting HTML for custom menus My_Sub_Menu allows custom class name, in this case nav__submenu

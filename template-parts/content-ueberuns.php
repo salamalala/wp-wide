@@ -17,6 +17,7 @@ get_header();
 
       $args = array(
          'post_type' => 'ueberuns',
+         'numberposts' => -1,
          'order' => 'ASC',
          'orderby' => 'menu_order'
        );

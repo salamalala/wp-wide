@@ -13,10 +13,48 @@
       line-height: 50%;
       margin: 0 .1em 0 0;
     }
+
+    //in order to move second line up to big first letter.
+    p:first-child {
+      margin: 0;
+    }
+  }
+
+  img {
+    margin-top: $spacing-base;
+    margin-bottom: $spacing-base;
+    //to stop distorting them:
+    height: auto;
+    filter: grayscale(30%);
+  }
+
+  img.alignnone {
+    display: block;
+  }
+
+  img.alignleft {
+    float: left;
+    margin-right: $spacing-lg;
+  }
+
+  img.alignright {
+    float: right;
+    margin-left: $spacing-lg;
+  }
+
+  img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   h2 {
     display: inline-block;
     @include partly-underlined(3px, -3px, $medium-gray);
+    margin-top: $spacing-sm;
+  }
+
+  h3 {
+    margin-top: $spacing-sm;
   }
 }

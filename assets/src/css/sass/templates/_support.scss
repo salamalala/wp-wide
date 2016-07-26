@@ -4,6 +4,10 @@
     @include partly-underlined(5px, -1px, $medium-gray);
   }
 
+  h3 {
+    margin-bottom: 0;
+  }
+
   &__form {
     @include span-columns(5 of 8);
   }

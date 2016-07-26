@@ -1,5 +1,6 @@
 var emptyPTag = function() {
   $('p:empty').remove();
+  $('p > img').unwrap();
 };
 
 var mobileMenu = function () {
