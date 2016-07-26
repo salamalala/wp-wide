@@ -396,4 +396,53 @@
   	'description' => '',
   ));
 
+  acf_add_local_field_group(array (
+  	'key' => 'group_579762b69af96',
+  	'title' => 'Kontakt',
+  	'fields' => array (
+  		array (
+  			'key' => 'field_5797676b36c70',
+  			'label' => 'Kontakt',
+  			'name' => 'kontakt',
+  			'type' => 'wysiwyg',
+  			'instructions' => '',
+  			'required' => 0,
+  			'conditional_logic' => 0,
+  			'wrapper' => array (
+  				'width' => '',
+  				'class' => '',
+  				'id' => '',
+  			),
+  			'default_value' => '',
+  			'tabs' => 'all',
+  			'toolbar' => 'simple',
+  			'media_upload' => 0,
+  		),
+  	),
+  	'location' => array (
+  		array (
+  			array (
+  				'param' => 'page',
+  				'operator' => '==',
+  				'value' => '6',
+  			),
+  		),
+  		array (
+  			array (
+  				'param' => 'page',
+  				'operator' => '==',
+  				'value' => '149',
+  			),
+  		),
+  	),
+  	'menu_order' => 0,
+  	'position' => 'normal',
+  	'style' => 'default',
+  	'label_placement' => 'top',
+  	'instruction_placement' => 'label',
+  	'hide_on_screen' => '',
+  	'active' => 1,
+  	'description' => '',
+  ));
+
  endif;
