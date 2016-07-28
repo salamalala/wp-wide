@@ -151,7 +151,7 @@
       padding-bottom: $spacing-sm;
       padding-right: $spacing-sm;
       padding-left: 10px;
-      margin-bottom: $spacing-sm;
+      margin-bottom: 8px;
       font-weight: 700;
       text-transform: uppercase;
       font-family: $heading-font-family;
@@ -203,6 +203,22 @@
       left: 0;
       position: relative;
       transition: all 0.2s ease-out;
+      position: relative;
+
+      //arrow pointing down for submenu
+      > a:after {
+        content: url(../../img/svg/inline-arrow-down.svg);
+        position: absolute;
+        margin-left: $spacing-sm;
+        bottom: 50%;
+        width: $spacing-xs;
+        height: $spacing-xs;
+        transition: $hover-transition;
+      }
+
+      > a:hover:after {
+        bottom: 45%;
+      }
 
       //show submenu when hovering over li with submenus.
       &:focus > .nav__submenu,
@@ -215,38 +231,64 @@
         .nav__submenu {
           display: block;
         }
-      }
+        a {
+          padding: $spacing-xs;
+          padding-left: $spacing-xl;
+        }
 
-      //arrow pointing down for submenu
-      // > a:after {
-      //   content: url(../../img/svg/arrow-down.svg);
-      //   display: inline-block;
-      //   width: 15px;
-      //   height: 15px;
-      //   padding-left: $spacing-base;
-      // }
+        > a{
+          padding-left: $spacing-lg;
+
+          //arrow pointing down for submenu
+          &:after {
+            content: url(../../img/svg/inline-arrow-down-light.svg);
+            display: inline-block;
+            width: $spacing-xs;
+            height: $spacing-xs;
+            margin-left: $spacing-xs;
+          }
+        }
+      }
     }
   }
 
   &__submenu {
     display: none;
     margin: 0;
+    margin-top: 0;
     padding-left: 0;
 
     li {
       display: block;
       padding-right: 0;
-      margin-left: $spacing-md;
-
 
       @include media($medium-screen) {
         min-width: calc(220px - #{$spacing-md});
       }
+    }
 
+    a {
+      display: inline-block;
+      width: 100%;
+      font-size: 85%;//
+      font-weight: 600;
+      margin-bottom: 0;
+      padding: $spacing-xs;
+      padding-left: $spacing-xl;
+      background-color: lighten($light-gray, 4%);
+      color: lighten($medium-gray, 8%);
+    }
+
+    &:last-child {
+      margin-bottom: 8px;
+    }
+
+    //subsubmenu
+    .nav__submenu {
+      margin-top: 0;
       a {
-        display: inline-block;
-        width: 100%;
-        font-size: 90%;
+        font-size: 75%;
+        padding-left: $spacing-xxl;
       }
     }
   }
@@ -258,8 +300,7 @@
   pointer-events: none;
 }
 
-.current-menu-item > a,
-.current-menu-ancestor > a {
+.current-menu-item > a {
   background-color: $medium-gray;
   color: $offwhite;
 }

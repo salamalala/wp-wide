@@ -15,6 +15,11 @@
   &__address {
     label {
       margin-top: $spacing-md;
+      // margin-bottom: 0;
+      // padding-left: $spacing-base;
+      // background-color: $red;
+      // color: $offwhite;
+      // text-transform: uppercase;
     }
   }
 
@@ -23,5 +28,13 @@
     background-color: $red;
     color: $offwhite;
     margin-top: $spacing-lg;
+    transition: $hover-transition;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $offwhite;
+      color: $red;
+    }
   }
 }

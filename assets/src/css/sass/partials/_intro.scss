@@ -12,14 +12,19 @@
     font-size: $font-size-md;
     //to force same line height despite bigger letters in title
     line-height: 1.7em;
+    text-align: center;
   }
 
   &__title {
     display: inline;
     margin: 0;
+    // margin-left: -#{$spacing-lg};
     line-height: 1;
     font-size: $font-size-xl;
-    @include partly-underlined(4px, 4px, $offwhite);
+    @include partly-underlined(4px, 4px, $green);
+    &:after {
+      left: $spacing-sm;
+    }
   }
 
   p {
