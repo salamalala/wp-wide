@@ -1,5 +1,22 @@
 .header {
   position: relative;
+  height: 48px;
+  background-color: $blue;
+
+  .single-ueberuns &,
+  .single-aktivitaet &,
+  .single-thema &,
+  .page-template-content-unterstuetzung & {
+    background-color: $red;
+  }
+
+  @include media($small-screen) {
+    height: 100px;
+  }
+
+  @include media($medium-screen) {
+    height: 0;
+  }
 
   &__logo {
     position: absolute;

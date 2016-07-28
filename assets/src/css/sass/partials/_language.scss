@@ -1,15 +1,20 @@
 // using polylang plugin selectors:
 
 .language {
-  float: right;
   list-style: none;
-  padding-left: 0;
-  margin-right: 10px;
-  margin-top: 10px;
-  position: relative;
+  position: absolute;
   z-index: 10;
+  padding-left: 0;
+  right: 20px;
+  top: 50%;
+  margin-top: -14px;
+
+  @include media($small-screen) {
+    margin-top: -15px;
+  }
 
   @include media($medium-screen) {
+    display: inline-block;
     padding-top: 15%;
     right: 0;
     margin: 0;
@@ -56,8 +61,10 @@
     transition: all 0.4s ease-out;
 
     @include media($medium-screen) {
-      margin-bottom: $spacing-sm;
-      @include calc(padding, "#{$spacing-sm} - 2px");
+      font-size: $font-size-base;
+      margin-bottom: 8px;
+      padding: $spacing-sm;
+      line-height: 1;
     }
 
     &:active,

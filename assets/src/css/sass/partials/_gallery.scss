@@ -4,14 +4,18 @@
 
   &__item {
     margin: 0;
-    @include span-columns(4 of 12);
-    @include display(flex);
-    @include flex-direction(column);
+    @include span-columns(12 of 12);
     background-color: $white;
     margin-top: $spacing-md;
 
-    &:nth-child(3) {
-      margin-right: 0;
+    @include media($medium-screen) {
+      @include span-columns(4 of 12);
+      @include display(flex);
+      @include flex-direction(column);
+
+      &:nth-child(3) {
+        margin-right: 0;
+      }
     }
   }
 
