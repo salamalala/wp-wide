@@ -577,6 +577,8 @@ body {
   position: relative;
   height: 48px;
   background-color: #3B86A3; }
+  .home .header {
+    background-image: url(../../img/transparent-square-tiles.png); }
   .single-ueberuns .header,
   .single-aktivitaet .header,
   .single-thema .header,
@@ -686,7 +688,7 @@ body {
       @media screen and (min-width: 30em) {
         .nav__menu-button.close:before {
           top: 20px;
-          left: 25px;
+          left: 20px;
           width: 25px; } }
     .nav__menu-button.close:after {
       transform: rotate(-45deg);
@@ -696,7 +698,7 @@ body {
       @media screen and (min-width: 30em) {
         .nav__menu-button.close:after {
           top: 20px;
-          left: 25px;
+          left: 20px;
           width: 25px; } }
     @media screen and (min-width: 46.5em) {
       .nav__menu-button {
@@ -736,12 +738,12 @@ body {
       text-transform: uppercase;
       font-family: "sofia-pro", sans-serif;
       line-height: 1;
-      background: rgba(86, 91, 95, 0.97);
+      background: rgba(86, 91, 95, 0.95);
       color: #F5F5FA;
       transition: all 0.1s ease-out; }
       @media screen and (min-width: 30em) {
         .nav__menu-item a {
-          padding-left: 15px; } }
+          padding-left: 20px; } }
       @media screen and (min-width: 46.5em) {
         .nav__menu-item a {
           display: inline-block;
