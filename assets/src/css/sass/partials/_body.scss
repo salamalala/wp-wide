@@ -3,6 +3,10 @@ body {
 
   .body__wrapper {
     background-color: $offwhite;
-    margin: $spacing-md;
+    margin: $spacing-base;
+
+    @include media($medium-screen) {
+      margin: $spacing-md;
+    }
   }
 }

@@ -1,11 +1,7 @@
 .nav {
   position: absolute;
-  width: 45%;
+  width: 100%;
   z-index: 10;
-
-  @include media($small-screen) {
-    width: 40%;
-  }
 
   @include media($medium-screen) {
     //to push to viewport
@@ -24,17 +20,23 @@
   &__menu-button {
     display: inline-block;
     position: relative;
-    padding-top: 30px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-    background-color: $medium-gray;
-    color: $offwhite;
+    padding-top: 24px;
+    padding-left: 6px;
+    padding-right: 6px;
+    margin-top: 5px;
+    margin-left: 5px;
+    background-color: transparent;
+    color: $medium-gray;
     text-transform: uppercase;
     font-family: $heading-font-family;
-    font-weight: 700;
+    font-weight: 600;
+    font-size: $font-size-sm;
     line-height: 1;
     text-align: center;
+
+    .home & {
+      color: $offwhite;
+    }
 
     @include media($small-screen) {
       padding-top: 40px;
@@ -43,22 +45,19 @@
       padding-bottom: 15px;
     }
 
-    &:active,
-    &:focus,
-    &:hover {
-      background-color: $dark-gray;
-      color: $white;
-    }
-
     &:before {
       content: "";
       position: absolute;
       display: block;
-      top: 10px;
-      height: 3px;
-      @include calc(width, "100% - 20px");
-      background: $offwhite;
+      top: 8px;
+      height: 2px;
+      @include calc(width, "100% - 12px");
+      background: $medium-gray;
       transition: $hover-transition;
+
+      .home & {
+        background: $offwhite;
+      }
 
       @include media($small-screen) {
         @include calc(width, "100% - 30px");
@@ -71,11 +70,15 @@
       content: "";
       position: absolute;
       display: block;
-      top: 20px;
-      height: 3px;
-      @include calc(width, "100% - 20px");
-      background: $offwhite;
+      top: 16px;
+      height: 2px;
+      @include calc(width, "100% - 12px");
+      background: $medium-gray;
       transition: $hover-transition;
+
+      .home & {
+        background: $offwhite;
+      }
 
       @include media($small-screen) {
         @include calc(width, "100% - 30px");
@@ -87,8 +90,8 @@
   	&.close {
   		&:before {
         transform: rotate(45deg);
-        top: 15px;
-        left: 18px;
+        top: 12px;
+        left: 12px;
         width: 20px;
 
         @include media($small-screen) {
@@ -100,8 +103,8 @@
 
   		&:after {
         transform: rotate(-45deg);
-        top: 15px;
-        left: 18px;
+        top: 12px;
+        left: 12px;
         width: 20px;
 
         @include media($small-screen) {
@@ -151,7 +154,6 @@
       padding-bottom: $spacing-sm;
       padding-right: $spacing-base;
       padding-left: 10px;
-      margin-bottom: 8px;
       font-weight: 700;
       text-transform: uppercase;
       font-family: $heading-font-family;
@@ -167,6 +169,7 @@
       @include media($medium-screen) {
         display: inline-block;
         min-width: 180px;
+        margin-bottom: 8px;
         padding-left: $spacing-lg;
         background-color: $light-gray;
         color: $medium-gray;
@@ -295,7 +298,13 @@
       margin-top: 0;
       a {
         font-size: 75%;
-        padding-left: $spacing-xxl;
+        padding-left:  modular-scale(4);
+        background-color: lighten($light-gray, 6%);
+        color: lighten($medium-gray, 10%);
+        &:hover {
+          background-color: $light-gray;
+          color: $dark-gray;
+        }
       }
     }
   }

@@ -1,13 +1,12 @@
 .header {
   position: relative;
-  height: 1px;
 
   &__logo {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     top: -#{$spacing-xs};
-    width: 120px;
+    width: 100px;
 
     @include media($small-screen) {
       width: 200px;
