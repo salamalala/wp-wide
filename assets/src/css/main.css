@@ -712,7 +712,7 @@ body {
       width: 100%;
       padding-top: 0.7501875469em;
       padding-bottom: 0.7501875469em;
-      padding-right: 0.7501875469em;
+      padding-right: 1em;
       padding-left: 10px;
       margin-bottom: 8px;
       font-weight: 700;
@@ -753,7 +753,7 @@ body {
       .nav__menu-item--more > a:after {
         content: url(../../img/svg/inline-arrow-down.svg);
         position: absolute;
-        margin-left: 0.7501875469em;
+        margin-left: 0.5627813555em;
         bottom: 50%;
         width: 0.5627813555em;
         height: 0.5627813555em;
@@ -767,6 +767,7 @@ body {
         display: block; }
       .nav__menu-item--more.current-menu-item a {
         padding: 0.5627813555em;
+        padding-right: 1.333em;
         padding-left: 2.368593037em; }
       .nav__menu-item--more.current-menu-item > a {
         padding-left: 1.776889em; }
@@ -780,6 +781,7 @@ body {
     display: none;
     margin: 0;
     margin-top: 0;
+    margin-top: -8px;
     padding-left: 0; }
     .nav__submenu li {
       display: block;
@@ -787,6 +789,8 @@ body {
       @media screen and (min-width: 46.5em) {
         .nav__submenu li {
           min-width: calc(220px - 1.333em); } }
+      .nav__submenu li.nav__menu-item--more > a {
+        padding-left: 2.368593037em; }
     .nav__submenu a {
       display: inline-block;
       width: 100%;
@@ -794,8 +798,9 @@ body {
       font-weight: 600;
       margin-bottom: 0;
       padding: 0.5627813555em;
+      padding-right: 1.333em;
       padding-left: 2.368593037em;
-      background-color: #ebedf1;
+      background-color: #e8ebee;
       color: #697074; }
     .nav__submenu:last-child {
       margin-bottom: 8px; }

@@ -149,7 +149,7 @@
       width: 100%;
       padding-top: $spacing-sm;
       padding-bottom: $spacing-sm;
-      padding-right: $spacing-sm;
+      padding-right: $spacing-base;
       padding-left: 10px;
       margin-bottom: 8px;
       font-weight: 700;
@@ -209,7 +209,7 @@
       > a:after {
         content: url(../../img/svg/inline-arrow-down.svg);
         position: absolute;
-        margin-left: $spacing-sm;
+        margin-left: $spacing-xs;
         bottom: 50%;
         width: $spacing-xs;
         height: $spacing-xs;
@@ -233,6 +233,7 @@
         }
         a {
           padding: $spacing-xs;
+          padding-right: $spacing-md;
           padding-left: $spacing-xl;
         }
 
@@ -256,6 +257,7 @@
     display: none;
     margin: 0;
     margin-top: 0;
+    margin-top: -8px;
     padding-left: 0;
 
     li {
@@ -264,6 +266,10 @@
 
       @include media($medium-screen) {
         min-width: calc(220px - #{$spacing-md});
+      }
+
+      &.nav__menu-item--more > a {
+        padding-left: $spacing-xl;
       }
     }
 
@@ -274,8 +280,9 @@
       font-weight: 600;
       margin-bottom: 0;
       padding: $spacing-xs;
+      padding-right: $spacing-md;
       padding-left: $spacing-xl;
-      background-color: lighten($light-gray, 4%);
+      background-color: lighten($light-gray, 3%);
       color: lighten($medium-gray, 8%);
     }
 
