@@ -1,7 +1,10 @@
 var emptyPTag = function() {
   $('p:empty').remove();
-  $('p > img').unwrap();
 };
+
+var strapImgTag = function() {
+  $('p > img').unwrap();
+}
 
 var mobileMenu = function () {
   var menuToggle = $('#js-mobile-menu').unbind();
@@ -50,20 +53,38 @@ var sectionAnimationTriggered = function() {
 
 var stickyHeaderElements = function(el) {
   $(window).scroll(function(){
-  var sticky = $(el),
-      scroll = $(window).scrollTop();
+    var sticky = $(el),
+        scroll = $(window).scrollTop();
 
-  if (scroll >= 250) sticky.addClass('fixed');
-  else sticky.removeClass('fixed');
-});
+    if (scroll >= 250) {
+      sticky.addClass('fixed')}
+    else {
+      sticky.removeClass('fixed')
+    }
+  });
+};
+
+var inputFocus = function() {
+
+  $('.support__address').on("focus", "input", function() {
+    console.log("hello");
+    console.log($(this));
+    $(this).parents('.support__address').find("label").addClass("support__label");
+    // $(this).find('label').addClass("support__label");
+  });
 }
 
-$(function() {
 
+$(function() {
   emptyPTag();
+  strapImgTag();
   mobileMenu();
   sectionAnimationTriggered();
   stickyHeaderElements('.nav');
   stickyHeaderElements('.language');
+
+  if ( $('.support').length ) {
+    inputFocus();
+  }
 
 });

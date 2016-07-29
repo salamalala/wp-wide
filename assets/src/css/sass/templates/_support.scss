@@ -13,13 +13,35 @@
   }
 
   &__address {
+    position: relative;
+
     label {
-      margin-top: $spacing-md;
-      // margin-bottom: 0;
-      // padding-left: $spacing-base;
-      // background-color: $red;
-      // color: $offwhite;
-      // text-transform: uppercase;
+      width: 100%;
+    	position: absolute;
+      top: -50%;
+      transform: translateY(50%);
+      bottom: 0;
+      left: 0;
+    	overflow: hidden;
+    	padding: 0;
+    	pointer-events: none;
+      margin: 0;
+
+      &.support__label {
+        animation: move-label 0.25s forwards;
+      }
+    }
+
+    input {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      margin-top: $spacing-xl;
+    	background: transparent;
+    	border: 2px solid;
+    	color: $medium-gray;
+    	transition: border-color 0.25s;
     }
   }
 
@@ -37,4 +59,21 @@
       color: $red;
     }
   }
+}
+
+@keyframes move-label {
+  0% {
+		transform: translateY(50%);
+    color: $medium-gray;
+	}
+	70% {
+		transform: translateY(20%);
+		opacity: 0;
+	}
+
+	100% {
+    opacity: 1;
+		transform: translateY(0%);
+    color: $red;
+	}
 }
