@@ -39,22 +39,8 @@
 
 		<header role="header" class="header">
 
-      <div class="header__logo">
-					<a href="<?php echo get_home_url(); ?>">
-
-            <?php if ( is_front_page() ): ?>
-              <img src= "<?php
-                echo get_template_directory_uri(); ?>/assets/img/svg/wide_switzerland_deflogo_white.svg"
-                alt="Logo Wide Switzerland"
-                >
-            <?php else: ?>
-              <img src= "<?php
-                echo get_template_directory_uri(); ?>/assets/img/svg/wide_switzerland_deflogo.svg"
-                alt="Logo Wide Switzerland"
-                >
-            <?php endif; ?>
-					</a>
-			</div>
+			<a class="header__logo" href="<?php echo get_home_url(); ?>">
+			</a>
 
       <div class="nav">
         <a class="nav__menu-button" id="js-mobile-menu" href="javascript:void(0)">Menu</a>

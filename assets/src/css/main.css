@@ -575,7 +575,7 @@ body {
 
 .header {
   position: relative;
-  height: 48px;
+  height: 60px;
   background-color: #3B86A3; }
   .home .header {
     background-image: url(../../img/transparent-square-tiles.png); }
@@ -594,14 +594,24 @@ body {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: -0.5627813555em;
-    width: 100px; }
+    top: -0.4221915645em;
+    width: 100px;
+    height: 50px;
+    background: url(../../img/svg/wide_switzerland_deflogo_white.svg) no-repeat center;
+    background-size: contain; }
     @media screen and (min-width: 30em) {
       .header__logo {
+        height: 100px;
         width: 200px; } }
     @media screen and (min-width: 46.5em) {
       .header__logo {
-        width: 220px; } }
+        background: url(../../img/svg/wide_switzerland_deflogo.svg) no-repeat center;
+        background-size: contain;
+        height: 110px;
+        width: 220px; }
+        .home .header__logo {
+          background: url(../../img/svg/wide_switzerland_deflogo_white.svg) no-repeat center;
+          background-size: contain; } }
 
 .nav {
   position: absolute;
@@ -619,31 +629,29 @@ body {
         padding-top: 0; } }
   .nav__menu-button {
     display: inline-block;
-    position: relative;
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    margin-left: 5px;
     padding-top: 24px;
     padding-left: 6px;
     padding-right: 6px;
-    margin-top: 5px;
-    margin-left: 5px;
+    padding-bottom: 6px;
     background-color: transparent;
-    color: #565B5F;
+    color: #F5F5FA;
     text-transform: uppercase;
     font-family: "sofia-pro", sans-serif;
     font-weight: 600;
     font-size: 0.7501875469em;
     line-height: 1;
     text-align: center; }
-    .home .nav__menu-button {
-      color: #F5F5FA; }
     @media screen and (min-width: 30em) {
       .nav__menu-button {
         padding-top: 40px;
         padding-left: 15px;
         padding-right: 15px;
         padding-bottom: 15px;
-        position: absolute;
-        top: 50%;
-        margin-top: -35px; } }
+        margin-top: -34px; } }
     .nav__menu-button:before {
       content: "";
       position: absolute;
@@ -652,10 +660,8 @@ body {
       height: 2px;
       width: -webkit-calc(100% - 12px);
       width: calc(100% - 12px);
-      background: #565B5F;
+      background: #F5F5FA;
       transition: all 0.1s ease-out; }
-      .home .nav__menu-button:before {
-        background: #F5F5FA; }
       @media screen and (min-width: 30em) {
         .nav__menu-button:before {
           width: -webkit-calc(100% - 30px);
@@ -670,10 +676,8 @@ body {
       height: 2px;
       width: -webkit-calc(100% - 12px);
       width: calc(100% - 12px);
-      background: #565B5F;
+      background: #F5F5FA;
       transition: all 0.1s ease-out; }
-      .home .nav__menu-button:after {
-        background: #F5F5FA; }
       @media screen and (min-width: 30em) {
         .nav__menu-button:after {
           width: -webkit-calc(100% - 30px);
@@ -709,6 +713,7 @@ body {
     display: none;
     overflow: visible;
     padding: 0;
+    margin-top: 60px;
     width: 100%; }
     @media screen and (min-width: 30em) {
       .nav__list {
@@ -860,11 +865,12 @@ body {
   position: absolute;
   z-index: 10;
   padding-left: 0;
-  right: 20px;
+  right: 11px;
   top: 50%;
   margin-top: -14px; }
   @media screen and (min-width: 30em) {
     .language {
+      right: 20px;
       margin-top: -15px; } }
   @media screen and (min-width: 46.5em) {
     .language {
@@ -884,7 +890,7 @@ body {
     pointer-events: none; }
     .language .current-lang a:active, .language .current-lang a:focus, .language .current-lang a:hover {
       color: #565B5F;
-      background-color: #DFE3E8; }
+      background-color: #F5F5FA; }
   .language .lang-item {
     display: inline-block; }
     @media screen and (min-width: 46.5em) {
@@ -898,14 +904,15 @@ body {
     font-family: "sofia-pro", sans-serif;
     font-size: 0.7501875469em;
     color: #565B5F;
-    background-color: #DFE3E8;
+    background-color: #F5F5FA;
     transition: all 0.4s ease-out; }
     @media screen and (min-width: 46.5em) {
       .language a {
         font-size: 1em;
         margin-bottom: 8px;
         padding: 0.7501875469em;
-        line-height: 1; } }
+        line-height: 1;
+        background-color: #DFE3E8; } }
     .language a:active, .language a:focus, .language a:hover {
       color: #F5F5FA;
       background-color: #565B5F;

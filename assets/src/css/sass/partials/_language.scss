@@ -5,11 +5,12 @@
   position: absolute;
   z-index: 10;
   padding-left: 0;
-  right: 20px;
+  right: 11px;
   top: 50%;
   margin-top: -14px;
 
   @include media($small-screen) {
+    right: 20px;
     margin-top: -15px;
   }
 
@@ -37,7 +38,7 @@
     &:focus,
     &:hover {
       color: $medium-gray;
-      background-color: $light-gray;
+      background-color: $offwhite;
     }
   }
 
@@ -57,7 +58,7 @@
     font-family: $heading-font-family;
     font-size: $font-size-sm;
     color: $medium-gray;
-    background-color: $light-gray;
+    background-color: $offwhite;
     transition: all 0.4s ease-out;
 
     @include media($medium-screen) {
@@ -65,6 +66,7 @@
       margin-bottom: 8px;
       padding: $spacing-sm;
       line-height: 1;
+      background-color: $light-gray;
     }
 
     &:active,
