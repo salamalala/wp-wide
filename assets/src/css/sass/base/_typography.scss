@@ -6,7 +6,7 @@ body {
   font-size: $body-font-size-sm;
   line-height: $base-line-height;
 
-  @include media($small-screen) {
+  @include media($medium-screen) {
     font-size: $body-font-size-base;
   }
 

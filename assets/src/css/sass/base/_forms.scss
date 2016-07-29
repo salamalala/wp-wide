@@ -11,6 +11,7 @@ select {
   display: block;
   font-family: $heading-font-family;
   font-size: $font-size-base;
+  border-radius: $base-border-radius;
 }
 
 label {

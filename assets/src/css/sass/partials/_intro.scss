@@ -3,19 +3,19 @@
   background-image: url(../../img/transparent-square-tiles.png);
   color: $offwhite;
   margin-bottom: $spacing-xl;
-  padding-top: 40%;
+  padding-top: 40px;
+  padding-bottom: 40px;
 
   @include media($medium-screen) {
     padding-top: 20%;
+    padding-bottom: $spacing-xxl;
     height: calc(100vh - (4*#{$spacing-base});
   }
 
   &__content {
-    padding-bottom: $spacing-xxl;
     font-family: $heading-font-family;
     font-size: $font-size-base;
     //to force same line height despite bigger letters in title
-
     text-align: center;
 
     @include media($medium-screen) {
@@ -29,11 +29,16 @@
     display: inline;
     margin: 0;
     // margin-left: -#{$spacing-lg};
+    font-size: $font-size-lg;
     line-height: 1;
-    font-size: $font-size-xl;
-    @include partly-underlined(4px, 4px, $green);
-    &:after {
-      left: $spacing-sm;
+    @include partly-underlined(2px,1px, $green);
+
+    @include media($medium-screen) {
+      font-size: $font-size-xl;
+      @include partly-underlined(4px, 4px, $green);
+      &:after {
+          left: $spacing-sm;
+      }
     }
   }
 

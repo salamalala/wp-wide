@@ -8,11 +8,15 @@
       content: "";
       position: absolute;
       display: block;
-      width: 5px;
+      width: 3px;
       height: 0;
-      left: -#{$spacing-sm};
+      left: -#{$spacing-xs};
       bottom: 0;
       background-color: $green;
+
+      @include media($small-screen) {
+        width: 4px;
+      }
 
       @include media($medium-screen) {
         left: -#{$spacing-base};
@@ -27,13 +31,17 @@
 
   &__title {
     display: inline-block;
-    @include partly-underlined(3px, -7px, $medium-gray);
+    @include partly-underlined(3px, -5px, $medium-gray);
+
+    @include media($medium-screen) {
+      @include partly-underlined(3px, -7px, $medium-gray);
+    }
   }
 
   &__category {
     color: $green;
     position: absolute;
-    left: -#{$spacing-base};
+    left: -#{$spacing-sm};
     bottom: -#{$font-size-sm};
     text-transform: uppercase;
     font-size: $font-size-sm;

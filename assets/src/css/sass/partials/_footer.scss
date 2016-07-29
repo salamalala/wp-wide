@@ -23,15 +23,16 @@
       content: "Newsletter abonnieren";
       position: absolute;
       left: $spacing-xs;
-      top: -15%;
+      top: -10%;
       padding: 0 $spacing-xxxs;
       font-family: $heading-font-family;
       font-weight: 700;
-      font-size: $font-size-lg;
+      font-size: $font-size-md;
       background: $blue;
       color: $light-blue;
 
       @include media($small-medium-screen) {
+        font-size: $font-size-lg;
         top: -25%;
         left: $spacing-base;
         padding: 0 $spacing-base;
