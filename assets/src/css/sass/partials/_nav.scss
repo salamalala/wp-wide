@@ -210,7 +210,6 @@
         content: url(../../img/svg/inline-arrow-down-light.svg);
         position: absolute;
         margin-left: $spacing-xs;
-
         width: $spacing-xs;
         height: $spacing-xs;
         transition: $hover-transition;
@@ -266,12 +265,13 @@
     padding-left: 0;
 
     @include media($medium-screen) {
-      margin-top: -8px;
+      margin-top: -9px;
     }
 
     li {
       display: block;
       padding-right: 0;
+      margin: -1px 0;
 
       @include media($medium-screen) {
         min-width: calc(220px - #{$spacing-md});
