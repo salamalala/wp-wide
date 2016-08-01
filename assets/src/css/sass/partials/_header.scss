@@ -18,7 +18,7 @@
     height: 100px;
   }
 
-  @include media($medium-screen) {
+  @include media($medium-large-screen) {
     height: 0;
   }
 
@@ -37,7 +37,7 @@
       width: 200px;
     }
 
-    @include media($medium-screen) {
+    @include media($medium-large-screen) {
       background: url(../../img/svg/wide_switzerland_deflogo.svg) no-repeat center;
       background-size: contain;
       height: 110px;

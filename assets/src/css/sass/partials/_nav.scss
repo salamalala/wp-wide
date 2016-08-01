@@ -4,7 +4,7 @@
   height: 100%;
   z-index: 10;
 
-  @include media($medium-screen) {
+  @include media($medium-large-screen) {
     //to push to viewport
     left: -#{$spacing-md};
     padding-top: 15%;
@@ -107,7 +107,7 @@
       }
   	}
 
-    @include media ($medium-screen) {
+    @include media ($medium-large-screen) {
       display: none;
     }
   }
@@ -125,7 +125,7 @@
       margin-top: 100px;
     }
 
-    @include media ($medium-screen) {
+    @include media ($medium-large-screen) {
       margin-top: 0;
       display: block;
       margin: 0;
@@ -136,7 +136,7 @@
   &__menu-item {
     width: 100%;
 
-    @include media($medium-screen) {
+    @include media($medium-large-screen) {
       min-width: 180px;
     }
 
@@ -163,7 +163,7 @@
         padding-left: 20px;
       }
 
-      @include media($medium-screen) {
+      @include media($medium-large-screen) {
         display: inline-block;
         min-width: 180px;
         margin-bottom: 8px;
@@ -182,7 +182,7 @@
         background-color: $dark-gray;
         color: $white;
 
-        @include media($medium-screen) {
+        @include media($medium-large-screen) {
           background-color: $light-gray;
           color: $dark-gray;
         }
@@ -190,7 +190,7 @@
     }
 
     > a {
-      @include media($medium-screen) {
+      @include media($medium-large-screen) {
         &:active,
         &:focus,
         &:hover {
@@ -214,14 +214,14 @@
         height: $spacing-xs;
         transition: $hover-transition;
 
-        @include media($medium-screen) {
+        @include media($medium-large-screen) {
           content: url(../../img/svg/inline-arrow-down.svg);
           bottom: 50%;
         }
       }
 
       > a:hover:after {
-        @include media($medium-screen) {
+        @include media($medium-large-screen) {
           bottom: 45%;
         }
       }
@@ -264,7 +264,7 @@
     margin: 0;
     padding-left: 0;
 
-    @include media($medium-screen) {
+    @include media($medium-large-screen) {
       margin-top: -9px;
     }
 
@@ -273,7 +273,7 @@
       padding-right: 0;
       margin: -1px 0;
 
-      @include media($medium-screen) {
+      @include media($medium-large-screen) {
         min-width: calc(220px - #{$spacing-md});
       }
 
@@ -292,14 +292,14 @@
       padding-right: $spacing-md;
       padding-left: $spacing-xl;
 
-      @include media($medium-screen) {
+      @include media($medium-large-screen) {
         background-color: lighten($light-gray, 3%);
         color: lighten($medium-gray, 8%);
       }
     }
 
     &:last-child {
-      @include media($medium-screen) {
+      @include media($medium-large-screen) {
         margin-bottom: 8px;
       }
     }
@@ -311,7 +311,7 @@
         font-size: 75%;
         padding-left:  modular-scale(4);
 
-        @include media($medium-screen) {
+        @include media($medium-large-screen) {
           background-color: lighten($light-gray, 6%);
           color: lighten($medium-gray, 10%);
           &:hover {

@@ -14,7 +14,7 @@
     margin-top: -15px;
   }
 
-  @include media($medium-screen) {
+  @include media($medium-large-screen) {
     display: inline-block;
     padding-top: 15%;
     top: 0;
@@ -46,7 +46,7 @@
   .lang-item {
     display: inline-block;
 
-    @include media($medium-screen) {
+    @include media($medium-large-screen) {
       display: block;
     }
   }
@@ -62,7 +62,7 @@
     background-color: $offwhite;
     transition: all 0.4s ease-out;
 
-    @include media($medium-screen) {
+    @include media($medium-large-screen) {
       font-size: $font-size-base;
       margin-bottom: 8px;
       padding: $spacing-sm;
