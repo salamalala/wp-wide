@@ -25,7 +25,8 @@
 							</div>
 
 							<a class="footer__support-button" href="#">Mitmachen</a>
-							<a class="footer__support-button" href="/de/unterstutzung/">Unterstützen</a>
+							<a class="footer__support-button" href="<?php echo esc_url( get_permalink( get_page_by_title( 'Unterstützen' ) ) ); ?>">Unterstützen</a>
+							<a target="_blank" class="footer__support-button footer__support-facebook" href="https://www.facebook.com/NetworkWIDE"><?php get_template_part('assets/img/svg/inline', 'facebook.svg'); ?></a>
 
 						</div>
 					</div>

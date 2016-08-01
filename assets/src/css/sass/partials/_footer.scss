@@ -107,7 +107,7 @@
     color: $light-blue;
 
     @include media($small-screen) {
-      width: 45%;
+      @include span-columns(7 of 16);
       margin-top: 0;
     }
 
@@ -117,9 +117,19 @@
       background-color: $light-blue;
       color: $medium-gray;
     }
+  }
 
-    &:last-child {
-      float:right;
+  &__support-facebook {
+    @include media($small-screen) {
+      @include span-columns(2 of 16);
+      svg {
+        height: $body-font-size-lg;
+      }
+      &:hover {
+        svg path {
+          fill: $medium-gray;
+        }
+      }
     }
   }
 
