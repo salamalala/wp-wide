@@ -65,12 +65,9 @@ var stickyHeaderElements = function(el) {
 };
 
 var inputFocus = function() {
-
   $('.support__address').on("focus", "input", function() {
-    console.log("hello");
-    console.log($(this));
+    $(this).addClass("input__focused");
     $(this).parents('.support__address').find("label").addClass("support__label");
-    // $(this).find('label').addClass("support__label");
   });
 }
 

@@ -18,17 +18,18 @@
     label {
       width: 100%;
     	position: absolute;
-      top: -50%;
-      transform: translateY(50%);
       bottom: 0;
       left: 0;
+      top: 0;
+      transform: translateY(0);
     	overflow: hidden;
-    	padding: 0;
+      padding-top: $spacing-sm;
+      padding-left: $spacing-lg;
     	pointer-events: none;
       margin: 0;
 
       &.support__label {
-        animation: move-label 0.25s forwards;
+        animation: move-label 0.2s forwards;
       }
     }
 
@@ -42,6 +43,10 @@
     	border: 2px solid;
     	color: $medium-gray;
     	transition: border-color 0.25s;
+
+      &.input__focused {
+        border-color: $red;
+      }
     }
   }
 
@@ -55,25 +60,27 @@
     &:hover,
     &:focus,
     &:active {
-      background-color: $offwhite;
-      color: $red;
+      background-color: darken($red, 5%);
+      border-color: darken($red, 5%);
     }
   }
 }
 
 @keyframes move-label {
   0% {
-		transform: translateY(50%);
+		transform: translateY(0);
     color: $medium-gray;
 	}
-	70% {
-		transform: translateY(20%);
+	50% {
+		transform: translateY(-50%);
 		opacity: 0;
 	}
 
 	100% {
+		transform: translateY(-#{$spacing-xl});
     opacity: 1;
-		transform: translateY(0%);
+    padding-left: 0;
     color: $red;
+    font-weight: 700;
 	}
 }
