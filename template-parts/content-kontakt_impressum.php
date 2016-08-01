@@ -1,6 +1,6 @@
 <?php
 
-/* Template Name: Kontakt */
+/* Template Name: Kontakt / Impressum */
 
 get_header();
 
@@ -12,7 +12,7 @@ get_header();
     <?php the_title( '<h1 class="heading-underline">', '</h1>' ); ?>
 
     <div class="contact">
-      <?php the_field('kontakt'); ?>
+      <?php the_field('kontakt_impressum'); ?>
     </div>
 
   </div>

@@ -34,7 +34,7 @@
 
 				<div class="footer__info outer-container">
 						<p class="footer__copyright">
-							© 2016 Wide Switzerland | <span class="footer__impressum"><a href="#">Impressum</a></span>
+							© 2016 Wide Switzerland | <span class="footer__impressum"><a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Impressum' ) ) ); ?>">Impressum</a></span>
 						</p>
 
 						<p class="footer__address">

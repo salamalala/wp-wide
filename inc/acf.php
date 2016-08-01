@@ -53,9 +53,9 @@
     ),
     array (
 			array (
-				'param' => 'page',
+				'param' => 'page_template',
 				'operator' => '==',
-				'value' => '132',
+				'value' => 'default',
 			),
 		),
   ),
@@ -398,12 +398,12 @@
 
   acf_add_local_field_group(array (
   	'key' => 'group_579762b69af96',
-  	'title' => 'Kontakt',
+  	'title' => 'Kontakt / Impressum',
   	'fields' => array (
   		array (
   			'key' => 'field_5797676b36c70',
-  			'label' => 'Kontakt',
-  			'name' => 'kontakt',
+  			'label' => 'Kontakt / Impressum',
+  			'name' => 'kontakt_impressum',
   			'type' => 'wysiwyg',
   			'instructions' => '',
   			'required' => 0,
@@ -419,22 +419,15 @@
   			'media_upload' => 0,
   		),
   	),
-  	'location' => array (
-  		array (
-  			array (
-  				'param' => 'page',
-  				'operator' => '==',
-  				'value' => '6',
-  			),
-  		),
-  		array (
-  			array (
-  				'param' => 'page',
-  				'operator' => '==',
-  				'value' => '149',
-  			),
-  		),
-  	),
+    'location' => array (
+      array (
+        array (
+          'param' => 'page_template',
+          'operator' => '==',
+          'value' => 'template-parts/content-kontakt_impressum.php',
+        ),
+      ),
+    ),
   	'menu_order' => 0,
   	'position' => 'normal',
   	'style' => 'default',

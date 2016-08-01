@@ -157,7 +157,8 @@
   .single-ueberuns &,
   .single-aktivitaet &,
   .single-thema &,
-  .page-template-content-unterstuetzung & {
+  .page-template-content-unterstuetzung &,
+  .page-template-default {
     &__support {
       background-color: $red;
     }
