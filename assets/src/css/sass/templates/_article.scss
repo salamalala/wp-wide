@@ -2,11 +2,11 @@
 
   &:first-letter {
     color: $red;
-    font-size: $font-size-xxxl;
+    font-size: $font-size-xxl;
     font-weight: 400;
     float: left;
-    line-height: 50%;
-    margin: 0 .1em 0 0;
+    line-height: 75%;
+    margin: .04em .12em 0 0;
   }
 
   //in order to move second line up to big first letter.
