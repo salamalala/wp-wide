@@ -26,19 +26,28 @@
   }
 
   img.alignleft {
-    float: left;
-    margin-right: $spacing-lg;
+    width: 100%;
+    @include media($small-screen) {
+      float: left;
+      margin-right: $spacing-lg;
+    }
   }
 
   img.alignright {
-    float: right;
-    margin-left: $spacing-lg;
+    width: 100%;
+    @include media($small-screen) {
+      float: right;
+      margin-left: $spacing-lg;
+    }
   }
 
   img.aligncenter {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    @include media($small-screen) {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   h2 {

@@ -70,6 +70,7 @@ a {
   @include link-underlined($medium-gray);
 }
 
+.single main a,
 .article a {
   @include link-underlined($red);
 }

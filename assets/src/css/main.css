@@ -469,10 +469,12 @@ a {
     padding-bottom: 0.1782457172em;
     box-shadow: 0 -0.12em #565b5f inset; }
 
+.single main a,
 .article a {
   color: #CF5D55;
   box-shadow: 0 0em rgba(207, 93, 85, 0) inset;
   transition: all 150ms ease-out; }
+  .single main a:hover,
   .article a:hover {
     padding-bottom: 0.1782457172em;
     box-shadow: 0 -0.12em #cf5d55 inset; }
@@ -1198,7 +1200,7 @@ body {
     .intro__title:after {
       content: "";
       position: absolute;
-      width: 70%;
+      width: 80%;
       height: 2px;
       left: 0;
       bottom: 1px;
@@ -1210,7 +1212,7 @@ body {
         .intro__title:after {
           content: "";
           position: absolute;
-          width: 70%;
+          width: 80%;
           height: 4px;
           left: 0;
           bottom: 4px;
@@ -1248,7 +1250,7 @@ body {
   .news__title:after {
     content: "";
     position: absolute;
-    width: 70%;
+    width: 80%;
     height: 3px;
     left: 0;
     bottom: -5px;
@@ -1259,7 +1261,7 @@ body {
       .news__title:after {
         content: "";
         position: absolute;
-        width: 70%;
+        width: 80%;
         height: 3px;
         left: 0;
         bottom: -7px;
@@ -1468,6 +1470,11 @@ body {
     -moz-flex: 1 0 auto;
     -ms-flex: 1 0 auto;
     flex: 1 0 auto; }
+  .gallery__email {
+    -webkit-align-self: flex-start;
+    -moz-align-self: flex-start;
+    align-self: flex-start;
+    -ms-flex-item-align: start; }
 
 .article p:first-child {
   margin: 0; }
@@ -1489,17 +1496,26 @@ body {
   display: block; }
 
 .article img.alignleft {
-  float: left;
-  margin-right: 1.776889em; }
+  width: 100%; }
+  @media screen and (min-width: 30em) {
+    .article img.alignleft {
+      float: left;
+      margin-right: 1.776889em; } }
 
 .article img.alignright {
-  float: right;
-  margin-left: 1.776889em; }
+  width: 100%; }
+  @media screen and (min-width: 30em) {
+    .article img.alignright {
+      float: right;
+      margin-left: 1.776889em; } }
 
 .article img.aligncenter {
-  display: block;
-  margin-left: auto;
-  margin-right: auto; }
+  width: 100%; }
+  @media screen and (min-width: 30em) {
+    .article img.aligncenter {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; } }
 
 .article h2 {
   padding-top: 0.7501875469em;
@@ -1518,7 +1534,7 @@ body {
   .support__title:after {
     content: "";
     position: absolute;
-    width: 70%;
+    width: 80%;
     height: 5px;
     left: 0;
     bottom: -1px;
@@ -1598,7 +1614,7 @@ body {
   .heading-underline:after {
     content: "";
     position: absolute;
-    width: 70%;
+    width: 80%;
     height: 5px;
     left: 0;
     bottom: -1px;

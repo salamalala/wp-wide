@@ -49,4 +49,8 @@
     @include flex(1 0 auto);
   }
 
+  &__email {
+    @include align-self(flex-start);
+  }
+
 }
