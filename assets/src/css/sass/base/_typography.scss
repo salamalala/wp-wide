@@ -40,6 +40,7 @@ h2 {
 h3 {
   font-weight: 600;
   font-size: $font-size-md;
+  margin: 0 0 $spacing-xs 0;
 }
 
 p {
@@ -54,40 +55,31 @@ br {
 a {
   position: relative;
   font-weight: 500;
-  color: $dark-gray;
   text-decoration: none;
 
   &:active,
-  &:focus {
+  &:focus,
+  &:hover {
     outline: none;
+    text-decoration: none;
   }
 }
 
+
 .news a {
-  @include link-underlined($dark-gray);
-  margin: 0;
-  font-weight: 600;
+  @include link-underlined($medium-gray);
 }
 
-// .single-aktivitaet a,
-// .single-thema a,
-// .single-ueberuns a {
-//   color: $red;
-//   font-weight: 500;
-// }
-// .main a {
-//   @include link-underlined($dark-gray);
-//   margin: 0;
-//   font-weight: 600;
-//
-//   .single-aktivitaet & {
-//     color: $red;
-//     @include link-underlined($red);
-//   }
-// }
+.article a {
+  @include link-underlined($red);
+}
 
-.footer a {
+.footer__info a {
   @include link-underlined($offwhite);
+}
+
+.page-template-content-kontakt_impressum .main a {
+  @include link-underlined($blue);
 }
 
 

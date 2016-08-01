@@ -1,17 +1,16 @@
 .article {
 
-  &:first-letter {
-    color: $red;
-    font-size: $font-size-xxl;
-    font-weight: 400;
-    float: left;
-    line-height: 75%;
-    margin: .04em .12em 0 0;
-  }
-
   //in order to move second line up to big first letter.
   p:first-child {
     margin: 0;
+    &:first-letter {
+      color: $red;
+      font-size: $font-size-xxl;
+      font-weight: 400;
+      float: left;
+      line-height: 75%;
+      margin: .04em .12em 0 0;
+    }
   }
 
   img {
@@ -43,12 +42,17 @@
   }
 
   h2 {
-    display: inline-block;
-    @include partly-underlined(3px, -3px, $medium-gray);
+    padding-top: $spacing-sm;
     margin-top: $spacing-sm;
+    border-top: solid $light-gray 2px;
+    &:first-child {
+      border-top: none;
+      padding-top: 0;
+    }
   }
 
   h3 {
-    margin-top: $spacing-sm;
+    color: $red;
+    // margin-top: $spacing-sm;
   }
 }

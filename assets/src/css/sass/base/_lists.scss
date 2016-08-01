@@ -1,11 +1,26 @@
 ul,
 ol {
-  margin: 0;
+  margin: 0 0 $spacing-sm 0;
   padding-left: $spacing-sm;
 
   li {
-   list-style-position:inside
+   list-style-position: inside;
   }
+}
+
+ol {
+   list-style: none;
+}
+
+ol li {
+   counter-increment: item;
+
+   &:before {
+    content: counter(item)'.';
+    font-size: $font-size-md;
+    font-weight: 700;
+    margin-right: 10px;
+   }
 }
 
 dl {
