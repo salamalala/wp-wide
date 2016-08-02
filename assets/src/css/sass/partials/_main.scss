@@ -1,5 +1,13 @@
 .main {
-  padding-top: 18%;
+  padding-top: 120px;
+
+  @include media($small-screen) {
+    padding-top: 150px;
+  }
+
+  @include media($medium-large-screen) {
+    padding-top: 200px;
+  }
 
   .home & {
     padding-top: 0;

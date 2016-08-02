@@ -1,7 +1,10 @@
 .header {
-  position: relative;
-  height: 60px;
+  position: fixed;
+  height: 80px;
+  width: calc(100% - 2 * #{$spacing-base});
+  z-index: 10;
   background-color: $medium-gray;
+  transition: height 0.3s;
 
   .home & {
     background-color: $blue;
@@ -9,11 +12,14 @@
   }
 
   @include media($small-screen) {
-    height: 100px;
+    height: 120px;
   }
 
   @include media($medium-large-screen) {
+    background-color: transparent;
+    width: 100%;
     height: 0;
+    position: relative;
   }
 
   &__logo {
@@ -21,26 +27,47 @@
     left: 50%;
     transform: translateX(-50%);
     top: -#{$spacing-sm};
-    width: 100px;
-    height: 50px;
+    width: 150px;
+    height: 75px;
     background: url(../../img/svg/wide_switzerland_deflogo_white.svg) no-repeat center;
     background-size: contain;
+    transition: all 0.3s;
 
     @include media($small-screen) {
-      height: 100px;
-      width: 200px;
+      height: 110px;
+      width: 220px;
     }
 
     @include media($medium-large-screen) {
       background: url(../../img/svg/wide_switzerland_deflogo.svg) no-repeat center;
       background-size: contain;
-      height: 140px;
-      width: 280px;
+      height: 120px;
+      width: 240px;
 
       .home & {
         background: url(../../img/svg/wide_switzerland_deflogo_white.svg) no-repeat center;
         background-size: contain;
       }
+
+      &.fixed {
+        height: 50px;
+        width: 100px;
+      }
+    }
+  }
+
+  &.fixed {
+    height: 60px;
+    top: 0;
+
+    @include media($medium-large-screen) {
+      height: 0;
+    }
+
+    .header__logo {
+      width: 100px;
+      height: 50px;
+      top: 0;
     }
   }
 }

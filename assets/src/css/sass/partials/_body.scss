@@ -5,7 +5,7 @@ body {
     background-color: $offwhite;
     margin: $spacing-base;
 
-    @include media($medium-screen) {
+    @include media($medium-large-screen) {
       margin: $spacing-md;
     }
   }

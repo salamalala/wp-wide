@@ -51,12 +51,12 @@ var sectionAnimationTriggered = function() {
 };
 
 
-var stickyHeaderElements = function(el) {
+var stickyHeaderElements = function(el, scrollPos) {
   $(window).scroll(function(){
     var sticky = $(el),
         scroll = $(window).scrollTop();
 
-    if (scroll >= 250) {
+    if (scroll >= scrollPos) {
       sticky.addClass('fixed')}
     else {
       sticky.removeClass('fixed')
@@ -77,8 +77,10 @@ $(function() {
   strapImgTag();
   mobileMenu();
   sectionAnimationTriggered();
-  stickyHeaderElements('.nav');
-  stickyHeaderElements('.language');
+  stickyHeaderElements('.header', 100);
+  stickyHeaderElements('.header__logo', 40);
+  stickyHeaderElements('.nav', 200);
+  stickyHeaderElements('.language', 200);
 
   if ( $('.support').length ) {
     inputFocus();

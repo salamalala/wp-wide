@@ -16,7 +16,8 @@
 
   @include media($medium-large-screen) {
     display: inline-block;
-    padding-top: 15%;
+    //padding top equals to scroll distance untill its fixed.
+    padding-top: 200px;
     top: 0;
     right: 0;
     margin: 0;
