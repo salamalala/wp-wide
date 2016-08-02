@@ -1008,7 +1008,7 @@ body {
         .footer__input[type=email]:last-child {
           margin-right: 0; } }
     .footer__input[type=email]:hover {
-      border-color: #c1dee9; }
+      border-color: #F7F9FA; }
     .footer__input[type=email]:focus {
       border-color: #3B86A3;
       outline: none; }
@@ -1039,7 +1039,8 @@ body {
     margin-top: 1.333em;
     text-align: center;
     border: 3px solid #e7f2f6;
-    color: #e7f2f6; }
+    color: #e7f2f6;
+    transition: all 0.1s ease-out; }
     .footer__support-button:last-child {
       margin-right: 0; }
     @media screen and (min-width: 30em) {
@@ -1106,94 +1107,69 @@ body {
       color: #F7F9FA; }
   .footer__address {
     margin: 0; }
-  .single-ueberuns .footer__support,
-  .single-aktivitaet .footer__support,
-  .single-thema .footer__support,
+  .single .footer__support,
   .page-template-content-unterstuetzung .footer__support,
-  .footer .page-template-default__support {
+  .page-template-default .footer__support {
     background-color: #CF5D55; }
-  .single-ueberuns .footer__newsletter,
-  .single-aktivitaet .footer__newsletter,
-  .single-thema .footer__newsletter,
+  .single .footer__newsletter,
   .page-template-content-unterstuetzung .footer__newsletter,
-  .footer .page-template-default__newsletter {
+  .page-template-default .footer__newsletter {
     border-color: #f9e9e8; }
-    .single-ueberuns .footer__newsletter:before,
-    .single-aktivitaet .footer__newsletter:before,
-    .single-thema .footer__newsletter:before,
+    .single .footer__newsletter:before,
     .page-template-content-unterstuetzung .footer__newsletter:before,
-    .footer .page-template-default__newsletter:before {
+    .page-template-default .footer__newsletter:before {
       background-color: #CF5D55;
       color: #f9e9e8; }
-  .single-ueberuns .footer__input[type=email],
-  .single-aktivitaet .footer__input[type=email],
-  .single-thema .footer__input[type=email],
+  .single .footer__input[type=email],
   .page-template-content-unterstuetzung .footer__input[type=email],
-  .footer .page-template-default__input[type=email] {
+  .page-template-default .footer__input[type=email] {
     background-color: #f9e9e8;
     border-color: #f9e9e8; }
-    .single-ueberuns .footer__input[type=email]:hover,
-    .single-aktivitaet .footer__input[type=email]:hover,
-    .single-thema .footer__input[type=email]:hover,
+    .single .footer__input[type=email]:hover,
     .page-template-content-unterstuetzung .footer__input[type=email]:hover,
-    .footer .page-template-default__input[type=email]:hover {
-      border-color: #edc3c0; }
-    .single-ueberuns .footer__input[type=email]:focus,
-    .single-aktivitaet .footer__input[type=email]:focus,
-    .single-thema .footer__input[type=email]:focus,
+    .page-template-default .footer__input[type=email]:hover {
+      border-color: #F7F9FA; }
+    .single .footer__input[type=email]:focus,
     .page-template-content-unterstuetzung .footer__input[type=email]:focus,
-    .footer .page-template-default__input[type=email]:focus {
+    .page-template-default .footer__input[type=email]:focus {
       border-color: #CF5D55; }
-  .single-ueberuns .footer__submit[type=submit],
-  .single-aktivitaet .footer__submit[type=submit],
-  .single-thema .footer__submit[type=submit],
+  .single .footer__submit[type=submit],
   .page-template-content-unterstuetzung .footer__submit[type=submit],
-  .footer .page-template-default__submit[type=submit] {
+  .page-template-default .footer__submit[type=submit] {
     border-color: #f9e9e8;
     color: #f9e9e8; }
-    .single-ueberuns .footer__submit[type=submit]:active, .single-ueberuns .footer__submit[type=submit]:focus, .single-ueberuns .footer__submit[type=submit]:hover,
-    .single-aktivitaet .footer__submit[type=submit]:active,
-    .single-aktivitaet .footer__submit[type=submit]:focus,
-    .single-aktivitaet .footer__submit[type=submit]:hover,
-    .single-thema .footer__submit[type=submit]:active,
-    .single-thema .footer__submit[type=submit]:focus,
-    .single-thema .footer__submit[type=submit]:hover,
+    .single .footer__submit[type=submit]:active, .single .footer__submit[type=submit]:focus, .single .footer__submit[type=submit]:hover,
     .page-template-content-unterstuetzung .footer__submit[type=submit]:active,
     .page-template-content-unterstuetzung .footer__submit[type=submit]:focus,
     .page-template-content-unterstuetzung .footer__submit[type=submit]:hover,
-    .footer .page-template-default__submit[type=submit]:active,
-    .footer .page-template-default__submit[type=submit]:focus,
-    .footer .page-template-default__submit[type=submit]:hover {
+    .page-template-default .footer__submit[type=submit]:active,
+    .page-template-default .footer__submit[type=submit]:focus,
+    .page-template-default .footer__submit[type=submit]:hover {
       background-color: #f9e9e8;
       color: #565B5F; }
-  .single-ueberuns .footer__support-button,
-  .single-aktivitaet .footer__support-button,
-  .single-thema .footer__support-button,
+  .single .footer__support-button,
   .page-template-content-unterstuetzung .footer__support-button,
-  .footer .page-template-default__support-button {
+  .page-template-default .footer__support-button {
     border-color: #f9e9e8;
-    color: #f9e9e8; }
-    .single-ueberuns .footer__support-button:active, .single-ueberuns .footer__support-button:focus, .single-ueberuns .footer__support-button:hover,
-    .single-aktivitaet .footer__support-button:active,
-    .single-aktivitaet .footer__support-button:focus,
-    .single-aktivitaet .footer__support-button:hover,
-    .single-thema .footer__support-button:active,
-    .single-thema .footer__support-button:focus,
-    .single-thema .footer__support-button:hover,
+    color: #f9e9e8;
+    transition: all 0.1s ease-out; }
+    .single .footer__support-button:active, .single .footer__support-button:focus, .single .footer__support-button:hover,
     .page-template-content-unterstuetzung .footer__support-button:active,
     .page-template-content-unterstuetzung .footer__support-button:focus,
     .page-template-content-unterstuetzung .footer__support-button:hover,
-    .footer .page-template-default__support-button:active,
-    .footer .page-template-default__support-button:focus,
-    .footer .page-template-default__support-button:hover {
+    .page-template-default .footer__support-button:active,
+    .page-template-default .footer__support-button:focus,
+    .page-template-default .footer__support-button:hover {
       background-color: #f9e9e8;
       color: #565B5F; }
-    .single-ueberuns .footer__support-button svg path,
-    .single-aktivitaet .footer__support-button svg path,
-    .single-thema .footer__support-button svg path,
-    .page-template-content-unterstuetzung .footer__support-button svg path,
-    .footer .page-template-default__support-button svg path {
-      fill: #f9e9e8; }
+  .single .footer__support-facebook svg path,
+  .page-template-content-unterstuetzung .footer__support-facebook svg path,
+  .page-template-default .footer__support-facebook svg path {
+    fill: #f9e9e8; }
+  .single .footer__support-facebook:hover svg path,
+  .page-template-content-unterstuetzung .footer__support-facebook:hover svg path,
+  .page-template-default .footer__support-facebook:hover svg path {
+    fill: #565B5F; }
 
 .intro {
   background-color: #3B86A3;
@@ -1524,6 +1500,7 @@ body {
   @media screen and (min-width: 30em) {
     .article img.alignleft {
       float: left;
+      width: auto;
       margin-right: 1.776889em; } }
 
 .article img.alignright {
@@ -1531,6 +1508,7 @@ body {
   @media screen and (min-width: 30em) {
     .article img.alignright {
       float: right;
+      width: auto;
       margin-left: 1.776889em; } }
 
 .article img.aligncenter {
@@ -1538,6 +1516,7 @@ body {
   @media screen and (min-width: 30em) {
     .article img.aligncenter {
       display: block;
+      width: auto;
       margin-left: auto;
       margin-right: auto; } }
 

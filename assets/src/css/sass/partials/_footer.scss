@@ -68,7 +68,7 @@
     }
 
     &:hover {
-      border-color: darken($light-blue, 10%);
+      border-color: $offwhite;
     }
 
     &:focus {
@@ -105,6 +105,7 @@
     text-align: center;
     border: 3px solid $light-blue;
     color: $light-blue;
+    transition: $hover-transition;
 
     @include media($small-screen) {
       @include span-columns(7 of 16);
@@ -185,11 +186,9 @@
 
 
   // change footer and all its element into $red
-  .single-ueberuns &,
-  .single-aktivitaet &,
-  .single-thema &,
+  .single &,
   .page-template-content-unterstuetzung &,
-  .page-template-default {
+  .page-template-default & {
     &__support {
       background-color: $red;
     }
@@ -208,7 +207,7 @@
       border-color: $light-red;
 
       &:hover {
-        border-color: darken($light-red, 10%);
+        border-color: $offwhite;
       }
 
       &:focus {
@@ -231,6 +230,7 @@
     &__support-button {
       border-color: $light-red;
       color: $light-red;
+      transition: $hover-transition;
 
       &:active,
       &:focus,
@@ -238,9 +238,16 @@
         background-color: $light-red;
         color: $medium-gray;
       }
+    }
 
+    &__support-facebook {
       svg path {
         fill: $light-red;
+      }
+      &:hover {
+        svg path {
+          fill: $medium-gray;
+        }
       }
     }
   }
