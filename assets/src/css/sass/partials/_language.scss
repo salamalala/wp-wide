@@ -30,10 +30,15 @@
 
   .current-lang a {
     color: $offwhite;
-    background-color: $medium-gray;
-    border-color: $medium-gray;
+    background-color: $dark-gray;
+    border-color: $dark-gray;
     transition: all 0.2s ease-out;
     pointer-events: none;
+
+    @include media($medium-large-screen) {
+      background-color: $medium-gray;
+      border-color: $medium-gray;
+    }
 
     &:active,
     &:focus,
@@ -74,8 +79,13 @@
     &:focus,
     &:hover {
       color: $offwhite;
-      background-color: $medium-gray;
-      border-color: $medium-gray;
+      background-color: $dark-gray;
+      border-color: $dark-gray;
+
+      @include media($medium-large-screen) {
+        background-color: $medium-gray;
+        border-color: $medium-gray;
+      }
     }
   }
 }

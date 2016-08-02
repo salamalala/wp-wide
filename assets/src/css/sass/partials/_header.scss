@@ -1,17 +1,11 @@
 .header {
   position: relative;
   height: 60px;
-  background-color: $blue;
+  background-color: $medium-gray;
 
   .home & {
+    background-color: $blue;
     background-image: url(../../img/transparent-square-tiles.png);
-  }
-
-  .single-ueberuns &,
-  .single-aktivitaet &,
-  .single-thema &,
-  .page-template-content-unterstuetzung & {
-    background-color: $red;
   }
 
   @include media($small-screen) {
@@ -40,8 +34,8 @@
     @include media($medium-large-screen) {
       background: url(../../img/svg/wide_switzerland_deflogo.svg) no-repeat center;
       background-size: contain;
-      height: 110px;
-      width: 220px;
+      height: 140px;
+      width: 280px;
 
       .home & {
         background: url(../../img/svg/wide_switzerland_deflogo_white.svg) no-repeat center;

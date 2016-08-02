@@ -583,14 +583,10 @@ body {
 .header {
   position: relative;
   height: 60px;
-  background-color: #3B86A3; }
+  background-color: #565B5F; }
   .home .header {
+    background-color: #3B86A3;
     background-image: url(../../img/transparent-square-tiles.png); }
-  .single-ueberuns .header,
-  .single-aktivitaet .header,
-  .single-thema .header,
-  .page-template-content-unterstuetzung .header {
-    background-color: #CF5D55; }
   @media screen and (min-width: 30em) {
     .header {
       height: 100px; } }
@@ -614,8 +610,8 @@ body {
       .header__logo {
         background: url(../../img/svg/wide_switzerland_deflogo.svg) no-repeat center;
         background-size: contain;
-        height: 110px;
-        width: 220px; }
+        height: 140px;
+        width: 280px; }
         .home .header__logo {
           background: url(../../img/svg/wide_switzerland_deflogo_white.svg) no-repeat center;
           background-size: contain; } }
@@ -893,10 +889,14 @@ body {
         padding-top: 1em; } }
   .language .current-lang a {
     color: #F7F9FA;
-    background-color: #565B5F;
-    border-color: #565B5F;
+    background-color: #393D40;
+    border-color: #393D40;
     transition: all 0.2s ease-out;
     pointer-events: none; }
+    @media screen and (min-width: 56.25em) {
+      .language .current-lang a {
+        background-color: #565B5F;
+        border-color: #565B5F; } }
     .language .current-lang a:active, .language .current-lang a:focus, .language .current-lang a:hover {
       color: #565B5F;
       background-color: #F7F9FA; }
@@ -924,11 +924,15 @@ body {
         background-color: #E8EBED; } }
     .language a:active, .language a:focus, .language a:hover {
       color: #F7F9FA;
-      background-color: #565B5F;
-      border-color: #565B5F; }
+      background-color: #393D40;
+      border-color: #393D40; }
+      @media screen and (min-width: 56.25em) {
+        .language a:active, .language a:focus, .language a:hover {
+          background-color: #565B5F;
+          border-color: #565B5F; } }
 
 .main {
-  padding-top: 20%; }
+  padding-top: 18%; }
   .home .main {
     padding-top: 0; }
 
