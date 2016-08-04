@@ -179,6 +179,19 @@
         padding-left: $spacing-lg;
         background-color: $light-gray;
         color: $medium-gray;
+
+        &:before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 0%;
+          height: 100%;
+          background-color: $medium-gray;
+          color: $offwhite;
+          transition: width ease-out 0.3s;
+          z-index: -1;
+        }
       }
 
       @include media($large-screen) {
@@ -192,8 +205,12 @@
         color: $white;
 
         @include media($medium-large-screen) {
-          background-color: $light-gray;
-          color: $dark-gray;
+          background-color: transparent;
+          color: $offwhite;
+
+          &:before {
+              width: 100%;
+          }
         }
       }
     }
@@ -274,7 +291,7 @@
     padding-left: 0;
 
     @include media($medium-large-screen) {
-      margin-top: -9px;
+      margin-top: -8px;
     }
 
     li {
