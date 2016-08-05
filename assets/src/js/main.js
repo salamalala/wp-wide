@@ -77,7 +77,9 @@ $(function() {
   strapImgTag();
   mobileMenu();
   sectionAnimationTriggered();
+  //for small screens
   stickyHeaderElements('.header', 100);
+  //for bigger screens
   stickyHeaderElements('.header__logo', 40);
   stickyHeaderElements('.nav', 200);
   stickyHeaderElements('.language', 200);

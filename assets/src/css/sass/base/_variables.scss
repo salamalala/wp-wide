@@ -31,7 +31,7 @@ $heading-line-height: 1.4;
 // Other Sizes
 $base-border-radius: 0;
 $base-z-index: 0;
-$letter-spacing-lg: 1px;
+$letter-spacing-lg: 0.03em;
 
 //Spacing with modular scales
 $spacing-xxxs: modular-scale(-6);
@@ -61,6 +61,8 @@ $dark-gray: #393D40;
 
 //logo gray
 $medium-gray: #565B5F;
+
+$lighter-medium-gray: lighten($medium-gray, 6%);
 
 $light-gray: #E4E9ED;
 $light-gray: #E6EAED;

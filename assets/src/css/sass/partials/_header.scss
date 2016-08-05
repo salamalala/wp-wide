@@ -4,6 +4,7 @@
   width: calc(100% - 2 * #{$spacing-base});
   z-index: 10;
   background-color: $medium-gray;
+  background-image: url(../../img/transparent-square-tiles.png);
   transition: height 0.3s;
 
   .home & {
@@ -18,8 +19,24 @@
   @include media($medium-large-screen) {
     background-color: transparent;
     width: 100%;
-    height: 180px;
+    //has to 0 in order to get animation working
+    height: 0px;
     position: relative;
+  }
+
+  &.fixed {
+    height: 60px;
+    top: 0;
+
+    @include media($medium-large-screen) {
+      height: 0;
+    }
+
+    .header__logo {
+      width: 100px;
+      height: 50px;
+      top: 0;
+    }
   }
 
   &__logo {
@@ -56,18 +73,4 @@
     }
   }
 
-  &.fixed {
-    height: 60px;
-    top: 0;
-
-    @include media($medium-large-screen) {
-      height: 0;
-    }
-
-    .header__logo {
-      width: 100px;
-      height: 50px;
-      top: 0;
-    }
-  }
 }

@@ -1,7 +1,6 @@
 .heading-underline {
   @include partly-underlined(4px, -3px, $medium-gray);
   position: relative;
-  color: $medium-gray;
 
   &:after {
     width: 0;

@@ -3,13 +3,12 @@
   background-image: url(../../img/transparent-square-tiles.png);
   color: $offwhite;
   margin-bottom: $spacing-xl;
-  padding-top: 40px;
+  padding-top: 160px;
   padding-bottom: 40px;
 
-  @include media($medium-screen) {
-    padding-top: 20%;
-    padding-bottom: $spacing-xxl;
-    height: calc(100vh - (4*#{$spacing-base});
+  @include media($medium-large-screen) {
+    height: calc(100vh - (2*#{$spacing-base});
+    padding-top: calc(180px + 10%);
   }
 
   &__content {
@@ -26,21 +25,32 @@
   }
 
   &__title {
-    display: inline;
+    @include partly-underlined(2px,-3px, $green);
+    display: inline-block;
     margin: 0;
-    // margin-left: -#{$spacing-lg};
-    font-size: $font-size-lg;
+    font-size: $font-size-md;
+    font-weight: 600;
     line-height: 1;
-    @include partly-underlined(2px,1px, $green);
+    &:after {
+      left: $spacing-sm;
+    }
 
     @include media($medium-screen) {
-      font-size: $font-size-xl;
-      @include partly-underlined(4px, 4px, $green);
+      @include partly-underlined(3px,-6px, $green);
+      font-size: $font-size-lg;
+
       &:after {
-          left: $spacing-sm;
+        left: $spacing-sm;
       }
     }
+
+    &:first-letter{
+      font-size: $font-size-md;
+      font-weight: 500;
+    }
   }
+
+
 
   p {
     display: inline;

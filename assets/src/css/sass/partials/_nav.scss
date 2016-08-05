@@ -127,10 +127,10 @@
     }
 
     @include media($small-screen) {
-      margin-top: 100px;
+      margin-top: 120px;
     }
 
-    @include media ($medium-large-screen) {
+    @include media($medium-large-screen) {
       margin-top: 0;
       display: block;
       margin: 0;
@@ -180,6 +180,7 @@
         background-color: $light-gray;
         color: $medium-gray;
 
+        //to create grey transition on hover
         &:before {
           content: '';
           position: absolute;
@@ -189,7 +190,7 @@
           height: 100%;
           background-color: $medium-gray;
           color: $offwhite;
-          transition: width ease-out 0.3s;
+          transition: width ease-out 0.25s;
           z-index: -1;
         }
       }
@@ -208,8 +209,9 @@
           background-color: transparent;
           color: $offwhite;
 
+          //to create grey transition on hover
           &:before {
-              width: 100%;
+            width: 100%;
           }
         }
       }
@@ -220,7 +222,7 @@
         &:active,
         &:focus,
         &:hover {
-          width: 110%;
+          width: 107%;
         }
       }
     }
@@ -248,6 +250,7 @@
 
       > a:hover:after {
         @include media($medium-large-screen) {
+          content: url(../../img/svg/inline-arrow-down-light.svg);
           bottom: 45%;
         }
       }
@@ -319,8 +322,12 @@
       padding-left: $spacing-xl;
 
       @include media($medium-large-screen) {
-        background-color: lighten($light-gray, 3%);
+        background-color: lighten($light-gray, 5%);
         color: lighten($medium-gray, 8%);
+
+        &:before {
+          background-color: lighten($medium-gray, 5%);
+        }
       }
     }
 
@@ -338,11 +345,28 @@
         padding-left:  modular-scale(4);
 
         @include media($medium-large-screen) {
-          background-color: lighten($light-gray, 6%);
+          background-color: lighten($light-gray, 8%);
           color: lighten($medium-gray, 10%);
+
+          &:before {
+            background-color: lighten($medium-gray, 12%);
+          }
+
+          &:active,
+          &:focus,
           &:hover {
-            background-color: $light-gray;
-            color: $dark-gray;
+            background-color: $dark-gray;
+            color: $white;
+
+            @include media($medium-large-screen) {
+              background-color: transparent;
+              color: $offwhite;
+
+              //to create grey transition on hover
+              &:before {
+                width: 100%;
+              }
+            }
           }
         }
       }

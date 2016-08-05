@@ -20,7 +20,7 @@
 
       @include media($medium-screen) {
         left: -#{$spacing-base};
-        width: 6px;
+        width: 5px;
       }
     }
 
@@ -31,10 +31,10 @@
 
   &__title {
     display: inline-block;
-    @include partly-underlined(3px, -5px, $medium-gray);
+    @include partly-underlined(3px, -5px, $lighter-medium-gray);
 
     @include media($medium-screen) {
-      @include partly-underlined(3px, -7px, $medium-gray);
+      @include partly-underlined(3px, -7px, $lighter-medium-gray);
     }
   }
 
