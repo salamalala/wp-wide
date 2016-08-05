@@ -1,22 +1,16 @@
 .heading-underline {
-  display: inline-block;
-  // @include partly-underlined(5px, -1px, $medium-gray);
+  @include partly-underlined(4px, -3px, $medium-gray);
   position: relative;
+  color: $medium-gray;
 
   &:after {
-    content: "";
-    position: absolute;
     width: 0;
-    height: 5px;
-    left: 3px;
-    bottom: -3px;
-    background-color: $medium-gray;
-    animation: underline ease-out 0.3s 0.5s forwards  ;
+    animation: underline ease-out 0.3s 1s forwards  ;
   }
 }
 
 @keyframes underline {
   to {
-    width: 80%;
+    width: 100%;
   }
 }

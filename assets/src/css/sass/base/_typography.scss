@@ -28,24 +28,34 @@ h6 {
 
 h1 {
   font-weight: 700;
-  font-size: $font-size-xxl;
+  font-size: $font-size-xl;
   letter-spacing: $letter-spacing-lg;
+  text-transform: uppercase;
+
+  &:first-letter {
+    font-size: $font-size-md;
+    font-weight: 600;
+  }
 }
 
 h2 {
-  font-weight: 700;
-  font-size: $font-size-lg;
+  font-weight: 600;
+  color: lighten($medium-gray, 5%);
+  font-size: $font-size-md;
 }
 
 h3 {
-  font-weight: 600;
-  font-size: $font-size-md;
-  margin: 0 0 $spacing-xs 0;
+  font-weight: 700;
+  font-size: $font-size-sm;
+  text-transform: uppercase;
+  letter-spacing: $letter-spacing-lg;
+  margin-bottom: $spacing-base;
+  color: $red;
 }
 
 p {
   font-size: $font-size-base;
-  margin: 0 0 $spacing-sm;
+  margin: 0 0 $spacing-xxs;
 }
 
 br {
