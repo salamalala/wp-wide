@@ -39,18 +39,32 @@
   }
 
   &__caption {
-    margin: $spacing-base 0;
+    margin-top: $spacing-xs;
+    margin-bottom: $spacing-xxxs;
     font-family: $heading-font-family;
     font-weight: 700;
-    font-size: $font-size-sm;
+    font-size: $font-size-md;
+    color: $lighter-medium-gray;
+  }
+
+  &__function {
+    margin-bottom: $spacing-md;
   }
 
   &__paragraph {
     @include flex(1 0 auto);
+    font-style: italic;
+  }
+
+  svg {
+    height: 0.5em;
+    margin-bottom: 0.2em;
   }
 
   &__email {
     @include align-self(flex-start);
+    //to stop making box bigger:
+    height: 1.5em;
   }
 
 }

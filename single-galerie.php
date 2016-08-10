@@ -23,18 +23,27 @@ get_header(); ?>
 			<?php while( have_rows('gallery_item') ): the_row();
 
 				$image = get_sub_field('image');
-				$caption = get_sub_field('caption');
-				$paragraph = get_sub_field('paragraph', false, false);
-				$email = get_sub_field('emailaddress');
+				$name = get_sub_field('name');
+				$function = get_sub_field('funktion');
+				$statement = get_sub_field('statement', false, false);
+				$email = get_sub_field('email');
 
 				?>
 
 				<figure class="gallery__item">
 					<img class="gallery__img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
 					<div class="gallery__text">
-						<figcaption class="gallery__caption"> <?php echo $caption; ?> </figcaption>
-						<p class="gallery__paragraph"> <?php echo $paragraph; ?> </p>
-						<a class="gallery__email" href="mailto:<?php echo $email; ?>" >Email</a>
+						<figcaption class="gallery__caption"> <?php echo $name; ?> </figcaption>
+						<h3 class="gallery__function"> <?php echo $function; ?> </h3>
+						<p class="gallery__paragraph">
+							<span> <?php get_template_part('assets/img/svg/inline', 'quotes.svg'); ?>
+							</span>
+							<?php echo $statement; ?>
+						</p>
+
+						<?php if( $email ): ?>
+							<a class="gallery__email" href="mailto:<?php echo $email; ?>" >Email</a>
+						<?php endif; ?>
 					</div>
 				</figure>
 

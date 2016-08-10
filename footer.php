@@ -19,10 +19,29 @@
 					<div class="outer-container">
 						<div class="wrapper">
 
-							<div class="footer__newsletter">
-								<input class="footer__input" type="email" placeholder="Emailadresse"/>
-								<input class="footer__submit" type="submit" name="name" value="Anmelden">
+							<!-- Begin MailChimp Signup Form -->
+							<div id="mc_embed_signup" class="footer__newsletter">
+								<form action="//wide-network.us12.list-manage.com/subscribe/post?u=77a567236b6e5cd3dfe13d53d&amp;id=0780bfd7dd" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+								    <div id="mc_embed_signup_scroll">
+										<div class="mc-field-group">
+											<input type="email" value="" name="EMAIL" class="required email footer__input" id="mce-EMAIL" placeholder="Emailadresse">
+										</div>
+
+										<div id="mce-responses" class="clear">
+											<div class="response" id="mce-error-response" style="display:none"></div>
+											<div class="response" id="mce-success-response" style="display:none"></div>
+										</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+								    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_77a567236b6e5cd3dfe13d53d_0780bfd7dd" tabindex="-1" value=""></div>
+								    <div class="clear">
+											<input type="submit" value="Anmelden" name="subscribe" id="mc-embedded-subscribe" class="footer__submit">
+										</div>
+								    </div>
+								</form>
 							</div>
+
+							<!--End mc_embed_signup-->
+
+
 
 							<a class="footer__support-button" href="#">Mitmachen</a>
 							<a class="footer__support-button" href="<?php echo esc_url( get_permalink( get_page_by_title( 'Unterstützen' ) ) ); ?>">Unterstützen</a>

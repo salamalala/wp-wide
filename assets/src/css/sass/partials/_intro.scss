@@ -3,19 +3,30 @@
   background-image: url(../../img/transparent-square-tiles.png);
   color: $offwhite;
   margin-bottom: $spacing-xl;
-  padding-top: 160px;
-  padding-bottom: 40px;
+  //header heigt is 80px
+  padding-top: 110px;
+  padding-bottom: 30px;
+
+  @include media($small-screen) {
+    //header height is 120px
+    padding-top: 150px;
+  }
 
   @include media($medium-large-screen) {
     height: calc(100vh - (2*#{$spacing-base});
-    padding-top: calc(180px + 10%);
+    // height of logo is 180px:
+    padding-top: 180px;
+    //to center the intro text:
+    @include display(flex);
+    @include flex-direction(column);
+    @include justify-content(center);
   }
 
   &__content {
     font-family: $heading-font-family;
     font-size: $font-size-base;
     //to force same line height despite bigger letters in title
-    text-align: center;
+    text-align: left;
 
     @include media($medium-screen) {
       //to force same line height despite bigger letters in title
@@ -32,7 +43,7 @@
     font-weight: 600;
     line-height: 1;
     &:after {
-      left: $spacing-sm;
+      // left: $spacing-sm;
     }
 
     @include media($medium-screen) {
@@ -40,7 +51,7 @@
       font-size: $font-size-lg;
 
       &:after {
-        left: $spacing-sm;
+        // left: $spacing-sm;
       }
     }
 
