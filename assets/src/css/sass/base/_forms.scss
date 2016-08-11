@@ -137,6 +137,10 @@ input:-ms-input-placeholder {
 .wpcf7 {
   font-family: $heading-font-family;
 
+  span.wpcf7-list-item {
+    margin: 0;
+  }
+
   span.wpcf7-not-valid-tip {
     color: $red;
     font-weight: 600;
