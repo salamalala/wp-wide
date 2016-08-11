@@ -459,4 +459,50 @@
   	'description' => '',
   ));
 
+  acf_add_local_field_group(array (
+	'key' => 'group_57ac8ca41b492',
+	'title' => 'support form id',
+	'fields' => array (
+		array (
+			'key' => 'field_57ac8caf3ecea',
+			'label' => 'Support Form ID',
+			'name' => 'support_form_id',
+			'type' => 'number',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'min' => '',
+			'max' => '',
+			'step' => '',
+		),
+	),
+	'location' => array (
+		array (
+			array (
+				'param' => 'page_template',
+				'operator' => '==',
+				'value' => 'template-parts/content-unterstuetzung.php',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => 1,
+	'description' => '',
+  ));
+
+
  endif;

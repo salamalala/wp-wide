@@ -16,11 +16,11 @@ get_header();
     	$currentlang = get_bloginfo('language');
     	if($currentlang=="de-CH"):?>
 
-        <?php echo do_shortcode( '[contact-form-7 id="234" title="Unterstützungs-Formular"]' ); ?>
+        <?php echo do_shortcode( '[contact-form-7 id=get_field("support_form_id") title="Unterstützungs-Formular"]' ); ?>
 
       <?php else: ?>
 
-        <?php echo do_shortcode( '[contact-form-7 id="240" title="Support-Form"]' ); ?>
+        <?php echo do_shortcode( '[contact-form-7 id=get_field("support_form_id") title="Support-Form"]' ); ?>
 
       <?php endif; ?>
 
