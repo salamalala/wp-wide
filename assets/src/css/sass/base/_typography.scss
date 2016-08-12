@@ -77,7 +77,7 @@ a {
 
 
 .news a {
-  @include link-underlined($medium-gray);
+  @include link-underlined($blue);
 }
 
 .single main a,

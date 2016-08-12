@@ -36,6 +36,7 @@
     	   <?php while( have_rows('news') ): the_row();
 
       		$titel = get_sub_field('titel');
+          $untertitel = get_sub_field('untertitel');
       		$text = get_sub_field('text');
       		$kategorie = get_sub_field('kategorie');
           $page_link = get_sub_field('link_zur_seite');
@@ -44,8 +45,18 @@
           <section class="news__item">
             <h3 class="news__category rotated-text"><?php echo $kategorie; ?></h3>
             <h2 class="news__title"><?php echo $titel; ?></h2>
-            <p class="news__text"><?php echo $text; ?></p>
-            <p>Mehr Infos: <a href="<?php echo $page_link; ?>">hier</a> </p>
+
+            <?php if( $untertitel ): ?>
+              <h3 class="news__untertitel"><?php echo $untertitel; ?> </h3>
+            <?php endif; ?>
+
+            <?php if( $text ): ?>
+              <p class="news__text"><?php echo $text; ?></p>
+            <?php endif; ?>
+
+            <?php if( $page_link ): ?>
+              <p>Mehr Infos: <a href="<?php echo $page_link; ?>">hier</a> </p>
+            <?php endif; ?>
           </section>
 
         <?php endwhile; ?>

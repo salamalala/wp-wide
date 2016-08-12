@@ -472,12 +472,12 @@ a {
     text-decoration: none; }
 
 .news a {
-  color: #565B5F;
-  box-shadow: 0 0em rgba(86, 91, 95, 0) inset;
+  color: #3B86A3;
+  box-shadow: 0 0em rgba(59, 134, 163, 0) inset;
   transition: all 150ms ease-out; }
   .news a:hover {
     padding-bottom: 0.1337177173em;
-    box-shadow: 0 -0.09em #565b5f inset; }
+    box-shadow: 0 -0.09em #3b86a3 inset; }
 
 .single main a,
 .article a {
@@ -1365,6 +1365,9 @@ body {
         left: 0;
         bottom: -7px;
         background-color: #656a6f; } }
+
+.news__untertitel {
+  color: #565B5F; }
 
 .news__category {
   color: #CCCC23;
