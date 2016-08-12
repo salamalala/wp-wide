@@ -595,7 +595,7 @@ body {
   height: 80px;
   width: calc(100% - 2 * 1em);
   z-index: 10;
-  background-color: #565B5F;
+  background-color: #656a6f;
   background-image: url(../../img/transparent-square-tiles.png);
   transition: height 0.3s; }
   .home .header {

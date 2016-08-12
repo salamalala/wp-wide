@@ -3,7 +3,7 @@
   height: 80px;
   width: calc(100% - 2 * #{$spacing-base});
   z-index: 10;
-  background-color: $medium-gray;
+  background-color: $lighter-medium-gray;
   background-image: url(../../img/transparent-square-tiles.png);
   transition: height 0.3s;
 
