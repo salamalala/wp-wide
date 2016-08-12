@@ -33,7 +33,7 @@
       margin: 0;
 
       &.support__label {
-        animation: move-label 0.2s forwards;
+        animation: label-move 0.2s forwards;
       }
     }
 
@@ -70,7 +70,7 @@
   }
 }
 
-@keyframes move-label {
+@keyframes label-move {
   0% {
 		transform: translateY(0);
     color: $medium-gray;
