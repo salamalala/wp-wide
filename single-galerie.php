@@ -36,9 +36,11 @@ get_header(); ?>
 						<figcaption class="gallery__caption"> <?php echo $name; ?> </figcaption>
 						<h3 class="gallery__function"> <?php echo $function; ?> </h3>
 						<p class="gallery__paragraph">
-							<span> <?php get_template_part('assets/img/svg/inline', 'quotes.svg'); ?>
+							<span> <?php get_template_part('assets/img/svg/inline', 'start-quotes.svg'); ?>
 							</span>
 							<?php echo $statement; ?>
+							<span> <?php get_template_part('assets/img/svg/inline', 'end-quotes.svg'); ?>
+							</span>
 						</p>
 
 						<?php if( $email ): ?>

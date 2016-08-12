@@ -1577,8 +1577,8 @@ body {
     flex: 1 0 auto;
     font-style: italic; }
   .gallery svg {
-    height: 0.5em;
-    margin-bottom: 0.2em; }
+    height: 0.42em;
+    margin-bottom: 0.35em; }
   .gallery__email {
     -webkit-align-self: flex-start;
     -moz-align-self: flex-start;
@@ -1674,7 +1674,7 @@ body {
     pointer-events: none;
     margin: 0; }
     .support__address-element label.support__label {
-      animation: label-move 0.2s forwards; }
+      animation: move-label 0.2s forwards; }
   .support__address-element input {
     position: relative;
     top: 0;
@@ -1698,7 +1698,7 @@ body {
     background-color: #c94a41;
     border-color: #c94a41; }
 
-@keyframes label-move {
+@keyframes move-label {
   0% {
     transform: translateY(0);
     color: #565B5F; }
