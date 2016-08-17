@@ -365,3 +365,10 @@ add_filter('single_template', create_function(
 		return TEMPLATEPATH . "/single-{$cat->slug}.php"; }
 	return $the_template;' )
 );
+
+//give editor the possibility to add something to the menu: 
+// get the the role object
+$role_object = get_role( 'editor' );
+
+// add $cap capability to this role object
+$role_object->add_cap( 'edit_theme_options' );
