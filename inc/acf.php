@@ -323,7 +323,7 @@
         'min_size' => '',
         'max_width' => '',
         'max_height' => '',
-        'max_size' => 200,
+        'max_size' => 400,
         'mime_types' => '',
       ),
       array (
