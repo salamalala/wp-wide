@@ -15,9 +15,20 @@
 		<div class="wrapper">
 
 			<?php the_title( '<h1 class="heading-underline">', '</h1>' ); ?>
-			<div class="article">
-				<?php the_field('article_content'); ?>
-			</div>
+
+			<?php if( get_field('article_content') ): ?>
+
+				<?php if ( get_field( 'erster_buchstabe' ) ): ?>
+					<div class="article big-letter">
+				<?php else: ?>
+					<div class="article">
+				<?php endif; ?>
+
+					<?php the_field('article_content'); ?>
+				</div>
+
+			<?php endif; ?>
+
 
 		</div>
 	</div>

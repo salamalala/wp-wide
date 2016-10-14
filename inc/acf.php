@@ -9,7 +9,23 @@
  acf_add_local_field_group(array (
  	'key' => 'group_5787854686ff9',
  	'title' => 'Article',
- 	'fields' => array (
+  'fields' => array (
+		array (
+			'key' => 'field_5800e074720fb',
+			'label' => 'Erster Buchstabe im Lauftext vergrössern',
+			'name' => 'erster_buchstabe',
+			'type' => 'true_false',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'message' => '',
+			'default_value' => 1,
+		),
  		array (
  			'key' => 'field_578787f7bb57e',
  			'label' => 'Text',

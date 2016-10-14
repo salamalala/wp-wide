@@ -1591,9 +1591,9 @@ body {
     -ms-flex-item-align: start;
     height: 1.5em; }
 
-.article p:first-child {
+.article.big-letter p:first-child {
   margin: 0; }
-  .article p:first-child:first-letter {
+  .article.big-letter p:first-child:first-letter {
     color: #CF5D55;
     font-size: 3.1573345183em;
     font-weight: 400;

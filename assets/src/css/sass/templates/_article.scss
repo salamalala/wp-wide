@@ -1,6 +1,6 @@
 .article {
 
-  p:first-child {
+  &.big-letter p:first-child {
     //in order to move second line up to big first letter.
     margin: 0;
 

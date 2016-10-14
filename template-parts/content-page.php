@@ -17,9 +17,16 @@
 				<?php the_title( '<h1 class="heading-underline">', '</h1>' ); ?>
 
 				<?php if( get_field('article_content') ): ?>
-					<div class="article">
+
+					<?php if ( get_field( 'erster_buchstabe' ) ): ?>
+						<div class="article big-letter">
+					<?php else: ?>
+						<div class="article">
+					<?php endif; ?>
+
 						<?php the_field('article_content'); ?>
 					</div>
+
 				<?php endif; ?>
 
 		</div>
