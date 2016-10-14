@@ -26,9 +26,13 @@
     }
   }
 
-  //in order to get following h3 to h2.
+  //in order to have no space between h3 and h1 or h2 on the article page.
   h2 + h3 {
     margin-top: -#{$spacing-sm};
+  }
+
+  h1 + h3 {
+    margin-top: -#{$spacing-xl};
   }
 
   img {
