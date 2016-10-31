@@ -31,7 +31,7 @@ get_header(); ?>
 				?>
 
 				<figure class="gallery__item">
-					<img class="gallery__img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
+					<img class="gallery__img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>"/>
 					<div class="gallery__text">
 						<figcaption class="gallery__caption"> <?php echo $name; ?> </figcaption>
 						<h3 class="gallery__function"> <?php echo $function; ?> </h3>

@@ -29,6 +29,8 @@
     height: 200px;
     object-fit: cover;
     filter: grayscale(30%);
+    // for object-fit polyfill:
+    @include object-fit(cover);
   }
 
   &__text {
@@ -48,8 +50,8 @@
   }
 
   &__function {
-    margin-top: 0;
     margin-bottom: $spacing-md;
+    margin-top: 0;
   }
 
   &__paragraph {
