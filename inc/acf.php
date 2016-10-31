@@ -400,7 +400,7 @@
         ),
         'default_value' => '',
         'placeholder' => '',
-        'maxlength' => 500,
+        'maxlength' => 450,
         'rows' => '',
         'new_lines' => 'wpautop',
         'readonly' => 0,
