@@ -1571,6 +1571,7 @@ body {
     font-size: 1.333em;
     color: #656a6f; }
   .gallery__function {
+    margin-top: 0;
     margin-bottom: 1.333em; }
   .gallery__paragraph {
     -webkit-box-flex: 1;

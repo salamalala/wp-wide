@@ -12,8 +12,8 @@
   'fields' => array (
 		array (
 			'key' => 'field_5800e074720fb',
-			'label' => 'Erster Buchstabe im Lauftext vergrössern',
-			'name' => 'erster_buchstabe',
+			'label' => 'Erster Buchstabe im Text vergrössern',
+			'name' => 'erster_buchstabe_im_text_vergrossern_',
 			'type' => 'true_false',
 			'instructions' => '',
 			'required' => 0,
@@ -26,6 +26,7 @@
 			'message' => '',
 			'default_value' => 1,
 		),
+
  		array (
  			'key' => 'field_578787f7bb57e',
  			'label' => 'Text',
@@ -339,7 +340,7 @@
         'min_size' => '',
         'max_width' => '',
         'max_height' => '',
-        'max_size' => 400,
+        'max_size' => 200,
         'mime_types' => '',
       ),
       array (
@@ -399,7 +400,7 @@
         ),
         'default_value' => '',
         'placeholder' => '',
-        'maxlength' => 250,
+        'maxlength' => 500,
         'rows' => '',
         'new_lines' => 'wpautop',
         'readonly' => 0,
