@@ -30,7 +30,12 @@
     <div class="wrapper">
       <?php if( have_rows('news') ): ?>
 
-        <h1>Aktuelles:</h1>
+        <?php  if (get_locale() == 'de_CH') {
+            echo '<h1>Aktuelles:</h1>';
+            } else {
+            echo '<h1>News:</h1>';
+        } ?>
+
         <div class="news">
 
     	   <?php while( have_rows('news') ): the_row();
