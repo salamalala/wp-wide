@@ -61,9 +61,13 @@
     }
   }
 
-
-
   p {
     display: inline;
+  }
+
+  a {
+    color: $offwhite;
+    font-weight: 700;
+    @include link-underlined($offwhite);
   }
 }

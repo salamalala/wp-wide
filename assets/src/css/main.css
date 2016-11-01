@@ -1325,6 +1325,15 @@ body {
       font-weight: 500; }
   .intro p {
     display: inline; }
+  .intro a {
+    color: #F7F9FA;
+    font-weight: 700;
+    color: #F7F9FA;
+    box-shadow: 0 0em rgba(247, 249, 250, 0) inset;
+    transition: all 150ms ease-out; }
+    .intro a:hover {
+      padding-bottom: 0.1337177173em;
+      box-shadow: 0 -0.09em #f7f9fa inset; }
 
 .news__item {
   position: relative;
