@@ -20,7 +20,6 @@
 
     //Newsletter abonnieren text
     &:before {
-      content: "Newsletter abonnieren";
       position: absolute;
       left: $spacing-xs;
       top: -10%;
@@ -47,6 +46,18 @@
         left: $spacing-xl;
         padding: 0 $spacing-lg;
       }
+    }
+  }
+
+  &__de {
+    &:before {
+      content: "Newsletter abonnieren";
+    }
+  }
+
+  &__en {
+    &:before {
+      content: "Sign up for our Newsletter";
     }
   }
 

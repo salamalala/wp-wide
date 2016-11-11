@@ -1028,7 +1028,6 @@ body {
     .footer__newsletter:last-child {
       margin-right: 0; }
     .footer__newsletter:before {
-      content: "Newsletter abonnieren";
       position: absolute;
       left: 0.5627813555em;
       top: -10%;
@@ -1052,6 +1051,10 @@ body {
         .footer__newsletter:before {
           left: 2.368593037em;
           padding: 0 1.776889em; } }
+  .footer__de:before {
+    content: "Newsletter abonnieren"; }
+  .footer__en:before {
+    content: "Sign up for our Newsletter"; }
   .footer__input[type=email] {
     float: left;
     display: block;
