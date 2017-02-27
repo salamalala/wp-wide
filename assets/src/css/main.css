@@ -337,7 +337,8 @@ input:-ms-input-placeholder {
 .wpcf7 {
   font-family: "sofia-pro", sans-serif; }
   .wpcf7 span.wpcf7-list-item {
-    margin: 0; }
+    margin: 0;
+    display: block; }
   .wpcf7 span.wpcf7-not-valid-tip {
     color: #CF5D55;
     font-weight: 600;
