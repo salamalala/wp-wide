@@ -1261,7 +1261,7 @@ body {
       padding-top: 150px; } }
   @media screen and (min-width: 56.25em) {
     .intro {
-      height: calc(100vh - (2*1em));
+      height: calc(90vh - (2*1em));
       padding-top: 180px;
       display: -webkit-box;
       display: -moz-box;
