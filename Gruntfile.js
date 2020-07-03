@@ -28,7 +28,7 @@ module.exports = function (grunt) {
 
                 processors: [
                     require('pixrem')(), // add fallbacks for rem units
-                    require('autoprefixer')({browsers: 'last 2 versions'}), // add vendor prefixes
+                    require('autoprefixer'), // add vendor prefixes
                     require('cssnano')() // minify the result
                 ]
             },
@@ -45,7 +45,7 @@ module.exports = function (grunt) {
               src : ['assets/dist/**/*.css', 'assets/dist/**/*.js', '*.php']
             },
             options: {
-              proxy: "http://local.wordpress.dev/",
+              proxy: "wide.local",
               watchTask: true,
             }
           }

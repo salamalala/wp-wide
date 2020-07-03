@@ -366,9 +366,17 @@ add_filter('single_template', create_function(
 	return $the_template;' )
 );
 
-//give editor the possibility to add something to the menu: 
+//give editor the possibility to add something to the menu:
 // get the the role object
 $role_object = get_role( 'editor' );
 
 // add $cap capability to this role object
 $role_object->add_cap( 'edit_theme_options' );
+
+
+// Remove "Post" and "Comments" from admin bar
+function fmd_post_remove () {
+  remove_menu_page('edit.php');
+  remove_menu_page('edit-comments.php');
+}
+add_action('admin_menu', 'fmd_post_remove');
