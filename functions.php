@@ -370,7 +370,6 @@ $singlePostTemplates = function($the_template) {
 add_filter('single_template', $singlePostTemplates);
 
 
-
 //give editor the possibility to add something to the menu:
 // get the the role object
 $role_object = get_role( 'editor' );
