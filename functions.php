@@ -358,17 +358,16 @@ add_action( 'init', 'create_posttype' );
 
 
 // creating different templates for single posts
-add_filter(
-    'single_template',
-    function($theTemplate) {
-         foreach(get_the_category() as $cat) {
-         $php = TEMPLATEPATH . "/single-{$cat->slug}.php";
-         if (file_exists($php)) {
-            return $php;
-         }
-         return $theTemplate;
+$singlePostTemplates = function($the_template) {
+    foreach((array)get_the_category() as $cat) {
+        if (file_exists(TEMPLATEPATH . "/single-{$cat->slug}.php")) {
+            return TEMPLATEPATH . "/single-{$cat->slug}.php";
+        }
     }
-);
+    return $the_template;
+};
+
+add_filter('single_template', $singlePostTemplates);
 
 
 
