@@ -358,13 +358,13 @@ add_action( 'init', 'create_posttype' );
 
 
 // creating different templates for single posts
-add_filter('single_template', create_function(
-	'$the_template',
-	'foreach( (array) get_the_category() as $cat ) {
-		if ( file_exists(TEMPLATEPATH . "/single-{$cat->slug}.php") )
-		return TEMPLATEPATH . "/single-{$cat->slug}.php"; }
-	return $the_template;' )
-);
+// add_filter('single_template', create_function(
+// 	'$the_template',
+// 	'foreach( (array) get_the_category() as $cat ) {
+// 		if ( file_exists(TEMPLATEPATH . "/single-{$cat->slug}.php") )
+// 		return TEMPLATEPATH . "/single-{$cat->slug}.php"; }
+// 	return $the_template;' )
+// );
 
 //give editor the possibility to add something to the menu:
 // get the the role object
