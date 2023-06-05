@@ -16,18 +16,28 @@
 
 				<?php the_title( '<h1 class="heading-underline">', '</h1>' ); ?>
 
-				<?php if( get_field('article_content') ): ?>
+				<?php if ( post_password_required() ) :
 
-					<?php if ( get_field( 'erster_buchstabe' ) ): ?>
-						<div class="article big-letter">
-					<?php else: ?>
-						<div class="article">
-					<?php endif; ?>
+					 echo get_the_password_form();
 
-						<?php the_field('article_content'); ?>
-					</div>
+				else :
+					
+						if( get_field('article_content') ): ?>
 
-				<?php endif; ?>
+							<?php if ( get_field( 'erster_buchstabe' ) ): ?>
+								<div class="article big-letter">
+							<?php else: ?>
+								<div class="article">
+							<?php endif; ?>
+
+								<?php the_field('article_content'); ?>
+							</div>
+
+					<?php endif;
+					
+
+				
+				endif; ?>
 
 		</div>
 	</div>
